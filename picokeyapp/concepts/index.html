@@ -10,9 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/faq/">
+        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/concepts/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../install/">
       
       
         
@@ -23,11 +27,14 @@
     
     
       
-        <title>FAQ - PicoKeys Documentation</title>
+        <title>Concepts - PicoKeys Documentation</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +64,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -64,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#faq" class="md-skip">
+        <a href="#core-concepts" class="md-skip">
           Skip to content
         </a>
       
@@ -80,8 +96,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,12 +113,38 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FAQ
+              Concepts
             
           </span>
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -190,10 +231,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -290,8 +333,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     PicoKeys Documentation
@@ -330,28 +372,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -369,7 +414,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -403,6 +448,292 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#picokeyapp-vs-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PicoKeyApp vs firmware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PicoKeyApp vs firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picokeyapp-desktop-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PicoKeyApp (desktop application)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-device-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware (device functionality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-board-and-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device, board, and firmware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device, board, and firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-vs-board-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License vs board registration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="License vs board registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commissioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commissioning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rescue-bootsel-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RESCUE / BOOTSEL mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-operation-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal operation mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#irreversible-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Irreversible actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsibility-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsibility model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -498,6 +829,34 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -505,19 +864,22 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
             
   
   
@@ -535,8 +897,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1191,10 +1553,138 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#is-picokeyapp-open-source" class="md-nav__link">
+  <a href="#picokeyapp-vs-firmware" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Is PicoKeyApp open source?
+        PicoKeyApp vs firmware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PicoKeyApp vs firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picokeyapp-desktop-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PicoKeyApp (desktop application)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware-device-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware (device functionality)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-board-and-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device, board, and firmware
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device, board, and firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-vs-board-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License vs board registration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="License vs board registration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#board-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Board registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commissioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commissioning
       
     </span>
   </a>
@@ -1202,10 +1692,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-does-picokeyapp-require-a-license" class="md-nav__link">
+  <a href="#connection-modes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why does PicoKeyApp require a license?
+        Connection modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rescue-bootsel-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RESCUE / BOOTSEL mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-operation-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal operation mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#irreversible-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Irreversible actions
       
     </span>
   </a>
@@ -1213,10 +1742,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-i-use-picokeyapp-offline" class="md-nav__link">
+  <a href="#responsibility-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Can I use PicoKeyApp offline?
+        Responsibility model
       
     </span>
   </a>
@@ -1224,10 +1753,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-if-my-device-is-not-detected" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What if my device is not detected?
+        Summary
       
     </span>
   </a>
@@ -1251,16 +1780,173 @@
 
 
 
-<h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
-<h2 id="is-picokeyapp-open-source">Is PicoKeyApp open source?<a class="headerlink" href="#is-picokeyapp-open-source" title="Permanent link">&para;</a></h2>
-<p>The application may be distributed as a binary. Some firmware components and related tools may be available as open source depending on the project.</p>
-<h2 id="why-does-picokeyapp-require-a-license">Why does PicoKeyApp require a license?<a class="headerlink" href="#why-does-picokeyapp-require-a-license" title="Permanent link">&para;</a></h2>
-<p>Licensing may be used to enable advanced features and to support ongoing development.</p>
-<h2 id="can-i-use-picokeyapp-offline">Can I use PicoKeyApp offline?<a class="headerlink" href="#can-i-use-picokeyapp-offline" title="Permanent link">&para;</a></h2>
-<p>Depending on the build, most core functionality works offline. Some update mechanisms may require internet access.</p>
-<h2 id="what-if-my-device-is-not-detected">What if my device is not detected?<a class="headerlink" href="#what-if-my-device-is-not-detected" title="Permanent link">&para;</a></h2>
-<p>Start with:
-- <a href="../troubleshooting/">Troubleshooting</a></p>
+<h1 id="core-concepts">Core concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h1>
+<p>This section explains the <strong>core concepts</strong> used throughout the PicoKeys ecosystem.</p>
+<p>Understanding these concepts is essential to correctly use PicoKeyApp and the different firmware variants.</p>
+<hr />
+<h2 id="picokeyapp-vs-firmware">PicoKeyApp vs firmware<a class="headerlink" href="#picokeyapp-vs-firmware" title="Permanent link">&para;</a></h2>
+<p>The PicoKeys ecosystem is split into two distinct layers.</p>
+<h3 id="picokeyapp-desktop-application">PicoKeyApp (desktop application)<a class="headerlink" href="#picokeyapp-desktop-application" title="Permanent link">&para;</a></h3>
+<p>PicoKeyApp is the <strong>management interface</strong>.</p>
+<p>It is responsible for:</p>
+<ul>
+<li>Detecting devices</li>
+<li>Displaying device and firmware information</li>
+<li>Configuring and commissioning devices</li>
+<li>Installing licenses and registering boards</li>
+<li>Providing diagnostics and troubleshooting tools</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PicoKeyApp does not implement cryptographic functionality.</p>
+</div>
+<hr />
+<h3 id="firmware-device-functionality">Firmware (device functionality)<a class="headerlink" href="#firmware-device-functionality" title="Permanent link">&para;</a></h3>
+<p>The firmware installed on the device defines <strong>what the device actually does</strong>.</p>
+<p>Different firmware variants provide different functionality, such as:</p>
+<ul>
+<li>Hardware security module features (Pico HSM)</li>
+<li>FIDO2 / WebAuthn authentication (Pico FIDO)</li>
+<li>OpenPGP smartcard functionality (Pico OpenPGP)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The same PicoKeyApp interface is used regardless of the installed firmware.</p>
+</div>
+<hr />
+<h2 id="device-board-and-firmware">Device, board, and firmware<a class="headerlink" href="#device-board-and-firmware" title="Permanent link">&para;</a></h2>
+<p>Several terms are used to describe different aspects of the hardware.</p>
+<h3 id="device">Device<a class="headerlink" href="#device" title="Permanent link">&para;</a></h3>
+<p>A <strong>device</strong> refers to the physical PicoKeys unit connected via USB.</p>
+<p>Each device has:</p>
+<ul>
+<li>A unique serial number</li>
+<li>A hardware platform</li>
+<li>A specific board model</li>
+</ul>
+<hr />
+<h3 id="board">Board<a class="headerlink" href="#board" title="Permanent link">&para;</a></h3>
+<p>A <strong>board</strong> describes the exact hardware variant.</p>
+<p>Board information is used to:</p>
+<ul>
+<li>Apply correct configuration</li>
+<li>Bind a license to compatible hardware</li>
+<li>Ensure firmware compatibility</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Board selection is irreversible once the board is registered.</p>
+</div>
+<hr />
+<h3 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">&para;</a></h3>
+<p>The <strong>firmware</strong> is the software running on the device.</p>
+<p>Firmware determines:</p>
+<ul>
+<li>Supported features</li>
+<li>Available security options</li>
+<li>Operational behavior</li>
+</ul>
+<p>Changing firmware may change device capabilities without changing the hardware.</p>
+<hr />
+<h2 id="license-vs-board-registration">License vs board registration<a class="headerlink" href="#license-vs-board-registration" title="Permanent link">&para;</a></h2>
+<p>Licensing involves <strong>two distinct steps</strong>.</p>
+<h3 id="license-installation">License installation<a class="headerlink" href="#license-installation" title="Permanent link">&para;</a></h3>
+<p>Installing a license means:</p>
+<ul>
+<li>The license data is stored locally</li>
+<li>No device is modified yet</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Installing a license alone does not enable any device functionality.</p>
+</div>
+<hr />
+<h3 id="board-registration">Board registration<a class="headerlink" href="#board-registration" title="Permanent link">&para;</a></h3>
+<p>Registering a board means:</p>
+<ul>
+<li>Binding a license to a specific board</li>
+<li>Making the license effective for that device</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Board registration is irreversible.</p>
+<p>Once a license is bound to a board, it cannot be transferred or modified.</p>
+</div>
+<hr />
+<h2 id="commissioning">Commissioning<a class="headerlink" href="#commissioning" title="Permanent link">&para;</a></h2>
+<p>Commissioning is the process of <strong>finalizing device setup</strong>.</p>
+<p>Commissioning typically:</p>
+<ul>
+<li>Applies configuration settings</li>
+<li>Writes persistent state to the device</li>
+<li>Prepares the device for normal operation</li>
+</ul>
+<p>Commissioning is usually performed after:</p>
+<ul>
+<li>Firmware installation</li>
+<li>Board registration</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Commissioning modifies persistent device state.</p>
+</div>
+<hr />
+<h2 id="connection-modes">Connection modes<a class="headerlink" href="#connection-modes" title="Permanent link">&para;</a></h2>
+<p>A PicoKeys device can appear in different connection modes.</p>
+<h3 id="rescue-bootsel-mode">RESCUE / BOOTSEL mode<a class="headerlink" href="#rescue-bootsel-mode" title="Permanent link">&para;</a></h3>
+<p>This mode is typically used for:</p>
+<ul>
+<li>Initial setup</li>
+<li>Firmware updates</li>
+<li>Recovery operations</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For new or freshly flashed devices, RESCUE mode is expected.</p>
+</div>
+<hr />
+<h3 id="normal-operation-mode">Normal operation mode<a class="headerlink" href="#normal-operation-mode" title="Permanent link">&para;</a></h3>
+<p>In normal operation mode:</p>
+<ul>
+<li>The device runs the installed firmware</li>
+<li>Features exposed depend on the firmware variant</li>
+</ul>
+<hr />
+<h2 id="irreversible-actions">Irreversible actions<a class="headerlink" href="#irreversible-actions" title="Permanent link">&para;</a></h2>
+<p>Some actions in the PicoKeys ecosystem <strong>cannot be undone</strong>.</p>
+<p>Examples include:</p>
+<ul>
+<li>Selecting and registering a board type</li>
+<li>Binding a license to a board</li>
+<li>Certain commissioning operations</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Always double-check irreversible actions before confirming.</p>
+</div>
+<hr />
+<h2 id="responsibility-model">Responsibility model<a class="headerlink" href="#responsibility-model" title="Permanent link">&para;</a></h2>
+<p>The PicoKeys ecosystem follows a <strong>user-controlled model</strong>.</p>
+<p>This means:</p>
+<ul>
+<li>The user explicitly selects actions</li>
+<li>PicoKeyApp does not auto-correct critical decisions</li>
+<li>Irreversible operations require explicit confirmation</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This model is intentional and prioritizes transparency and control over automation.</p>
+</div>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>To use PicoKeys devices correctly, remember:</p>
+<ul>
+<li>PicoKeyApp is the management interface</li>
+<li>Firmware defines actual device functionality</li>
+<li>Board selection and registration are irreversible</li>
+<li>Commissioning finalizes device setup</li>
+<li>Understanding these concepts prevents configuration errors</li>
+</ul>
 
 
 

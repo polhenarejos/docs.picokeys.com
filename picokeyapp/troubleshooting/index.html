@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/troubleshooting/">
       
       
+        <link rel="prev" href="../quickstart/">
+      
+      
+        <link rel="next" href="../home/">
       
       
         
@@ -28,6 +32,9 @@
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -46,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +64,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -80,8 +96,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,6 +119,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -190,10 +231,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -290,8 +333,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     PicoKeys Documentation
@@ -330,28 +372,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -369,7 +414,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -395,6 +440,34 @@
     
   
     Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concepts
   
 
     
@@ -496,6 +569,404 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#device-not-detected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device not detected
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device not detected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-causes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible causes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-detected-but-in-unexpected-connection-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device detected but in unexpected connection mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Device detected but in unexpected connection mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-installed-but-board-is-not-registered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License installed but board is not registered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="License installed but board is not registered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-the-wrong-board-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected the wrong board type
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selected the wrong board type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-board-does-not-appear-in-the-board-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My board does not appear in the board list
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My board does not appear in the board list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firmware-update-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firmware update fails
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firmware update fails">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-causes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible causes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features-missing-after-firmware-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features missing after firmware update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features missing after firmware update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-issues-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission issues (Linux)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permission issues (Linux)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-open-a-support-ticket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to open a support ticket
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     
@@ -505,19 +976,22 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
         
           
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
             
   
   
@@ -535,8 +1009,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1203,10 +1677,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
+  <a href="#possible-causes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Windows
+        Possible causes
       
     </span>
   </a>
@@ -1214,21 +1688,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
+  <a href="#recommended-actions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        macOS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linux
+        Recommended actions
       
     </span>
   </a>
@@ -1241,13 +1704,158 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#app-opens-but-features-are-missing" class="md-nav__link">
+  <a href="#device-detected-but-in-unexpected-connection-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        App opens but features are missing
+        Device detected but in unexpected connection mode
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Device detected but in unexpected connection mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-installed-but-board-is-not-registered" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License installed but board is not registered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="License installed but board is not registered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selected-the-wrong-board-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selected the wrong board type
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selected the wrong board type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-do_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-board-does-not-appear-in-the-board-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My board does not appear in the board list
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="My board does not appear in the board list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1256,6 +1864,123 @@
     <span class="md-ellipsis">
       
         Firmware update fails
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Firmware update fails">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possible-causes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Possible causes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features-missing-after-firmware-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features missing after firmware update
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features missing after firmware update">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permission-issues-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission issues (Linux)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permission issues (Linux)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explanation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-actions_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-open-a-support-ticket" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to open a support ticket
       
     </span>
   </a>
@@ -1280,38 +2005,175 @@
 
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+<p>This section lists the most common issues encountered when using <strong>PicoKeyApp</strong>, together with their causes and recommended actions.</p>
+<p>Read this section carefully before opening a support ticket.</p>
+<hr />
 <h2 id="device-not-detected">Device not detected<a class="headerlink" href="#device-not-detected" title="Permanent link">&para;</a></h2>
-<p>Try in this order:
-1. Use a different USB port (direct port preferred)
-2. Use a different USB cable (data-capable)
-3. Close other tools that might access the device
-4. Reboot the computer (yes, sometimes it helps)</p>
-<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
+<p>PicoKeyApp does not detect any connected device.</p>
+<h3 id="possible-causes">Possible causes<a class="headerlink" href="#possible-causes" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Check Device Manager for USB device entries.</li>
-<li>If you see driver errors, reinstall the app and reconnect the device.</li>
+<li>The device is not connected correctly</li>
+<li>The USB cable does not support data</li>
+<li>Another application is accessing the device</li>
+<li>USB permissions are missing (Linux)</li>
+<li>The device is in an unexpected mode</li>
 </ul>
-<h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
+<h3 id="recommended-actions">Recommended actions<a class="headerlink" href="#recommended-actions" title="Permanent link">&para;</a></h3>
 <ul>
-<li>If the app is blocked, allow it in <strong>Privacy &amp; Security</strong>.</li>
-<li>Try a different port or hub.</li>
+<li>Use a direct USB port on the computer (avoid hubs)</li>
+<li>Try a different USB cable</li>
+<li>Close other applications that may access USB devices</li>
+<li>Disconnect and reconnect the device</li>
+<li>Restart PicoKeyApp</li>
 </ul>
-<h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For first-time setup, always use a direct USB connection without hubs.</p>
+</div>
+<hr />
+<h2 id="device-detected-but-in-unexpected-connection-mode">Device detected but in unexpected connection mode<a class="headerlink" href="#device-detected-but-in-unexpected-connection-mode" title="Permanent link">&para;</a></h2>
+<p>The device is detected, but the <strong>Connection</strong> field shows an unexpected value.</p>
+<h3 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h3>
+<p>Depending on the firmware and device state, the connection mode may vary.</p>
+<p>Common modes include:</p>
 <ul>
-<li>USB permissions may block access.</li>
-<li>Run from terminal and look for permission errors.</li>
+<li><code>RESCUE</code> (BOOTSEL / recovery mode)</li>
+<li>Normal operation mode (firmware-dependent)</li>
 </ul>
-<h2 id="app-opens-but-features-are-missing">App opens but features are missing<a class="headerlink" href="#app-opens-but-features-are-missing" title="Permanent link">&para;</a></h2>
+<h3 id="what-to-do">What to do<a class="headerlink" href="#what-to-do" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Some features depend on the firmware variant installed on the device.</li>
-<li>Some features may require registration.</li>
+<li>For new or freshly flashed devices, <code>RESCUE</code> mode is expected</li>
+<li>If the device should be in normal mode, try reconnecting it</li>
+<li>If unsure, proceed with commissioning only when instructed</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Connection mode alone does not indicate a faulty device.</p>
+</div>
+<hr />
+<h2 id="license-installed-but-board-is-not-registered">License installed but board is not registered<a class="headerlink" href="#license-installed-but-board-is-not-registered" title="Permanent link">&para;</a></h2>
+<p>A license is installed, but the board status remains <strong>Not registered</strong>.</p>
+<h3 id="explanation_1">Explanation<a class="headerlink" href="#explanation_1" title="Permanent link">&para;</a></h3>
+<p>Installing a license and registering a board are <strong>two separate steps</strong>.</p>
+<p>A license must be installed first, and then explicitly bound to a board.</p>
+<h3 id="recommended-actions_1">Recommended actions<a class="headerlink" href="#recommended-actions_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Go to <strong>About → License</strong></li>
+<li>Verify that the license is correctly installed</li>
+<li>Select the correct board type</li>
+<li>Click <strong>Register Board</strong></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Board registration is a required step and cannot be skipped.</p>
+</div>
+<hr />
+<h2 id="selected-the-wrong-board-type">Selected the wrong board type<a class="headerlink" href="#selected-the-wrong-board-type" title="Permanent link">&para;</a></h2>
+<p>The wrong board type was selected during registration.</p>
+<h3 id="explanation_2">Explanation<a class="headerlink" href="#explanation_2" title="Permanent link">&para;</a></h3>
+<p>Board type selection is <strong>user-controlled</strong> and <strong>irreversible</strong>.</p>
+<p>Once a board is registered, the selected board type <strong>cannot be changed</strong>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Selecting an incorrect board type cannot be undone.</p>
+<p>The license will remain bound to the selected board type permanently.</p>
+</div>
+<h3 id="what-to-do_1">What to do<a class="headerlink" href="#what-to-do_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Do <strong>not</strong> attempt to work around this by selecting a similar board</li>
+<li>Do <strong>not</strong> attempt to re-register the board</li>
+</ul>
+<p>Instead, open a support ticket and explain the situation.</p>
+<hr />
+<h2 id="my-board-does-not-appear-in-the-board-list">My board does not appear in the board list<a class="headerlink" href="#my-board-does-not-appear-in-the-board-list" title="Permanent link">&para;</a></h2>
+<p>The board model you are using does not appear in the board selection list.</p>
+<h3 id="recommended-actions_2">Recommended actions<a class="headerlink" href="#recommended-actions_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Do not proceed with board registration</li>
+<li>Do not select a different or similar board</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Registering a board with an incorrect board type may permanently bind the license incorrectly.</p>
+</div>
+<h3 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h3>
+<p>Open a ticket at:</p>
+<p><a href="https://github.com/polhenarejos/picokeyapp/issues">https://github.com/polhenarejos/picokeyapp/issues</a></p>
+<p>Include:</p>
+<ul>
+<li>The exact board model</li>
+<li>PicoKeyApp version</li>
+<li>Firmware version</li>
+<li>Any relevant screenshots or logs</li>
+</ul>
+<hr />
 <h2 id="firmware-update-fails">Firmware update fails<a class="headerlink" href="#firmware-update-fails" title="Permanent link">&para;</a></h2>
+<p>A firmware update does not complete successfully.</p>
+<h3 id="possible-causes_1">Possible causes<a class="headerlink" href="#possible-causes_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Do not unplug immediately.</li>
-<li>Reopen PicoKeyApp and try again if the app indicates it is safe.</li>
-<li>If the device enters a boot/recovery mode, follow the recovery instructions provided with the firmware release.</li>
+<li>USB connection interrupted</li>
+<li>Device disconnected during update</li>
+<li>Incorrect firmware file</li>
+<li>Device not in the expected mode</li>
 </ul>
+<h3 id="recommended-actions_3">Recommended actions<a class="headerlink" href="#recommended-actions_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Do not unplug the device immediately</li>
+<li>Follow any instructions shown by PicoKeyApp</li>
+<li>If the device reappears in <code>RESCUE</code> mode, retry the update</li>
+<li>Use a direct USB connection</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Interrupting a firmware update may require recovery steps.</p>
+</div>
+<hr />
+<h2 id="features-missing-after-firmware-update">Features missing after firmware update<a class="headerlink" href="#features-missing-after-firmware-update" title="Permanent link">&para;</a></h2>
+<p>Some features are missing after installing or updating firmware.</p>
+<h3 id="explanation_3">Explanation<a class="headerlink" href="#explanation_3" title="Permanent link">&para;</a></h3>
+<p>Available features depend on the <strong>installed firmware</strong>, not on PicoKeyApp itself.</p>
+<p>Installing a different firmware variant may:</p>
+<ul>
+<li>Enable new features</li>
+<li>Disable features available in a previous firmware</li>
+<li>Require re-commissioning</li>
+</ul>
+<h3 id="recommended-actions_4">Recommended actions<a class="headerlink" href="#recommended-actions_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verify the installed firmware version</li>
+<li>Review the documentation for the selected firmware variant</li>
+<li>Re-run commissioning if required</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PicoKeyApp only exposes features supported by the firmware.</p>
+</div>
+<hr />
+<h2 id="permission-issues-linux">Permission issues (Linux)<a class="headerlink" href="#permission-issues-linux" title="Permanent link">&para;</a></h2>
+<p>The device is detected, but operations fail on Linux.</p>
+<h3 id="explanation_4">Explanation<a class="headerlink" href="#explanation_4" title="Permanent link">&para;</a></h3>
+<p>Linux systems may require additional USB permissions.</p>
+<h3 id="recommended-actions_5">Recommended actions<a class="headerlink" href="#recommended-actions_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check udev rules</li>
+<li>Ensure the user belongs to the appropriate groups</li>
+<li>Restart the session after changing permissions</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Running PicoKeyApp from a terminal can help identify permission-related errors.</p>
+</div>
+<hr />
+<h2 id="when-to-open-a-support-ticket">When to open a support ticket<a class="headerlink" href="#when-to-open-a-support-ticket" title="Permanent link">&para;</a></h2>
+<p>Open a support ticket if:</p>
+<ul>
+<li>The correct board model is not listed</li>
+<li>Firmware recovery is not possible</li>
+<li>The device behaves inconsistently after following this guide</li>
+</ul>
+<p>Use the official issue tracker:</p>
+<p><a href="https://github.com/polhenarejos/picokeyapp/issues">https://github.com/polhenarejos/picokeyapp/issues</a></p>
+<p>Provide as much detail as possible to speed up resolution.</p>
 
 
 
