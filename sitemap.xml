@@ -85,6 +85,14 @@
          <lastmod>2025-12-23</lastmod>
     </url>
     <url>
+         <loc>https://docs.picokeys.com/picokeyapp/init-picofido/</loc>
+         <lastmod>2025-12-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picokeyapp/init-picohsm/</loc>
+         <lastmod>2025-12-23</lastmod>
+    </url>
+    <url>
          <loc>https://docs.picokeys.com/picokeyapp/install/</loc>
          <lastmod>2025-12-23</lastmod>
     </url>
@@ -94,6 +102,10 @@
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/quickstart/</loc>
+         <lastmod>2025-12-23</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picokeyapp/security/</loc>
          <lastmod>2025-12-23</lastmod>
     </url>
     <url>
