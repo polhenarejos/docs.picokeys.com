@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/init-picohsm/">
+        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/app-settings/">
       
       
-        <link rel="prev" href="../firmware/">
+        <link rel="prev" href="../slots/yubiotp/">
       
       
-        <link rel="next" href="../init-picofido/">
+        <link rel="next" href="../about/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Pico HSM - PicoKeys Documentation</title>
+        <title>App settings - PicoKeys Documentation</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pico-hsm-initialization" class="md-skip">
+        <a href="#app-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pico HSM
+              App settings
             
           </span>
         </div>
@@ -766,8 +766,6 @@
                 
   
   
-    
-  
   
   
     
@@ -780,11 +778,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7_5" >
         
           
           <label class="md-nav__link" for="__nav_2_7_5" id="__nav_2_7_5_label" tabindex="0">
@@ -805,7 +805,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_7_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -820,37 +820,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pico HSM
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../init-picohsm/" class="md-nav__link">
         
   
   
@@ -866,220 +839,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pin-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PIN configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PIN configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-pin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        User PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#so-pin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SO PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pin-retries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PIN retries
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-protection-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Advanced protection options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced protection options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dkek-shares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DKEK shares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#puk-authentications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PUK authentications
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#puk-minimum-authentications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PUK minimum authentications
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-domains" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key domains
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Additional options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reset-retry-counter-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reset retry counter command
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transport-pin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Transport PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pka-replaceable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PKA replaceable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combined-pin-pka-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Combined PIN &amp; PKA authentication
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initialization-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initialization process
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1327,10 +1086,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../app-settings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App settings
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1346,6 +1132,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-readers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available readers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-rescue-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force Rescue Interface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-pcsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patch PC/SC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#device-status-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Device status indicators
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2058,44 +1936,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pin-configuration" class="md-nav__link">
+  <a href="#available-readers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PIN configuration
+        Available readers
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="PIN configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-rescue-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force Rescue Interface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patch-pcsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patch PC/SC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-pin" class="md-nav__link">
+  <a href="#enable-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#so-pin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SO PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pin-retries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PIN retries
+        Enable Agent
       
     </span>
   </a>
@@ -2108,143 +1997,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-protection-options" class="md-nav__link">
+  <a href="#device-status-indicators" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced protection options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced protection options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dkek-shares" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DKEK shares
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#puk-authentications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PUK authentications
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#puk-minimum-authentications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PUK minimum authentications
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-domains" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key domains
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Additional options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reset-retry-counter-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reset retry counter command
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transport-pin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Transport PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pka-replaceable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PKA replaceable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combined-pin-pka-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Combined PIN &amp; PKA authentication
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initialization-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initialization process
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
+        Device status indicators
       
     </span>
   </a>
@@ -2268,119 +2024,82 @@
 
 
 
-<h1 id="pico-hsm-initialization">Pico HSM Initialization<a class="headerlink" href="#pico-hsm-initialization" title="Permanent link">&para;</a></h1>
-<p>This page documents the <strong>security initialization options</strong> available for <strong>Pico HSM</strong> when using PicoKey App.</p>
-<p>These settings control <strong>PIN policies, key protection mechanisms, and recovery options</strong>.</p>
-<p><img alt="Pico HSM initialization" src="../../assets/images/picokeyapp/init-picohsm.png" /></p>
+<h1 id="app-settings">App settings<a class="headerlink" href="#app-settings" title="Permanent link">&para;</a></h1>
+<p>This section describes the <strong>application-level settings</strong> available in PicoKeyApp.
+These settings affect how the application communicates with PicoKey devices and how certain advanced features are enabled.</p>
+<p><img alt="Application settings" src="../../assets/images/picokeyapp/app-settings.png" /></p>
 <hr />
-<h2 id="pin-configuration">PIN configuration<a class="headerlink" href="#pin-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="user-pin">User PIN<a class="headerlink" href="#user-pin" title="Permanent link">&para;</a></h3>
-<p>Defines the primary user PIN.</p>
+<h2 id="available-readers">Available readers<a class="headerlink" href="#available-readers" title="Permanent link">&para;</a></h2>
+<p>Selects the smart card / USB reader interface used by PicoKeyApp.</p>
 <ul>
-<li>Required for cryptographic operations</li>
-<li>Protects private keys and stored objects</li>
+<li>The list shows all detected compatible interfaces</li>
+<li>The active reader is highlighted</li>
+<li>The refresh button forces a new scan of available readers</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In most cases, the default reader selection is sufficient and should not be changed.</p>
+</div>
+<hr />
+<h2 id="force-rescue-interface">Force Rescue Interface<a class="headerlink" href="#force-rescue-interface" title="Permanent link">&para;</a></h2>
+<p>Forces the application to use the <strong>Rescue Interface</strong> instead of the default PC/SC interface.</p>
+<p>When enabled:</p>
+<ul>
+<li>PicoKeyApp bypasses the standard PC/SC stack</li>
+<li>Communication is performed through the Rescue Interface</li>
+<li>This may be required if PC/SC is misconfigured or unavailable</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Rescue Interface provides reduced functionality compared to PC/SC.</p>
+</div>
+<hr />
+<h2 id="patch-pcsc">Patch PC/SC<a class="headerlink" href="#patch-pcsc" title="Permanent link">&para;</a></h2>
+<p>Attempts to patch the local <strong>pcscd service</strong> to improve compatibility with PicoKey devices on some Linux distributions.</p>
+<p>When enabled:</p>
+<ul>
+<li>PicoKeyApp applies changes to the PC/SC service</li>
+<li>Compatibility issues with certain distributions may be resolved</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>This operation requires root privileges and may affect other smart card devices.
+Use with caution.</p>
+</div>
+<hr />
+<h2 id="agent">Agent<a class="headerlink" href="#agent" title="Permanent link">&para;</a></h2>
+<h3 id="enable-agent">Enable Agent<a class="headerlink" href="#enable-agent" title="Permanent link">&para;</a></h3>
+<p>Enables communication with <strong>PicoKey Agent</strong>.</p>
+<p>When enabled:</p>
+<ul>
+<li>The device can communicate with the local PicoKey Agent</li>
+<li>Advanced operations become available</li>
+<li>
+<p>Required for features such as:</p>
+</li>
+<li>
+<p>Device time synchronization</p>
+</li>
+<li>
+<p>Audit or traceability features</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PicoKey Agent runs as a background service and must be installed separately.</p>
+</div>
+<hr />
+<h2 id="device-status-indicators">Device status indicators<a class="headerlink" href="#device-status-indicators" title="Permanent link">&para;</a></h2>
+<p>At the bottom of the application, PicoKeyApp displays real-time status information:</p>
+<ul>
+<li>Device connection status (online/offline)</li>
+<li>Recovery mode state</li>
+<li>Current device time</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The default PIN is <code>648219</code>.</p>
+<p>Device time is updated automatically when the agent is enabled.</p>
 </div>
-<hr />
-<h3 id="so-pin">SO PIN<a class="headerlink" href="#so-pin" title="Permanent link">&para;</a></h3>
-<p>Defines the Security Officer PIN.</p>
-<ul>
-<li>Used for administrative operations</li>
-<li>Required for certain reset and recovery commands</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The SO PIN should be stored separately from the user PIN.</p>
-</div>
-<hr />
-<h3 id="pin-retries">PIN retries<a class="headerlink" href="#pin-retries" title="Permanent link">&para;</a></h3>
-<p>Configures the number of allowed incorrect PIN attempts.</p>
-<ul>
-<li>Applies to both user PIN and SO PIN</li>
-<li>Exceeding the limit blocks access</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Exceeding retry limits may permanently lock the device.</p>
-</div>
-<hr />
-<h2 id="advanced-protection-options">Advanced protection options<a class="headerlink" href="#advanced-protection-options" title="Permanent link">&para;</a></h2>
-<h3 id="dkek-shares">DKEK shares<a class="headerlink" href="#dkek-shares" title="Permanent link">&para;</a></h3>
-<p>Enables <strong>Distributed Key Encryption Key</strong> (DKEK) shares.</p>
-<ul>
-<li>Splits the encryption key into multiple shares</li>
-<li>Requires a threshold number of shares for recovery</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>DKEK improves resilience against single-point compromise.</p>
-</div>
-<hr />
-<h3 id="puk-authentications">PUK authentications<a class="headerlink" href="#puk-authentications" title="Permanent link">&para;</a></h3>
-<p>Enables PUK-based recovery.</p>
-<ul>
-<li>Allows PIN reset using the PUK</li>
-<li>Adds an additional recovery mechanism</li>
-</ul>
-<hr />
-<h3 id="puk-minimum-authentications">PUK minimum authentications<a class="headerlink" href="#puk-minimum-authentications" title="Permanent link">&para;</a></h3>
-<p>Defines the minimum number of PUK authentications required.</p>
-<ul>
-<li>Used when PUK-based recovery is enabled</li>
-</ul>
-<hr />
-<h3 id="key-domains">Key domains<a class="headerlink" href="#key-domains" title="Permanent link">&para;</a></h3>
-<p>Enables key domain separation.</p>
-<ul>
-<li>Keys are grouped into isolated domains</li>
-<li>Access policies can differ per domain</li>
-</ul>
-<hr />
-<h2 id="additional-options">Additional options<a class="headerlink" href="#additional-options" title="Permanent link">&para;</a></h2>
-<h3 id="reset-retry-counter-command">Reset retry counter command<a class="headerlink" href="#reset-retry-counter-command" title="Permanent link">&para;</a></h3>
-<p>Allows resetting the retry counter via command.</p>
-<ul>
-<li>Useful for controlled recovery scenarios</li>
-</ul>
-<hr />
-<h3 id="transport-pin">Transport PIN<a class="headerlink" href="#transport-pin" title="Permanent link">&para;</a></h3>
-<p>Allows setting a temporary PIN during transport or provisioning.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Transport PINs should be changed immediately after deployment.</p>
-</div>
-<hr />
-<h3 id="pka-replaceable">PKA replaceable<a class="headerlink" href="#pka-replaceable" title="Permanent link">&para;</a></h3>
-<p>Allows replacement of public key authentication data.</p>
-<hr />
-<h3 id="combined-pin-pka-authentication">Combined PIN &amp; PKA authentication<a class="headerlink" href="#combined-pin-pka-authentication" title="Permanent link">&para;</a></h3>
-<p>Requires both PIN and public key authentication.</p>
-<ul>
-<li>Provides multi-factor protection</li>
-</ul>
-<hr />
-<h2 id="initialization-process">Initialization process<a class="headerlink" href="#initialization-process" title="Permanent link">&para;</a></h2>
-<p>After configuring all parameters:</p>
-<ul>
-<li>Click <strong>Initialize</strong></li>
-<li>The device is provisioned with the selected security configuration</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Some options cannot be changed without reinitializing the device.</p>
-</div>
-<hr />
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Pico HSM security initialization defines:</p>
-<ul>
-<li>Access control policies</li>
-<li>Recovery mechanisms</li>
-<li>Cryptographic isolation guarantees</li>
-</ul>
-<p>These options should be configured carefully according to the intended deployment model.</p>
 
 
 
