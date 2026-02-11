@@ -10,31 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/init-picohsm/">
+        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/hsm/cipher/">
       
       
-        <link rel="prev" href="../firmware/">
+        <link rel="prev" href="../key-management/">
       
       
-        <link rel="next" href="../init-picofido/">
+        <link rel="next" href="../initialize/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Pico HSM - PicoKeys Documentation</title>
+        <title>Cipher - PicoKeys Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pico-hsm-initialization" class="md-skip">
+        <a href="#pico-hsm-cipher" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
+    <a href="../../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  <img src="../../assets/images/picokeys.png" alt="logo">
+  <img src="../../../assets/images/picokeys.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pico HSM
+              Cipher
             
           </span>
         </div>
@@ -214,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -237,7 +237,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -257,7 +257,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../picohsm/" class="md-tabs__link">
+        <a href="../../../picohsm/" class="md-tabs__link">
           
   
   
@@ -277,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../picofido/" class="md-tabs__link">
+        <a href="../../../picofido/" class="md-tabs__link">
           
   
   
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../pico-openpgp/" class="md-tabs__link">
+        <a href="../../../pico-openpgp/" class="md-tabs__link">
           
   
   
@@ -331,9 +331,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
+    <a href="../../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  <img src="../../assets/images/picokeys.png" alt="logo">
+  <img src="../../../assets/images/picokeys.png" alt="logo">
 
     </a>
     PicoKeys Documentation
@@ -348,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -432,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -460,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../concepts/" class="md-nav__link">
+      <a href="../../concepts/" class="md-nav__link">
         
   
   
@@ -488,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../../install/" class="md-nav__link">
         
   
   
@@ -516,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-steps/" class="md-nav__link">
+      <a href="../../first-steps/" class="md-nav__link">
         
   
   
@@ -544,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quickstart/" class="md-nav__link">
+      <a href="../../quickstart/" class="md-nav__link">
         
   
   
@@ -572,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../troubleshooting/" class="md-nav__link">
         
   
   
@@ -657,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../home/" class="md-nav__link">
+      <a href="../../home/" class="md-nav__link">
         
   
   
@@ -685,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+      <a href="../../configuration/" class="md-nav__link">
         
   
   
@@ -713,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../security/" class="md-nav__link">
+      <a href="../../security/" class="md-nav__link">
         
   
   
@@ -741,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../firmware/" class="md-nav__link">
+      <a href="../../firmware/" class="md-nav__link">
         
   
   
@@ -757,6 +757,96 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_5" id="__nav_2_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initialization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Initialization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../init-picofido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pico FIDO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -784,17 +874,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_7_5" id="__nav_2_7_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7_6" id="__nav_2_7_6_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Initialization
+    HSM
   
 
     
@@ -805,16 +895,126 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_7_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Initialization
+    HSM
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_6_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_6_1" id="__nav_2_7_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_7_6_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../key-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Key management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -839,7 +1039,7 @@
   <span class="md-ellipsis">
     
   
-    Pico HSM
+    Cipher
   
 
     
@@ -857,7 +1057,7 @@
   <span class="md-ellipsis">
     
   
-    Pico HSM
+    Cipher
   
 
     
@@ -883,22 +1083,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pin-configuration" class="md-nav__link">
+  <a href="#prerequisite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PIN configuration
+        Prerequisite
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="PIN configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#io-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I/O flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I/O flow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-pin" class="md-nav__link">
+  <a href="#file-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User PIN
+        File flow
       
     </span>
   </a>
@@ -906,21 +1128,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#so-pin" class="md-nav__link">
+  <a href="#text-box-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SO PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pin-retries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PIN retries
+        Text box flow
       
     </span>
   </a>
@@ -933,22 +1144,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-protection-options" class="md-nav__link">
+  <a href="#operation-specific-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced protection options
+        Operation-specific fields
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Advanced protection options">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm-availability-by-key-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm availability by key type
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm availability by key type">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dkek-shares" class="md-nav__link">
+  <a href="#eddsa-keys-ed25519-ed448" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DKEK shares
+        EdDSA keys (ed25519, ed448)
       
     </span>
   </a>
@@ -956,10 +1178,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#puk-authentications" class="md-nav__link">
+  <a href="#other-ecc-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PUK authentications
+        Other ECC keys
       
     </span>
   </a>
@@ -967,10 +1189,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#puk-minimum-authentications" class="md-nav__link">
+  <a href="#rsa-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PUK minimum authentications
+        RSA keys
       
     </span>
   </a>
@@ -978,10 +1200,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#key-domains" class="md-nav__link">
+  <a href="#aes-keys-symmetric-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key domains
+        AES keys (symmetric keys)
       
     </span>
   </a>
@@ -990,95 +1212,20 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Additional options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reset-retry-counter-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reset retry counter command
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transport-pin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Transport PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pka-replaceable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PKA replaceable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combined-pin-pka-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Combined PIN &amp; PKA authentication
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initialization-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initialization process
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
   
 </li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1092,14 +1239,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../init-picofido/" class="md-nav__link">
+      <a href="../initialize/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Pico FIDO
+    Initialization
   
 
     
@@ -1143,10 +1290,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7_7" >
         
           
-          <label class="md-nav__link" for="__nav_2_7_6" id="__nav_2_7_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_7_7" id="__nav_2_7_7_label" tabindex="0">
             
   
   
@@ -1164,8 +1311,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_7_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1182,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/" class="md-nav__link">
+      <a href="../../slots/" class="md-nav__link">
         
   
   
@@ -1210,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/chalresp/" class="md-nav__link">
+      <a href="../../slots/chalresp/" class="md-nav__link">
         
   
   
@@ -1238,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/static-password/" class="md-nav__link">
+      <a href="../../slots/static-password/" class="md-nav__link">
         
   
   
@@ -1266,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/hotp/" class="md-nav__link">
+      <a href="../../slots/hotp/" class="md-nav__link">
         
   
   
@@ -1294,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/yubiotp/" class="md-nav__link">
+      <a href="../../slots/yubiotp/" class="md-nav__link">
         
   
   
@@ -1330,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../app-settings/" class="md-nav__link">
+      <a href="../../app-settings/" class="md-nav__link">
         
   
   
@@ -1358,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   
@@ -1386,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../license/" class="md-nav__link">
+      <a href="../../license/" class="md-nav__link">
         
   
   
@@ -1483,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/" class="md-nav__link">
+      <a href="../../../picohsm/" class="md-nav__link">
         
   
   
@@ -1511,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/features/" class="md-nav__link">
+      <a href="../../../picohsm/features/" class="md-nav__link">
         
   
   
@@ -1593,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/first-steps/" class="md-nav__link">
+      <a href="../../../picohsm/first-steps/" class="md-nav__link">
         
   
   
@@ -1621,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/key-generation/" class="md-nav__link">
+      <a href="../../../picohsm/key-generation/" class="md-nav__link">
         
   
   
@@ -1649,7 +1796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/aes/" class="md-nav__link">
+      <a href="../../../picohsm/aes/" class="md-nav__link">
         
   
   
@@ -1677,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/asymmetric-ciphering/" class="md-nav__link">
+      <a href="../../../picohsm/asymmetric-ciphering/" class="md-nav__link">
         
   
   
@@ -1705,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/sign-verify/" class="md-nav__link">
+      <a href="../../../picohsm/sign-verify/" class="md-nav__link">
         
   
   
@@ -1733,7 +1880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/public-key-authentication/" class="md-nav__link">
+      <a href="../../../picohsm/public-key-authentication/" class="md-nav__link">
         
   
   
@@ -1761,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/backup-restore/" class="md-nav__link">
+      <a href="../../../picohsm/backup-restore/" class="md-nav__link">
         
   
   
@@ -1789,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/store-data/" class="md-nav__link">
+      <a href="../../../picohsm/store-data/" class="md-nav__link">
         
   
   
@@ -1817,7 +1964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picohsm/scs3/" class="md-nav__link">
+      <a href="../../../picohsm/scs3/" class="md-nav__link">
         
   
   
@@ -1914,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../picofido/" class="md-nav__link">
+      <a href="../../../picofido/" class="md-nav__link">
         
   
   
@@ -2003,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pico-openpgp/" class="md-nav__link">
+      <a href="../../../pico-openpgp/" class="md-nav__link">
         
   
   
@@ -2058,22 +2205,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pin-configuration" class="md-nav__link">
+  <a href="#prerequisite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PIN configuration
+        Prerequisite
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="PIN configuration">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#io-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I/O flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I/O flow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-pin" class="md-nav__link">
+  <a href="#file-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User PIN
+        File flow
       
     </span>
   </a>
@@ -2081,21 +2250,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#so-pin" class="md-nav__link">
+  <a href="#text-box-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SO PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pin-retries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PIN retries
+        Text box flow
       
     </span>
   </a>
@@ -2108,22 +2266,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-protection-options" class="md-nav__link">
+  <a href="#operation-specific-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced protection options
+        Operation-specific fields
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Advanced protection options">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm-availability-by-key-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithm availability by key type
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm availability by key type">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dkek-shares" class="md-nav__link">
+  <a href="#eddsa-keys-ed25519-ed448" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DKEK shares
+        EdDSA keys (ed25519, ed448)
       
     </span>
   </a>
@@ -2131,10 +2300,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#puk-authentications" class="md-nav__link">
+  <a href="#other-ecc-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PUK authentications
+        Other ECC keys
       
     </span>
   </a>
@@ -2142,10 +2311,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#puk-minimum-authentications" class="md-nav__link">
+  <a href="#rsa-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PUK minimum authentications
+        RSA keys
       
     </span>
   </a>
@@ -2153,10 +2322,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#key-domains" class="md-nav__link">
+  <a href="#aes-keys-symmetric-keys" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key domains
+        AES keys (symmetric keys)
       
     </span>
   </a>
@@ -2165,89 +2334,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Additional options
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reset-retry-counter-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reset retry counter command
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transport-pin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Transport PIN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pka-replaceable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PKA replaceable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#combined-pin-pka-authentication" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Combined PIN &amp; PKA authentication
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#initialization-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Initialization process
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
   
 </li>
       
@@ -2268,119 +2354,153 @@
 
 
 
-<h1 id="pico-hsm-initialization">Pico HSM Initialization<a class="headerlink" href="#pico-hsm-initialization" title="Permanent link">&para;</a></h1>
-<p>This page documents the <strong>security initialization options</strong> available for <strong>Pico HSM</strong> when using PicoKey App.</p>
-<p>These settings control <strong>PIN policies, key protection mechanisms, and recovery options</strong>.</p>
-<p><img alt="Pico HSM initialization" src="../../assets/images/picokeyapp/init-picohsm.png" /></p>
+<h1 id="pico-hsm-cipher">Pico HSM Cipher<a class="headerlink" href="#pico-hsm-cipher" title="Permanent link">&para;</a></h1>
+<p>This page documents <strong>HSM &gt; Management &gt; Cipher</strong> in PicoKey App.</p>
+<p>The <code>Cipher</code> tab executes crypto operations using an existing key (<code>Key ID</code>).</p>
+<p><img alt="Cipher sign" src="../../../assets/images/picokeyapp/hsm/cipher-sign.png" /></p>
 <hr />
-<h2 id="pin-configuration">PIN configuration<a class="headerlink" href="#pin-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="user-pin">User PIN<a class="headerlink" href="#user-pin" title="Permanent link">&para;</a></h3>
-<p>Defines the primary user PIN.</p>
+<h2 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h2>
+<p>Before running cipher operations:</p>
+<ol>
+<li>Go to <code>HSM &gt; Management</code>.</li>
+<li>Enter <code>PIN</code>.</li>
+<li>Click <strong>Unlock</strong>.</li>
+<li>Wait until keys are loaded.</li>
+<li>If needed, expand <code>Session</code> and use <strong>Reload</strong> / <strong>Change PIN</strong>.</li>
+<li>Use a valid <code>Key ID</code>.</li>
+</ol>
+<p><img alt="HSM unlock" src="../../../assets/images/picokeyapp/hsm/unlock.png" />
+<img alt="HSM reload" src="../../../assets/images/picokeyapp/hsm/reload.png" /></p>
+<hr />
+<h2 id="main-controls">Main controls<a class="headerlink" href="#main-controls" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Required for cryptographic operations</li>
-<li>Protects private keys and stored objects</li>
+<li><strong>Operation</strong>: <code>Sign</code>, <code>Decrypt</code>, <code>Encrypt</code>, <code>MAC</code>, <code>KDF</code></li>
+<li><strong>Algorithm</strong>: available values depend on key type and selected operation</li>
+<li><strong>Key ID</strong>: key handle used by the operation</li>
+<li><strong>I/O flow</strong>: <code>File flow</code> or <code>Text box flow</code></li>
+<li><strong>Run Cipher</strong>: executes the selected operation</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The default PIN is <code>648219</code>.</p>
-</div>
 <hr />
-<h3 id="so-pin">SO PIN<a class="headerlink" href="#so-pin" title="Permanent link">&para;</a></h3>
-<p>Defines the Security Officer PIN.</p>
+<h2 id="io-flow">I/O flow<a class="headerlink" href="#io-flow" title="Permanent link">&para;</a></h2>
+<p>Two input/output modes are available.</p>
+<h3 id="file-flow">File flow<a class="headerlink" href="#file-flow" title="Permanent link">&para;</a></h3>
+<p>Use files as input and output.</p>
+<p><img alt="Cipher file flow" src="../../../assets/images/picokeyapp/hsm/cipher-flow-file.png" /></p>
+<p>Behavior:</p>
 <ul>
-<li>Used for administrative operations</li>
-<li>Required for certain reset and recovery commands</li>
+<li>Input is read from <strong>Input file</strong> (or drop zone)</li>
+<li>Output is written to <strong>Output file</strong></li>
+<li><strong>Browse</strong> buttons select input/output paths</li>
+</ul>
+<h3 id="text-box-flow">Text box flow<a class="headerlink" href="#text-box-flow" title="Permanent link">&para;</a></h3>
+<p>Use a single text area for both input and output.</p>
+<p><img alt="Cipher text flow" src="../../../assets/images/picokeyapp/hsm/cipher-flow-text.png" /></p>
+<p>Behavior:</p>
+<ul>
+<li>You write plaintext/data/signing input in the text box</li>
+<li>After execution, the same box is replaced with the result</li>
+<li>The <code>Text input/output is hex</code> toggle switches between plain string mode and hex mode</li>
+</ul>
+<hr />
+<h2 id="operation-specific-fields">Operation-specific fields<a class="headerlink" href="#operation-specific-fields" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>Encrypt</code>/<code>Decrypt</code> with AEAD/stream-like modes can require <strong>IV / Nonce (hex)</strong> and optional <strong>AAD (text or hex)</strong>.</li>
+<li><code>MAC</code> uses file/text input and writes tag output.</li>
+<li><code>KDF</code> can include <strong>Output length (bytes)</strong> and, for PBKDF2, <strong>PBKDF2 iterations</strong>.</li>
+</ul>
+<p><img alt="Cipher encrypt" src="../../../assets/images/picokeyapp/hsm/cipher-encrypt.png" />
+<img alt="Cipher decrypt" src="../../../assets/images/picokeyapp/hsm/cipher-decrypt.png" />
+<img alt="Cipher decrypt RSA" src="../../../assets/images/picokeyapp/hsm/cipher-decrypt-rsa.png" />
+<img alt="Cipher MAC" src="../../../assets/images/picokeyapp/hsm/cipher-mac.png" />
+<img alt="Cipher KDF" src="../../../assets/images/picokeyapp/hsm/cipher-kdf.png" /></p>
+<hr />
+<h2 id="algorithm-availability-by-key-type">Algorithm availability by key type<a class="headerlink" href="#algorithm-availability-by-key-type" title="Permanent link">&para;</a></h2>
+<h3 id="eddsa-keys-ed25519-ed448">EdDSA keys (<code>ed25519</code>, <code>ed448</code>)<a class="headerlink" href="#eddsa-keys-ed25519-ed448" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Only <code>Sign</code> is available.</li>
+<li>The only signature algorithm is <code>EDDSA</code>.</li>
+</ul>
+<h3 id="other-ecc-keys">Other ECC keys<a class="headerlink" href="#other-ecc-keys" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Sign</code> supports:</li>
+<li><code>EC-RAW</code></li>
+<li><code>EC-SHA1</code></li>
+<li><code>EC-SHA224</code></li>
+<li><code>EC-SHA256</code></li>
+<li><code>EC-SHA384</code></li>
+<li><code>EC-SHA512</code></li>
+</ul>
+<h3 id="rsa-keys">RSA keys<a class="headerlink" href="#rsa-keys" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Sign</code> supports:</li>
+<li><code>RSA-RAW</code></li>
+<li><code>RSA-PKCS1</code></li>
+<li><code>RSA-PKCS1-SHA1</code></li>
+<li><code>RSA-PKCS1-SHA224</code></li>
+<li><code>RSA-PKCS1-SHA256</code></li>
+<li><code>RSA-PKCS1-SHA384</code></li>
+<li><code>RSA-PKCS1-SHA512</code></li>
+<li><code>RSA-PSS</code></li>
+<li><code>RSA-PSS-SHA1</code></li>
+<li><code>RSA-PSS-SHA224</code></li>
+<li><code>RSA-PSS-SHA256</code></li>
+<li><code>RSA-PSS-SHA384</code></li>
+<li>
+<p><code>RSA-PSS-SHA512</code></p>
+</li>
+<li>
+<p><code>Decrypt</code> supports:</p>
+</li>
+<li><code>RSA-RAW</code></li>
+<li><code>RSA-PKCS1</code></li>
+<li><code>RSA-OAEP</code></li>
+</ul>
+<h3 id="aes-keys-symmetric-keys">AES keys (symmetric keys)<a class="headerlink" href="#aes-keys-symmetric-keys" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>Encrypt</code> / <code>Decrypt</code> support:</li>
+<li><code>CHACHAPOLY</code></li>
+<li><code>AES-ECB</code></li>
+<li><code>AES-CBC</code> (input length must be a multiple of 16 bytes)</li>
+<li><code>AES-OFB</code></li>
+<li><code>AES-CFB</code></li>
+<li><code>AES-GCM</code></li>
+<li><code>AES-CCM</code></li>
+<li><code>AES-CTR</code></li>
+<li>
+<p><code>AES-XTS</code></p>
+</li>
+<li>
+<p><code>MAC</code> supports:</p>
+</li>
+<li><code>CMAC</code></li>
+<li><code>HMAC-SHA1</code></li>
+<li><code>HMAC-SHA224</code></li>
+<li><code>HMAC-SHA256</code></li>
+<li><code>HMAC-SHA384</code></li>
+<li>
+<p><code>HMAC-SHA512</code></p>
+</li>
+<li>
+<p><code>KDF</code> supports:</p>
+</li>
+<li><code>HKDF-SHA256</code></li>
+<li><code>HKDF-SHA384</code></li>
+<li><code>HKDF-SHA512</code></li>
+<li><code>PBKDF2-SHA1</code></li>
+<li><code>PBKDF2-SHA224</code></li>
+<li><code>PBKDF2-SHA256</code></li>
+<li><code>PBKDF2-SHA384</code></li>
+<li><code>PBKDF2-SHA512</code></li>
+<li><code>X963-SHA1</code></li>
+<li><code>X963-SHA224</code></li>
+<li><code>X963-SHA256</code></li>
+<li><code>X963-SHA384</code></li>
+<li><code>X963-SHA512</code></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The SO PIN should be stored separately from the user PIN.</p>
+<p>If a selected key type does not support an operation, the corresponding algorithms are not offered in the selector.</p>
 </div>
-<hr />
-<h3 id="pin-retries">PIN retries<a class="headerlink" href="#pin-retries" title="Permanent link">&para;</a></h3>
-<p>Configures the number of allowed incorrect PIN attempts.</p>
-<ul>
-<li>Applies to both user PIN and SO PIN</li>
-<li>Exceeding the limit blocks access</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Exceeding retry limits may permanently lock the device.</p>
-</div>
-<hr />
-<h2 id="advanced-protection-options">Advanced protection options<a class="headerlink" href="#advanced-protection-options" title="Permanent link">&para;</a></h2>
-<h3 id="dkek-shares">DKEK shares<a class="headerlink" href="#dkek-shares" title="Permanent link">&para;</a></h3>
-<p>Enables <strong>Distributed Key Encryption Key</strong> (DKEK) shares.</p>
-<ul>
-<li>Splits the encryption key into multiple shares</li>
-<li>Requires a threshold number of shares for recovery</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>DKEK improves resilience against single-point compromise.</p>
-</div>
-<hr />
-<h3 id="puk-authentications">PUK authentications<a class="headerlink" href="#puk-authentications" title="Permanent link">&para;</a></h3>
-<p>Enables PUK-based recovery.</p>
-<ul>
-<li>Allows PIN reset using the PUK</li>
-<li>Adds an additional recovery mechanism</li>
-</ul>
-<hr />
-<h3 id="puk-minimum-authentications">PUK minimum authentications<a class="headerlink" href="#puk-minimum-authentications" title="Permanent link">&para;</a></h3>
-<p>Defines the minimum number of PUK authentications required.</p>
-<ul>
-<li>Used when PUK-based recovery is enabled</li>
-</ul>
-<hr />
-<h3 id="key-domains">Key domains<a class="headerlink" href="#key-domains" title="Permanent link">&para;</a></h3>
-<p>Enables key domain separation.</p>
-<ul>
-<li>Keys are grouped into isolated domains</li>
-<li>Access policies can differ per domain</li>
-</ul>
-<hr />
-<h2 id="additional-options">Additional options<a class="headerlink" href="#additional-options" title="Permanent link">&para;</a></h2>
-<h3 id="reset-retry-counter-command">Reset retry counter command<a class="headerlink" href="#reset-retry-counter-command" title="Permanent link">&para;</a></h3>
-<p>Allows resetting the retry counter via command.</p>
-<ul>
-<li>Useful for controlled recovery scenarios</li>
-</ul>
-<hr />
-<h3 id="transport-pin">Transport PIN<a class="headerlink" href="#transport-pin" title="Permanent link">&para;</a></h3>
-<p>Allows setting a temporary PIN during transport or provisioning.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Transport PINs should be changed immediately after deployment.</p>
-</div>
-<hr />
-<h3 id="pka-replaceable">PKA replaceable<a class="headerlink" href="#pka-replaceable" title="Permanent link">&para;</a></h3>
-<p>Allows replacement of public key authentication data.</p>
-<hr />
-<h3 id="combined-pin-pka-authentication">Combined PIN &amp; PKA authentication<a class="headerlink" href="#combined-pin-pka-authentication" title="Permanent link">&para;</a></h3>
-<p>Requires both PIN and public key authentication.</p>
-<ul>
-<li>Provides multi-factor protection</li>
-</ul>
-<hr />
-<h2 id="initialization-process">Initialization process<a class="headerlink" href="#initialization-process" title="Permanent link">&para;</a></h2>
-<p>After configuring all parameters:</p>
-<ul>
-<li>Click <strong>Initialize</strong></li>
-<li>The device is provisioned with the selected security configuration</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Some options cannot be changed without reinitializing the device.</p>
-</div>
-<hr />
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Pico HSM security initialization defines:</p>
-<ul>
-<li>Access control policies</li>
-<li>Recovery mechanisms</li>
-<li>Cryptographic isolation guarantees</li>
-</ul>
-<p>These options should be configured carefully according to the intended deployment model.</p>
 
 
 
@@ -2436,10 +2556,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
