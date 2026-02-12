@@ -13,6 +13,22 @@
          <lastmod>2026-02-12</lastmod>
     </url>
     <url>
+         <loc>https://docs.picokeys.com/picofido/accounts-oath/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picofido/initialization/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picofido/passkeys/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picofido/slots-otp/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
          <loc>https://docs.picokeys.com/picohsm/</loc>
          <lastmod>2026-02-12</lastmod>
     </url>
@@ -162,22 +178,6 @@
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/hsm/management/</loc>
-         <lastmod>2026-02-12</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.picokeys.com/picokeyapp/slots/chalresp/</loc>
-         <lastmod>2026-02-12</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.picokeys.com/picokeyapp/slots/hotp/</loc>
-         <lastmod>2026-02-12</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.picokeys.com/picokeyapp/slots/static-password/</loc>
-         <lastmod>2026-02-12</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.picokeys.com/picokeyapp/slots/yubiotp/</loc>
          <lastmod>2026-02-12</lastmod>
     </url>
 </urlset>

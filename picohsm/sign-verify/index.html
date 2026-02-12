@@ -2278,6 +2278,118 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/initialization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initialization and policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/passkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/accounts-oath/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accounts (OATH)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/slots-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slots & OTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2579,10 +2691,21 @@ The content is directly based on the official Pico HSM documentation.</p>
 <p>Pico HSM supports digital signatures using asymmetric keys.</p>
 <p>Supported signature types include:</p>
 <ul>
-<li>RSA signatures</li>
-<li>ECDSA signatures</li>
+<li>RSA signatures (RSA-PSS, RSA-PKCS#1 v1.5, Raw RSA)</li>
+<li>ECDSA signatures:</li>
+<li>ECDSA (raw / pre-hashed input)</li>
+<li>ECDSA-SHA1</li>
+<li>ECDSA-SHA224</li>
+<li>ECDSA-SHA256</li>
+<li>ECDSA-SHA384</li>
+<li>ECDSA-SHA512</li>
+<li>EdDSA signatures (Ed25519, Ed448)</li>
 </ul>
 <p>Signing operations are executed inside the device, and private keys never leave the HSM.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Exact mechanisms exposed by <code>pkcs11-tool</code> may vary depending on firmware and middleware versions.</p>
+</div>
 <hr />
 <h2 id="prepare-test-data">Prepare test data<a class="headerlink" href="#prepare-test-data" title="Permanent link">&para;</a></h2>
 <p>Create a test input file:</p>
@@ -2659,7 +2782,7 @@ The content is directly based on the official Pico HSM documentation.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
 <p>Using Pico HSM for digital signatures allows you to:</p>
 <ul>
-<li>Sign data with RSA or ECDSA keys stored securely</li>
+<li>Sign data with RSA, ECDSA, or EdDSA keys stored securely</li>
 <li>Verify signatures using standard OpenSSL tools</li>
 <li>Keep private keys fully isolated inside the HSM</li>
 </ul>

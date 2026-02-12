@@ -2222,6 +2222,118 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/initialization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initialization and policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/passkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/accounts-oath/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accounts (OATH)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picofido/slots-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slots & OTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2462,6 +2574,16 @@
 
 <h1 id="key-generation">Key Generation<a class="headerlink" href="#key-generation" title="Permanent link">&para;</a></h1>
 <h2 id="generate-keys">Generate keys<a class="headerlink" href="#generate-keys" title="Permanent link">&para;</a></h2>
+<p>Supported key families and curves include:</p>
+<ul>
+<li>RSA: 1024 to 4096 bits</li>
+<li>Weierstrass EC (ECDSA/ECDH): secp192r1, secp256r1, secp384r1, secp521r1, secp256k1, brainpoolP256r1, brainpoolP384r1, brainpoolP512r1</li>
+<li>Edwards curves: Ed25519 and Ed448</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Exact algorithm availability depends on firmware version/build and PKCS#11 middleware support.</p>
+</div>
 <p>Generate an RSA key:</p>
 <div class="highlight"><pre><span></span><code>pkcs11-tool<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--keygen<span class="w"> </span><span class="se">\</span>

@@ -10,27 +10,31 @@
       
       
       
-        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/slots/yubiotp/">
+        <link rel="canonical" href="https://docs.picokeys.com/picofido/accounts-oath/">
       
       
+        <link rel="prev" href="../passkeys/">
+      
+      
+        <link rel="next" href="../slots-otp/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Slot: Yubico OTP - PicoKeys Documentation</title>
+        <title>Accounts (OATH) - PicoKeys Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-yubico-otp" class="md-skip">
+        <a href="#accounts-oath" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
+    <a href="../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/picokeys.png" alt="logo">
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: Yubico OTP
+              Accounts (OATH)
             
           </span>
         </div>
@@ -210,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -231,7 +235,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../picokeyapp/" class="md-tabs__link">
           
   
   
@@ -251,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../picohsm/" class="md-tabs__link">
+        <a href="../../picohsm/" class="md-tabs__link">
           
   
   
@@ -267,11 +271,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../picofido/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -291,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../pico-openpgp/" class="md-tabs__link">
+        <a href="../../pico-openpgp/" class="md-tabs__link">
           
   
   
@@ -325,9 +331,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
+    <a href="../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/picokeys.png" alt="logo">
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     PicoKeys Documentation
@@ -342,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -423,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../picokeyapp/" class="md-nav__link">
         
   
   
@@ -451,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/" class="md-nav__link">
+      <a href="../../picokeyapp/concepts/" class="md-nav__link">
         
   
   
@@ -479,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../install/" class="md-nav__link">
+      <a href="../../picokeyapp/install/" class="md-nav__link">
         
   
   
@@ -507,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../first-steps/" class="md-nav__link">
+      <a href="../../picokeyapp/first-steps/" class="md-nav__link">
         
   
   
@@ -535,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
+      <a href="../../picokeyapp/quickstart/" class="md-nav__link">
         
   
   
@@ -563,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
+      <a href="../../picokeyapp/troubleshooting/" class="md-nav__link">
         
   
   
@@ -645,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/" class="md-nav__link">
+      <a href="../../picokeyapp/home/" class="md-nav__link">
         
   
   
@@ -673,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
+      <a href="../../picokeyapp/configuration/" class="md-nav__link">
         
   
   
@@ -701,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/" class="md-nav__link">
+      <a href="../../picokeyapp/security/" class="md-nav__link">
         
   
   
@@ -729,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../firmware/" class="md-nav__link">
+      <a href="../../picokeyapp/firmware/" class="md-nav__link">
         
   
   
@@ -865,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/management/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/management/" class="md-nav__link">
         
   
   
@@ -893,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/passkeys/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/passkeys/" class="md-nav__link">
         
   
   
@@ -921,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/accounts/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/accounts/" class="md-nav__link">
         
   
   
@@ -1003,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/slots/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/" class="md-nav__link">
         
   
   
@@ -1031,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/slots/chalresp/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/chalresp/" class="md-nav__link">
         
   
   
@@ -1059,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/slots/static-password/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/static-password/" class="md-nav__link">
         
   
   
@@ -1087,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/slots/hotp/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/hotp/" class="md-nav__link">
         
   
   
@@ -1115,7 +1121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/slots/yubiotp/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/yubiotp/" class="md-nav__link">
         
   
   
@@ -1159,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fido/initialize/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/initialize/" class="md-nav__link">
         
   
   
@@ -1303,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/management/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/management/" class="md-nav__link">
         
   
   
@@ -1331,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/key-management/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/key-management/" class="md-nav__link">
         
   
   
@@ -1359,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/cipher/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/cipher/" class="md-nav__link">
         
   
   
@@ -1387,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/hd/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/hd/" class="md-nav__link">
         
   
   
@@ -1423,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/initialize/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/initialize/" class="md-nav__link">
         
   
   
@@ -1459,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../app-settings/" class="md-nav__link">
+      <a href="../../picokeyapp/app-settings/" class="md-nav__link">
         
   
   
@@ -1487,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../picokeyapp/about/" class="md-nav__link">
         
   
   
@@ -1515,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../license/" class="md-nav__link">
+      <a href="../../picokeyapp/license/" class="md-nav__link">
         
   
   
@@ -1612,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/" class="md-nav__link">
+      <a href="../../picohsm/" class="md-nav__link">
         
   
   
@@ -1640,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/features/" class="md-nav__link">
+      <a href="../../picohsm/features/" class="md-nav__link">
         
   
   
@@ -1722,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/first-steps/" class="md-nav__link">
+      <a href="../../picohsm/first-steps/" class="md-nav__link">
         
   
   
@@ -1750,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/key-generation/" class="md-nav__link">
+      <a href="../../picohsm/key-generation/" class="md-nav__link">
         
   
   
@@ -1778,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/aes/" class="md-nav__link">
+      <a href="../../picohsm/aes/" class="md-nav__link">
         
   
   
@@ -1806,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/asymmetric-ciphering/" class="md-nav__link">
+      <a href="../../picohsm/asymmetric-ciphering/" class="md-nav__link">
         
   
   
@@ -1834,7 +1840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/sign-verify/" class="md-nav__link">
+      <a href="../../picohsm/sign-verify/" class="md-nav__link">
         
   
   
@@ -1862,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/public-key-authentication/" class="md-nav__link">
+      <a href="../../picohsm/public-key-authentication/" class="md-nav__link">
         
   
   
@@ -1890,7 +1896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/backup-restore/" class="md-nav__link">
+      <a href="../../picohsm/backup-restore/" class="md-nav__link">
         
   
   
@@ -1918,7 +1924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/store-data/" class="md-nav__link">
+      <a href="../../picohsm/store-data/" class="md-nav__link">
         
   
   
@@ -1946,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/scs3/" class="md-nav__link">
+      <a href="../../picohsm/scs3/" class="md-nav__link">
         
   
   
@@ -1986,28 +1992,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -2025,7 +2034,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2043,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picofido/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -2051,6 +2060,220 @@
     
   
     Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initialization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initialization and policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../passkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passkeys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accounts (OATH)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accounts (OATH)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#totp-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TOTP accounts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hotp-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOTP accounts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Account lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security considerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slots-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slots & OTP
   
 
     
@@ -2132,7 +2355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../pico-openpgp/" class="md-nav__link">
+      <a href="../../pico-openpgp/" class="md-nav__link">
         
   
   
@@ -2198,10 +2421,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#activation-mechanism" class="md-nav__link">
+  <a href="#totp-accounts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Activation mechanism
+        TOTP accounts
       
     </span>
   </a>
@@ -2209,71 +2432,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#slot-configuration" class="md-nav__link">
+  <a href="#hotp-accounts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Slot configuration
+        HOTP accounts
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Slot configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#public-id" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Public ID
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#private-id-hex" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Private ID (hex)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-hex" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key (hex)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#append-enter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Append Enter
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#save-and-cancel" class="md-nav__link">
+  <a href="#account-lifecycle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Save and cancel
+        Account lifecycle
       
     </span>
   </a>
@@ -2285,28 +2458,6 @@
     <span class="md-ellipsis">
       
         Security considerations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#typical-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Typical use cases
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#limitations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Limitations
       
     </span>
   </a>
@@ -2330,123 +2481,55 @@
 
 
 
-<h1 id="slot-yubico-otp">Slot: Yubico OTP<a class="headerlink" href="#slot-yubico-otp" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>Yubico OTP slot type</strong> available in PicoKeyApp.</p>
-<p>The Yubico OTP slot generates one-time passwords following the <strong>Yubico OTP specification</strong> and emits them as <strong>keyboard input</strong> when triggered.</p>
-<p><img alt="Yubico OTP slot" src="../../assets/images/picokeyapp/slots/slots-yubiotp.png" /></p>
+<h1 id="accounts-oath">Accounts (OATH)<a class="headerlink" href="#accounts-oath" title="Permanent link">&para;</a></h1>
+<p>This page describes the OATH account model in Pico FIDO (TOTP/HOTP).</p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Yubico OTP slot allows the device to:</p>
+<p>Pico FIDO can store OATH accounts and generate one-time codes for:</p>
 <ul>
-<li>Store Yubico-compatible identifiers and secret keys</li>
-<li>Generate Yubico OTP values</li>
-<li>Emit the OTP as keystrokes</li>
-<li>Behave as a USB keyboard when activated</li>
+<li>TOTP (time-based OTP)</li>
+<li>HOTP (counter-based OTP)</li>
 </ul>
-<p>The generated OTPs are compatible with systems expecting standard Yubico OTP authentication.</p>
+<p>Accounts are typically identified by issuer + account label and are managed on-device.</p>
 <hr />
-<h2 id="activation-mechanism">Activation mechanism<a class="headerlink" href="#activation-mechanism" title="Permanent link">&para;</a></h2>
-<p>The Yubico OTP slot is activated through the <strong>OTP / button interface</strong>.</p>
-<p>Activation works as follows:</p>
+<h2 id="totp-accounts">TOTP accounts<a class="headerlink" href="#totp-accounts" title="Permanent link">&para;</a></h2>
+<p>TOTP codes are derived from:</p>
 <ul>
-<li>The user presses the BOOTSEL button <strong>N times</strong></li>
-<li><code>N</code> corresponds to the slot number</li>
-<li>The device generates a Yubico OTP</li>
-<li>The OTP is typed on the host system as keyboard input</li>
+<li>Shared secret</li>
+<li>Time step (period, usually 30 seconds)</li>
+<li>Output digit length (typically 6 or 8 digits)</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>No additional software is required on the host beyond USB HID keyboard support.</p>
-</div>
+<p>Use TOTP when both authenticator and verifier share clock-based code rotation.</p>
 <hr />
-<h2 id="slot-configuration">Slot configuration<a class="headerlink" href="#slot-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="public-id">Public ID<a class="headerlink" href="#public-id" title="Permanent link">&para;</a></h3>
-<p>Defines the <strong>public identifier</strong> for the Yubico OTP.</p>
+<h2 id="hotp-accounts">HOTP accounts<a class="headerlink" href="#hotp-accounts" title="Permanent link">&para;</a></h2>
+<p>HOTP codes are derived from:</p>
 <ul>
-<li>Sent in clear as part of the OTP</li>
-<li>Used by the verification service to identify the device</li>
-<li>Limited in length by the Yubico specification</li>
+<li>Shared secret</li>
+<li>Moving counter</li>
+<li>Output digit length (typically 6 or 8 digits)</li>
 </ul>
-<hr />
-<h3 id="private-id-hex">Private ID (hex)<a class="headerlink" href="#private-id-hex" title="Permanent link">&para;</a></h3>
-<p>Defines the <strong>private identifier</strong>.</p>
-<ul>
-<li>Stored securely on the device</li>
-<li>Used internally during OTP generation</li>
-<li>Must be provided in hexadecimal format</li>
-</ul>
+<p>Use HOTP when the verifier expects counter-synchronized OTP values.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The private ID cannot be retrieved once stored.</p>
+<p>HOTP verification depends on counter synchronization between device and server.</p>
 </div>
 <hr />
-<h3 id="key-hex">Key (hex)<a class="headerlink" href="#key-hex" title="Permanent link">&para;</a></h3>
-<p>Defines the <strong>secret key</strong> used to generate the Yubico OTP.</p>
+<h2 id="account-lifecycle">Account lifecycle<a class="headerlink" href="#account-lifecycle" title="Permanent link">&para;</a></h2>
+<p>Typical lifecycle operations are:</p>
 <ul>
-<li>Stored securely on the device</li>
-<li>Must be provided in hexadecimal format</li>
-<li>Never exposed outside the device</li>
+<li>Create account</li>
+<li>List account metadata</li>
+<li>Generate/emit OTP</li>
+<li>Delete account</li>
 </ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Losing the secret key prevents OTP verification and cannot be recovered.</p>
-</div>
-<hr />
-<h3 id="append-enter">Append Enter<a class="headerlink" href="#append-enter" title="Permanent link">&para;</a></h3>
-<p>When enabled:</p>
-<ul>
-<li>An Enter key is sent after the OTP</li>
-<li>Useful for automatic form submission</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Enable this option when authenticating on web login forms.</p>
-</div>
-<hr />
-<h2 id="save-and-cancel">Save and cancel<a class="headerlink" href="#save-and-cancel" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Save</strong> stores the Yubico OTP configuration permanently</li>
-<li><strong>Cancel</strong> discards the configuration</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Saving overwrites any existing slot configuration.</p>
-</div>
+<p>When account storage is locked by policy, unlock/verification may be required before listing or using accounts.</p>
 <hr />
 <h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
-<p>The Yubico OTP slot:</p>
 <ul>
-<li>Follows Yubico OTP specifications</li>
-<li>Does not expose secrets over software interfaces</li>
-<li>Emits OTPs only as keyboard input</li>
+<li>Secrets are stored on-device.</li>
+<li>Protect account management with PIN/policy where available.</li>
+<li>Prefer TOTP/HOTP only for services that still require OTP workflows; use passkeys where possible for phishing-resistant auth.</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Anyone with physical access to the device may trigger OTP generation.</p>
-</div>
-<hr />
-<h2 id="typical-use-cases">Typical use cases<a class="headerlink" href="#typical-use-cases" title="Permanent link">&para;</a></h2>
-<p>Common use cases include:</p>
-<ul>
-<li>Authentication against Yubico-compatible servers</li>
-<li>Legacy systems using Yubico OTP</li>
-<li>Environments requiring keyboard-based OTP input</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Ensure the verification backend is correctly configured with matching identifiers and keys.</p>
-</div>
-<hr />
-<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Requires a compatible Yubico OTP verification service</li>
-<li>Keyboard-based emission only</li>
-<li>No host-side confirmation from the device</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This slot is intended for compatibility with existing Yubico OTP infrastructures.</p>
-</div>
 
 
 
@@ -2502,10 +2585,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
