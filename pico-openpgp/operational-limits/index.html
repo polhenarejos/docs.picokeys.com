@@ -10,31 +10,29 @@
       
       
       
-        <link rel="canonical" href="https://docs.picokeys.com/picokeyapp/fido/passkeys/">
+        <link rel="canonical" href="https://docs.picokeys.com/pico-openpgp/operational-limits/">
       
       
-        <link rel="prev" href="../dashboard/">
+        <link rel="prev" href="../pin-and-roles/">
       
-      
-        <link rel="next" href="../user-pin/">
       
       
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Passkeys - PicoKeys Documentation</title>
+        <title>Operational limits - PicoKeys Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#passkeys" class="md-skip">
+        <a href="#operational-limits" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +92,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
+    <a href="../.." title="PicoKeys Documentation" class="md-header__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/picokeys.png" alt="logo">
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Passkeys
+              Operational limits
             
           </span>
         </div>
@@ -214,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -231,13 +229,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../picokeyapp/" class="md-tabs__link">
           
   
   
@@ -257,7 +253,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../picohsm/" class="md-tabs__link">
+        <a href="../../picohsm/" class="md-tabs__link">
           
   
   
@@ -277,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../picofido/" class="md-tabs__link">
+        <a href="../../picofido/" class="md-tabs__link">
           
   
   
@@ -293,11 +289,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../pico-openpgp/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -331,9 +329,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
+    <a href="../.." title="PicoKeys Documentation" class="md-nav__button md-logo" aria-label="PicoKeys Documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/picokeys.png" alt="logo">
+  <img src="../../assets/images/picokeys.png" alt="logo">
 
     </a>
     PicoKeys Documentation
@@ -348,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -372,31 +370,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -414,7 +409,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -432,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../picokeyapp/" class="md-nav__link">
         
   
   
@@ -460,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/" class="md-nav__link">
+      <a href="../../picokeyapp/concepts/" class="md-nav__link">
         
   
   
@@ -488,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../install/" class="md-nav__link">
+      <a href="../../picokeyapp/install/" class="md-nav__link">
         
   
   
@@ -516,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../first-steps/" class="md-nav__link">
+      <a href="../../picokeyapp/first-steps/" class="md-nav__link">
         
   
   
@@ -544,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../quickstart/" class="md-nav__link">
+      <a href="../../picokeyapp/quickstart/" class="md-nav__link">
         
   
   
@@ -572,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../troubleshooting/" class="md-nav__link">
+      <a href="../../picokeyapp/troubleshooting/" class="md-nav__link">
         
   
   
@@ -600,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/" class="md-nav__link">
+      <a href="../../picokeyapp/release-notes/" class="md-nav__link">
         
   
   
@@ -625,31 +620,28 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
         
           
-          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
             
   
   
@@ -667,7 +659,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -685,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/" class="md-nav__link">
+      <a href="../../picokeyapp/home/" class="md-nav__link">
         
   
   
@@ -713,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
+      <a href="../../picokeyapp/configuration/" class="md-nav__link">
         
   
   
@@ -741,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/" class="md-nav__link">
+      <a href="../../picokeyapp/security/" class="md-nav__link">
         
   
   
@@ -769,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../firmware/" class="md-nav__link">
+      <a href="../../picokeyapp/firmware/" class="md-nav__link">
         
   
   
@@ -794,8 +786,6 @@
                 
   
   
-    
-  
   
   
     
@@ -808,11 +798,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_5" >
         
           
           <label class="md-nav__link" for="__nav_2_8_5" id="__nav_2_8_5_label" tabindex="0">
@@ -833,7 +825,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_8_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -851,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dashboard/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/dashboard/" class="md-nav__link">
         
   
   
@@ -876,37 +868,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Passkeys
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../picokeyapp/fido/passkeys/" class="md-nav__link">
         
   
   
@@ -922,81 +887,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#per-credential-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Per-credential actions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#credential-details-shown" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Credential details shown
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filtering-and-bulk-operations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Filtering and bulk operations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#locked-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Locked state
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1063,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-pin/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/user-pin/" class="md-nav__link">
         
   
   
@@ -1153,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/" class="md-nav__link">
         
   
   
@@ -1181,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/chalresp/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/chalresp/" class="md-nav__link">
         
   
   
@@ -1209,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/static-password/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/static-password/" class="md-nav__link">
         
   
   
@@ -1237,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/hotp/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/hotp/" class="md-nav__link">
         
   
   
@@ -1265,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slots/yubiotp/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/slots/yubiotp/" class="md-nav__link">
         
   
   
@@ -1301,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../accounts/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/accounts/" class="md-nav__link">
         
   
   
@@ -1329,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../initialize/" class="md-nav__link">
+      <a href="../../picokeyapp/fido/initialize/" class="md-nav__link">
         
   
   
@@ -1473,7 +1363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/key-management/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/key-management/" class="md-nav__link">
         
   
   
@@ -1501,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/cipher/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/cipher/" class="md-nav__link">
         
   
   
@@ -1529,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/hd/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/hd/" class="md-nav__link">
         
   
   
@@ -1565,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hsm/initialize/" class="md-nav__link">
+      <a href="../../picokeyapp/hsm/initialize/" class="md-nav__link">
         
   
   
@@ -1655,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openpgp/management/" class="md-nav__link">
+      <a href="../../picokeyapp/openpgp/management/" class="md-nav__link">
         
   
   
@@ -1683,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openpgp/piv/" class="md-nav__link">
+      <a href="../../picokeyapp/openpgp/piv/" class="md-nav__link">
         
   
   
@@ -1719,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../audit/" class="md-nav__link">
+      <a href="../../picokeyapp/audit/" class="md-nav__link">
         
   
   
@@ -1747,7 +1637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../app-settings/" class="md-nav__link">
+      <a href="../../picokeyapp/app-settings/" class="md-nav__link">
         
   
   
@@ -1775,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../picokeyapp/about/" class="md-nav__link">
         
   
   
@@ -1803,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../license/" class="md-nav__link">
+      <a href="../../picokeyapp/license/" class="md-nav__link">
         
   
   
@@ -1900,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/" class="md-nav__link">
+      <a href="../../picohsm/" class="md-nav__link">
         
   
   
@@ -1928,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/features/" class="md-nav__link">
+      <a href="../../picohsm/features/" class="md-nav__link">
         
   
   
@@ -2010,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/first-steps/" class="md-nav__link">
+      <a href="../../picohsm/first-steps/" class="md-nav__link">
         
   
   
@@ -2038,7 +1928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/key-generation/" class="md-nav__link">
+      <a href="../../picohsm/key-generation/" class="md-nav__link">
         
   
   
@@ -2066,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/aes/" class="md-nav__link">
+      <a href="../../picohsm/aes/" class="md-nav__link">
         
   
   
@@ -2094,7 +1984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/asymmetric-ciphering/" class="md-nav__link">
+      <a href="../../picohsm/asymmetric-ciphering/" class="md-nav__link">
         
   
   
@@ -2122,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/sign-verify/" class="md-nav__link">
+      <a href="../../picohsm/sign-verify/" class="md-nav__link">
         
   
   
@@ -2150,7 +2040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/public-key-authentication/" class="md-nav__link">
+      <a href="../../picohsm/public-key-authentication/" class="md-nav__link">
         
   
   
@@ -2178,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/backup-restore/" class="md-nav__link">
+      <a href="../../picohsm/backup-restore/" class="md-nav__link">
         
   
   
@@ -2206,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/store-data/" class="md-nav__link">
+      <a href="../../picohsm/store-data/" class="md-nav__link">
         
   
   
@@ -2234,7 +2124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picohsm/scs3/" class="md-nav__link">
+      <a href="../../picohsm/scs3/" class="md-nav__link">
         
   
   
@@ -2331,7 +2221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picofido/" class="md-nav__link">
+      <a href="../../picofido/" class="md-nav__link">
         
   
   
@@ -2359,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picofido/initialization/" class="md-nav__link">
+      <a href="../../picofido/initialization/" class="md-nav__link">
         
   
   
@@ -2387,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picofido/passkeys/" class="md-nav__link">
+      <a href="../../picofido/passkeys/" class="md-nav__link">
         
   
   
@@ -2415,7 +2305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picofido/accounts-oath/" class="md-nav__link">
+      <a href="../../picofido/accounts-oath/" class="md-nav__link">
         
   
   
@@ -2443,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picofido/slots-otp/" class="md-nav__link">
+      <a href="../../picofido/slots-otp/" class="md-nav__link">
         
   
   
@@ -2525,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../picofido/vendor-extensions/" class="md-nav__link">
+      <a href="../../picofido/vendor-extensions/" class="md-nav__link">
         
   
   
@@ -2565,28 +2455,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -2604,7 +2497,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2622,7 +2515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../pico-openpgp/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -2650,7 +2543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../pico-openpgp/compatibility-notes/" class="md-nav__link">
+      <a href="../compatibility-notes/" class="md-nav__link">
         
   
   
@@ -2678,7 +2571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../pico-openpgp/pin-and-roles/" class="md-nav__link">
+      <a href="../pin-and-roles/" class="md-nav__link">
         
   
   
@@ -2703,10 +2596,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../pico-openpgp/operational-limits/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operational limits
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2722,6 +2642,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#performance-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance profile
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capacity-and-workflow-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capacity and workflow planning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-priority-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting priority order
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2761,10 +2756,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#performance-profile" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Performance profile
       
     </span>
   </a>
@@ -2772,10 +2767,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#per-credential-actions" class="md-nav__link">
+  <a href="#tooling-limitations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Per-credential actions
+        Tooling limitations
       
     </span>
   </a>
@@ -2783,10 +2778,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#credential-details-shown" class="md-nav__link">
+  <a href="#environment-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Credential details shown
+        Environment dependencies
       
     </span>
   </a>
@@ -2794,10 +2789,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-and-bulk-operations" class="md-nav__link">
+  <a href="#capacity-and-workflow-planning" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Filtering and bulk operations
+        Capacity and workflow planning
       
     </span>
   </a>
@@ -2805,10 +2800,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#locked-state" class="md-nav__link">
+  <a href="#troubleshooting-priority-order" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Locked state
+        Troubleshooting priority order
       
     </span>
   </a>
@@ -2832,55 +2827,57 @@
 
 
 
-<h1 id="passkeys">Passkeys<a class="headerlink" href="#passkeys" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>Passkeys panel</strong> in PicoKey App FIDO management.</p>
-<p><img alt="Passkeys view" src="../../../assets/images/picokeyapp/fido/passkeys.png" /></p>
+<h1 id="operational-limits">Operational limits<a class="headerlink" href="#operational-limits" title="Permanent link">&para;</a></h1>
+<p>This page captures practical limits and expectations for Pico OpenPGP operations.</p>
 <hr />
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Passkeys panel lists resident FIDO credentials stored on the device and their metadata.</p>
+<h2 id="performance-profile">Performance profile<a class="headerlink" href="#performance-profile" title="Permanent link">&para;</a></h2>
+<p>Operation time depends on algorithm and key size.</p>
+<p>In general:</p>
 <ul>
-<li>Credential source and relying party information</li>
-<li>Username / user handle when available</li>
-<li>Per-credential management actions</li>
+<li>ECC operations are faster</li>
+<li>Larger RSA keys increase latency significantly</li>
+</ul>
+<p>Plan UX and automation timeouts accordingly, especially for high-bit RSA workflows.</p>
+<hr />
+<h2 id="tooling-limitations">Tooling limitations<a class="headerlink" href="#tooling-limitations" title="Permanent link">&para;</a></h2>
+<p>Not every client tool exposes every card capability.</p>
+<p>For some advanced operations, support may depend on:</p>
+<ul>
+<li>specific middleware versions</li>
+<li>PKCS#11 module behavior</li>
+<li>direct APDU tooling</li>
+</ul>
+<p>UI availability is not always equivalent to firmware capability availability.</p>
+<p>If a feature appears missing in one client, verify with an alternative tool path before concluding firmware regression.</p>
+<hr />
+<h2 id="environment-dependencies">Environment dependencies<a class="headerlink" href="#environment-dependencies" title="Permanent link">&para;</a></h2>
+<p>Runtime behavior is affected by:</p>
+<ul>
+<li>host OS smart-card stack</li>
+<li>PC/SC service state</li>
+<li>USB reader/device recognition</li>
+<li>board/firmware configuration choices</li>
+</ul>
+<p>Treat these dependencies as part of deployment validation, not as optional post-setup checks.</p>
+<hr />
+<h2 id="capacity-and-workflow-planning">Capacity and workflow planning<a class="headerlink" href="#capacity-and-workflow-planning" title="Permanent link">&para;</a></h2>
+<p>For reliable operations in production-like environments:</p>
+<ul>
+<li>Prefer ECC when latency matters.</li>
+<li>Reserve large RSA key operations for explicit cases that require them.</li>
+<li>Budget time for unlock/retry/recovery flows in automation pipelines.</li>
+<li>Separate “fast path” daily operations from “maintenance path” admin operations.</li>
 </ul>
 <hr />
-<h2 id="per-credential-actions">Per-credential actions<a class="headerlink" href="#per-credential-actions" title="Permanent link">&para;</a></h2>
-<p>Each credential row can expose these actions:</p>
-<ul>
-<li><strong>Copy Credential ID</strong></li>
-<li><strong>Export passkey record</strong> (<code>JSON</code> or <code>CSV</code>)</li>
-<li><strong>Delete</strong></li>
-</ul>
-<p>The export action stores passkey metadata (for example RP, user fields, and credential ID) for administration and backup workflows.</p>
-<p>For credentials that support it, the panel also provides a <strong>Large Blob</strong> management action.</p>
-<p><img alt="Large Blob management" src="../../../assets/images/picokeyapp/fido/largeblobs.png" /></p>
-<hr />
-<h2 id="credential-details-shown">Credential details shown<a class="headerlink" href="#credential-details-shown" title="Permanent link">&para;</a></h2>
-<p>The Passkeys list includes additional metadata to help administration and troubleshooting:</p>
-<ul>
-<li>Creation date</li>
-<li>Curve type / key algorithm</li>
-<li><code>credProtect</code> policy in use</li>
-<li>Signature counter status (enabled/active or not)</li>
-</ul>
-<hr />
-<h2 id="filtering-and-bulk-operations">Filtering and bulk operations<a class="headerlink" href="#filtering-and-bulk-operations" title="Permanent link">&para;</a></h2>
-<p>The panel supports filtering credentials by common fields, including:</p>
-<ul>
-<li>RP (Relying Party)</li>
-<li>User</li>
-<li>Credential ID</li>
-<li>Other searchable credential fields shown in the table</li>
-</ul>
-<p>Administrative operations also include deleting all credentials for a specific RP.</p>
-<hr />
-<h2 id="locked-state">Locked state<a class="headerlink" href="#locked-state" title="Permanent link">&para;</a></h2>
-<p>When credentials are protected by PIN or policy, the panel requires user verification before showing sensitive data.</p>
-<p><img alt="Passkeys unlock" src="../../../assets/images/picokeyapp/fido/passkeys-unlock.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Exact fields and actions depend on the installed firmware.</p>
-</div>
+<h2 id="troubleshooting-priority-order">Troubleshooting priority order<a class="headerlink" href="#troubleshooting-priority-order" title="Permanent link">&para;</a></h2>
+<p>When operations fail or are unexpectedly slow, use this order:</p>
+<ol>
+<li>Confirm device/session state (connected, unlocked, correct role context).</li>
+<li>Confirm host middleware health (PC/SC, reader visibility).</li>
+<li>Re-test with a second client/tooling path.</li>
+<li>Then inspect firmware-specific behavior.</li>
+</ol>
+<p>This ordering reduces false positives and shortens incident triage time.</p>
 
 
 
@@ -2936,10 +2933,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -9,6 +9,18 @@
          <lastmod>2026-04-07</lastmod>
     </url>
     <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/compatibility-notes/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/operational-limits/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/pin-and-roles/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
          <loc>https://docs.picokeys.com/picofido/</loc>
          <lastmod>2026-04-07</lastmod>
     </url>
@@ -26,6 +38,10 @@
     </url>
     <url>
          <loc>https://docs.picokeys.com/picofido/slots-otp/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picofido/vendor-extensions/</loc>
          <lastmod>2026-04-07</lastmod>
     </url>
     <url>
