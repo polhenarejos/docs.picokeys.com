@@ -2,182 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.picokeys.com/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/pico-openpgp/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picofido/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picofido/accounts-oath/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picofido/initialization/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picofido/passkeys/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picofido/slots-otp/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/aes/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/asymmetric-ciphering/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/backup-restore/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/features/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/first-steps/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/key-generation/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/public-key-authentication/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/scs3/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/sign-verify/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picohsm/store-data/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/about/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/app-settings/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picokeyapp/audit/</loc>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/concepts/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/configuration/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/firmware/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/first-steps/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/home/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/install/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/license/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/quickstart/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picokeyapp/release-notes/</loc>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/security/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/troubleshooting/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/accounts/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picokeyapp/fido/dashboard/</loc>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/initialize/</loc>
-         <lastmod>2026-02-12</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.picokeys.com/picokeyapp/fido/management/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/passkeys/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/slots/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picokeyapp/fido/user-pin/</loc>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/slots/chalresp/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/slots/hotp/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/slots/static-password/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/fido/slots/yubiotp/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/hsm/cipher/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/hsm/hd/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/hsm/initialize/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/hsm/key-management/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <lastmod>2026-04-07</lastmod>
     </url>
     <url>
-         <loc>https://docs.picokeys.com/picokeyapp/hsm/management/</loc>
-         <lastmod>2026-02-12</lastmod>
+         <loc>https://docs.picokeys.com/picokeyapp/openpgp/management/</loc>
+         <lastmod>2026-04-07</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picokeyapp/openpgp/piv/</loc>
+         <lastmod>2026-04-07</lastmod>
     </url>
 </urlset>
