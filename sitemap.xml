@@ -13,11 +13,35 @@
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/daily-use/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/key-management/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/openpgp-card/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
          <loc>https://docs.picokeys.com/pico-openpgp/operational-limits/</loc>
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
          <loc>https://docs.picokeys.com/pico-openpgp/pin-and-roles/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/piv/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/recovery-reset/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/pico-openpgp/troubleshooting/</loc>
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
@@ -29,7 +53,15 @@
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
+         <loc>https://docs.picokeys.com/picofido/git/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
          <loc>https://docs.picokeys.com/picofido/initialization/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picofido/limitations/</loc>
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
@@ -37,7 +69,19 @@
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
+         <loc>https://docs.picokeys.com/picofido/quickstart/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
          <loc>https://docs.picokeys.com/picofido/slots-otp/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picofido/ssh/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/picofido/troubleshooting/</loc>
          <lastmod>2026-06-15</lastmod>
     </url>
     <url>
@@ -210,6 +254,18 @@
     </url>
     <url>
          <loc>https://docs.picokeys.com/picokeyapp/openpgp/piv/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/production/anti-rollback/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/production/otp-fuses/</loc>
+         <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.picokeys.com/security/threat-model/</loc>
          <lastmod>2026-06-15</lastmod>
     </url>
 </urlset>
