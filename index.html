@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentation for Pico HSM, Pico FIDO, Pico OpenPGP and PicoKeyApp">
+        <meta name="description" content="Firmware-first documentation for Pico FIDO, Pico OpenPGP, and Pico HSM">
       
       
       
@@ -14,7 +14,7 @@
       
       
       
-        <link rel="next" href="picokeyapp/">
+        <link rel="next" href="picofido/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>PicoKeys Documentation</title>
+        <title>Overview - PicoKeys Documentation</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Overview
             
           </span>
         </div>
@@ -213,53 +213,14 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="." class="md-tabs__link">
+          
+  
   
   Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="picokeyapp/" class="md-tabs__link">
-          
-  
-  
-  PicoKey App
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="picohsm/" class="md-tabs__link">
-          
-  
-  
-  Pico HSM
 
         </a>
       </li>
@@ -307,6 +268,46 @@
   
 
       
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="picohsm/" class="md-tabs__link">
+          
+  
+  
+  Pico HSM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="picokeyapp/" class="md-tabs__link">
+          
+  
+  
+  PicoKey App
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -347,6 +348,63 @@
   
   
   
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -362,7 +420,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Overview
   
 
     
@@ -380,7 +438,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Overview
   
 
     
@@ -406,22 +464,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
+  <a href="#start-here" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture overview
+        Start here
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Architecture overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ecosystem-plainly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The ecosystem, plainly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-firmware-should-you-pick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which firmware should you pick?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which firmware should you pick?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-picokey-app-desktop-application" class="md-nav__link">
+  <a href="#pico-fido" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. PicoKey App (desktop application)
+        Pico FIDO
       
     </span>
   </a>
@@ -429,10 +509,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-firmware-variants-device-functionality" class="md-nav__link">
+  <a href="#pico-openpgp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Firmware variants (device functionality)
+        Pico OpenPGP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pico-hsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pico HSM
       
     </span>
   </a>
@@ -445,10 +536,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#typical-usage-flow" class="md-nav__link">
+  <a href="#security-baseline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typical usage flow
+        Security baseline
       
     </span>
   </a>
@@ -456,10 +547,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-of-this-documentation" class="md-nav__link">
+  <a href="#production-hardening" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scope of this documentation
+        Production hardening
       
     </span>
   </a>
@@ -467,10 +558,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-help" class="md-nav__link">
+  <a href="#how-to-read-the-docs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting help
+        How to read the docs
       
     </span>
   </a>
@@ -480,6 +571,163 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Production hardening
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Production hardening
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="production/otp-fuses.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OTP fuses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="production/anti-rollback.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-rollback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="security/threat-model.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threat model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -517,7 +765,7 @@
   <span class="md-ellipsis">
     
   
-    PicoKey App
+    Pico FIDO
   
 
     
@@ -530,6 +778,1209 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pico FIDO
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/quickstart.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/initialization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup and policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the device
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Using the device
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/passkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FIDO2 / WebAuthn / U2F
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/ssh.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/git.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git signing + auth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/accounts-oath/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OATH
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/slots-otp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/vendor-extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor extensions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/limitations.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picofido/troubleshooting.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pico OpenPGP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pico OpenPGP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/compatibility-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Host setup and compatibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/pin-and-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PINs and roles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the device
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Using the device
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/openpgp-card.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenPGP card
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/piv.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PIV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/key-management.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Key management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/daily-use.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/recovery-reset.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recovery and reset
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/operational-limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operational limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pico-openpgp/troubleshooting.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pico HSM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pico HSM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/first-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capability map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/key-generation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Key generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/sign-verify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sign and verify
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/asymmetric-ciphering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymmetric ciphering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/aes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AES
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/backup-restore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup and restore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/store-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Store data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/public-key-authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Public key authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="picohsm/scs3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smart Card Shell 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PicoKey App
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -757,10 +2208,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8" >
         
           
-          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
             
   
   
@@ -778,8 +2229,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -923,10 +2374,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_8_5" id="__nav_2_8_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8_5" id="__nav_5_8_5_label" tabindex="0">
             
   
   
@@ -944,8 +2395,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1033,10 +2484,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_5_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_2_8_5_3" id="__nav_2_8_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8_5_3" id="__nav_5_8_5_3_label" tabindex="0">
             
   
   
@@ -1054,8 +2505,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_8_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8_5_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_8_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_5_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1123,10 +2574,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_5_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_8_5_4" id="__nav_2_8_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8_5_4" id="__nav_5_8_5_4_label" tabindex="0">
             
   
   
@@ -1144,8 +2595,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_8_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8_5_4">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_8_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_5_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1389,10 +2840,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8_6" >
         
           
-          <label class="md-nav__link" for="__nav_2_8_6" id="__nav_2_8_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8_6" id="__nav_5_8_6_label" tabindex="0">
             
   
   
@@ -1410,8 +2861,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_6">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1443,10 +2894,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_6_1" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8_6_1" >
         
           
-          <label class="md-nav__link" for="__nav_2_8_6_1" id="__nav_2_8_6_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8_6_1" id="__nav_5_8_6_1_label" tabindex="0">
             
   
   
@@ -1464,8 +2915,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_8_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8_6_1">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_8_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_6_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1625,10 +3076,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_8_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8_7" >
         
           
-          <label class="md-nav__link" for="__nav_2_8_7" id="__nav_2_8_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_8_7" id="__nav_5_8_7_label" tabindex="0">
             
   
   
@@ -1646,8 +3097,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1848,901 +3299,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pico HSM
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Pico HSM
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/features/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Supported features
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Usage
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Usage
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/first-steps/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    First steps
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/key-generation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Key Generation
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/aes/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    AES
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/asymmetric-ciphering/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Asymmetric Ciphering
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/sign-verify/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Sign & Verify
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/public-key-authentication/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Public Key Authentication
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/backup-restore/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Backup & Restore
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/store-data/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Store Data
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picohsm/scs3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Smart Card Shell 3
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pico FIDO
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Pico FIDO
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picofido/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picofido/initialization/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Initialization and policy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picofido/passkeys/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Passkeys
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picofido/accounts-oath/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Accounts (OATH)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picofido/slots-otp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Slots & OTP
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Vendor Extensions
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Vendor Extensions
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="picofido/vendor-extensions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    User PIN
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pico OpenPGP
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Pico OpenPGP
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="pico-openpgp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="pico-openpgp/compatibility-notes/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Compatibility notes
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="pico-openpgp/pin-and-roles/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    PIN and roles
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="pico-openpgp/operational-limits/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Operational limits
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -2770,22 +3326,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
+  <a href="#start-here" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture overview
+        Start here
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Architecture overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-ecosystem-plainly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The ecosystem, plainly
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-firmware-should-you-pick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which firmware should you pick?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Which firmware should you pick?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-picokey-app-desktop-application" class="md-nav__link">
+  <a href="#pico-fido" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. PicoKey App (desktop application)
+        Pico FIDO
       
     </span>
   </a>
@@ -2793,10 +3371,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-firmware-variants-device-functionality" class="md-nav__link">
+  <a href="#pico-openpgp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Firmware variants (device functionality)
+        Pico OpenPGP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pico-hsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pico HSM
       
     </span>
   </a>
@@ -2809,10 +3398,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#typical-usage-flow" class="md-nav__link">
+  <a href="#security-baseline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typical usage flow
+        Security baseline
       
     </span>
   </a>
@@ -2820,10 +3409,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scope-of-this-documentation" class="md-nav__link">
+  <a href="#production-hardening" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scope of this documentation
+        Production hardening
       
     </span>
   </a>
@@ -2831,10 +3420,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-help" class="md-nav__link">
+  <a href="#how-to-read-the-docs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting help
+        How to read the docs
       
     </span>
   </a>
@@ -2859,99 +3448,84 @@
 
 
 <h1 id="picokeys-documentation">PicoKeys Documentation<a class="headerlink" href="#picokeys-documentation" title="Permanent link">&para;</a></h1>
-<p>This documentation covers the <strong>PicoKeys ecosystem</strong>, including the desktop application and the different firmware variants available for PicoKeys devices.</p>
-<p>The PicoKeys ecosystem is composed of:</p>
+<p>This site documents the firmware families in the PicoKeys ecosystem first, and the management application second.</p>
+<p>If you are here to decide which firmware to use, start with the firmware sections below. If you are already managing a device through the desktop app, keep the app pages as an operational reference, not as the source of truth for product capabilities.</p>
+<h2 id="start-here">Start here<a class="headerlink" href="#start-here" title="Permanent link">&para;</a></h2>
 <ul>
-<li>A <strong>desktop application</strong> used to manage devices</li>
-<li>One or more <strong>firmware variants</strong> that define the actual functionality of the device</li>
+<li><a href="picofido/">Pico FIDO</a>: passkeys, FIDO2, U2F, OATH, OTP slots, and vendor extensions</li>
+<li><a href="pico-openpgp/">Pico OpenPGP</a>: USB CCID smart card workflows for GnuPG, OpenSC, and PKCS#11</li>
+<li><a href="picohsm/">Pico HSM</a>: key generation, signing, decryption, symmetric cryptography, and wrapped-key workflows</li>
 </ul>
-<p>This documentation is intended for users who want to understand how to set up, manage, and use PicoKeys devices correctly.</p>
-<hr />
-<h2 id="architecture-overview">Architecture overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
-<p>The PicoKeys ecosystem is split into two clearly separated layers:</p>
-<h3 id="1-picokey-app-desktop-application">1. PicoKey App (desktop application)<a class="headerlink" href="#1-picokey-app-desktop-application" title="Permanent link">&para;</a></h3>
-<p><strong>PicoKey App</strong> is the desktop application used to manage PicoKeys devices.</p>
-<p>It is responsible for:</p>
+<h2 id="the-ecosystem-plainly">The ecosystem, plainly<a class="headerlink" href="#the-ecosystem-plainly" title="Permanent link">&para;</a></h2>
+<p>PicoKeys is not one product. It is a family of firmwares that run on supported microcontroller boards.</p>
+<p>The split matters:</p>
 <ul>
-<li>Device detection</li>
-<li>Device configuration and commissioning</li>
-<li>License installation and board registration</li>
-<li>Diagnostics and troubleshooting</li>
+<li>The firmware defines the real protocol surface, storage model, and security properties.</li>
+<li>The desktop application helps with flashing, commissioning, policy changes, and diagnostics.</li>
+<li>Host-side compatibility still depends on the protocol and middleware used by each firmware family.</li>
 </ul>
-<p>PicoKey App provides the <strong>same user interface regardless of the installed firmware</strong>.</p>
-<p>➡️ See:</p>
+<p>That last point is where many docs sets become vague. This one should not:</p>
 <ul>
-<li><a href="picokeyapp/">PicoKey App</a></li>
-<li><a href="picokeyapp/first-steps/">First steps</a></li>
-<li><a href="picokeyapp/quickstart/">Quick start</a></li>
+<li>FIDO behavior is driven by what the authenticator reports through CTAP and what browsers or host tools actually consume.</li>
+<li>OpenPGP and HSM behavior depend heavily on CCID, PC/SC, OpenSC, PKCS#11, and client-specific support.</li>
+<li>RP2040, RP2350/RP2354, and ESP32-S3 do not offer the same hardware security baseline.</li>
 </ul>
-<hr />
-<h3 id="2-firmware-variants-device-functionality">2. Firmware variants (device functionality)<a class="headerlink" href="#2-firmware-variants-device-functionality" title="Permanent link">&para;</a></h3>
-<p>The actual behavior and capabilities of a PicoKeys device are defined by the <strong>firmware installed on the device</strong>.</p>
-<p>Each firmware variant provides different functionality, while sharing the same hardware and management interface.</p>
-<p>Available firmware variants include:</p>
+<h2 id="which-firmware-should-you-pick">Which firmware should you pick?<a class="headerlink" href="#which-firmware-should-you-pick" title="Permanent link">&para;</a></h2>
+<h3 id="pico-fido">Pico FIDO<a class="headerlink" href="#pico-fido" title="Permanent link">&para;</a></h3>
+<p>Use it when the device is primarily an authenticator:</p>
 <ul>
-<li>
-<p><strong>Pico HSM</strong>
-  A hardware security module firmware focused on secure key storage and cryptographic operations.</p>
-</li>
-<li>
-<p><strong>Pico FIDO</strong>
-  A FIDO2 / WebAuthn firmware for passwordless and second-factor authentication.</p>
-</li>
-<li>
-<p><strong>Pico OpenPGP</strong>
-  An OpenPGP-compatible smartcard firmware for encryption, signing, and authentication workflows.</p>
-</li>
+<li>passkeys and WebAuthn</li>
+<li>U2F / second-factor flows</li>
+<li>OATH accounts</li>
+<li>OTP slots and challenge-response</li>
 </ul>
-<p>➡️ See:</p>
+<p>Do not pick Pico FIDO because you need a general-purpose smart card or HSM API. That is not its job.</p>
+<h3 id="pico-openpgp">Pico OpenPGP<a class="headerlink" href="#pico-openpgp" title="Permanent link">&para;</a></h3>
+<p>Use it when the device should behave like an OpenPGP smart card:</p>
 <ul>
-<li><a href="picohsm/">Pico HSM</a></li>
-<li><a href="picofido/">Pico FIDO</a></li>
-<li><a href="pico-openpgp/">Pico OpenPGP</a></li>
+<li>GnuPG smart-card workflows</li>
+<li>on-device signing and decryption</li>
+<li>CCID / APDU / PKCS#11 style integration</li>
 </ul>
-<hr />
-<h2 id="typical-usage-flow">Typical usage flow<a class="headerlink" href="#typical-usage-flow" title="Permanent link">&para;</a></h2>
-<p>For most users, the typical workflow is:</p>
-<ol>
-<li>Install PicoKey App</li>
-<li>Install a license</li>
-<li>Connect a PicoKeys device</li>
-<li>Select and register the correct board type</li>
-<li>Commission the device</li>
-<li>Use the device according to the installed firmware</li>
-<li>Select and flash the proper firmware</li>
-</ol>
-<p>The first-time setup includes <strong>mandatory and irreversible steps</strong>.
-Make sure to read the first-time use documentation before proceeding.</p>
-<p>➡️ See:</p>
+<p>Do not pick it for FIDO2/WebAuthn or broad symmetric/HSM workflows.</p>
+<h3 id="pico-hsm">Pico HSM<a class="headerlink" href="#pico-hsm" title="Permanent link">&para;</a></h3>
+<p>Use it when the device is meant to act as a compact HSM:</p>
 <ul>
-<li><a href="picokeyapp/first-steps/">First steps</a></li>
+<li>private-key generation and retention</li>
+<li>signatures and decryption through PKCS#11</li>
+<li>AES, HMAC, KDF, wrapped-key import/export, and advanced key domains</li>
 </ul>
-<hr />
-<h2 id="scope-of-this-documentation">Scope of this documentation<a class="headerlink" href="#scope-of-this-documentation" title="Permanent link">&para;</a></h2>
-<p>This documentation covers:</p>
+<p>Do not treat it as a certified enterprise HSM. The feature set is broad, but the hardware and assurance model remain those of supported microcontroller boards.</p>
+<h2 id="security-baseline">Security baseline<a class="headerlink" href="#security-baseline" title="Permanent link">&para;</a></h2>
+<p>Across the firmware families, the most important practical distinction is hardware:</p>
 <ul>
-<li>How to use PicoKey App</li>
-<li>How to perform first-time setup safely</li>
-<li>What functionality is provided by each firmware variant</li>
-<li>Common concepts shared across the PicoKeys ecosystem</li>
+<li>RP2040 boards do not provide the same hardware-backed at-rest protection described for RP2350/RP2354 and ESP32-S3 class devices.</li>
+<li>Secure Boot, Secure Lock, and OTP-backed key material are meaningful only on the platforms that actually implement those mechanisms.</li>
+<li>A host compromise can still drive operations on an unlocked device, regardless of firmware family.</li>
 </ul>
-<p>This documentation does <strong>not</strong> cover:</p>
+<p>If your threat model includes funded physical attackers or certification requirements, you should assume these projects are outside that scope unless explicitly proven otherwise.</p>
+<h2 id="production-hardening">Production hardening<a class="headerlink" href="#production-hardening" title="Permanent link">&para;</a></h2>
+<p>Production hardening is intentionally not a top-level product tab. It is a cross-cutting subject that depends on the board family, the firmware image, and the provisioning state.</p>
+<p>Read these pages before burning irreversible state:</p>
 <ul>
-<li>Internal firmware implementation details</li>
-<li>Cryptographic theory</li>
-<li>Third-party tools documentation (e.g. GPG, browser-specific WebAuthn details)</li>
+<li><a href="production/otp-fuses.md">OTP fuses</a>: which RP2350/RP2354 OTP rows and ESP32-S3 eFuses are used for PicoKeys root keys, secure boot, and secure lock.</li>
+<li><a href="production/anti-rollback.md">Anti-rollback</a>: why old signed firmware can still be dangerous, and what rollback floors are meant to prevent.</li>
+<li><a href="security/threat-model.md">Threat model</a>: what PicoKeys protects against, what remains host-dependent, and what is out of scope.</li>
 </ul>
-<hr />
-<h2 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h2>
-<p>If you encounter an issue with PicoKey App or the documentation:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not enable secure boot, secure lock, rollback, or fuse-based protection as a casual setup step. These are production decisions with irreversible hardware effects.</p>
+</div>
+<h2 id="how-to-read-the-docs">How to read the docs<a class="headerlink" href="#how-to-read-the-docs" title="Permanent link">&para;</a></h2>
+<p>The firmware sections follow the same approach:</p>
 <ul>
-<li>Check the relevant section in this documentation</li>
-<li>Review the troubleshooting information</li>
-<li>If the issue persists, open a ticket at:</li>
+<li>what the firmware is for</li>
+<li>what upstream claims it implements</li>
+<li>what host tooling is required</li>
+<li>what is easy, what is awkward, and what is unsupported</li>
+<li>where the sharp edges are</li>
 </ul>
-<p><a href="https://github.com/polhenarejos/picokeyapp/issues">https://github.com/polhenarejos/picokeyapp/issues</a></p>
+<p>That is intentional. Glossy feature lists are easy to write and often misleading. Operational documentation is more useful.</p>
 
 
 
