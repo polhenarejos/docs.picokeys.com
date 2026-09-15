@@ -2491,6 +2491,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#individual-credential-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual credential lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#credential-details-shown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3457,6 +3468,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#individual-credential-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual credential lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#credential-details-shown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3545,6 +3567,23 @@
 user information, and credential ID. They are separate from <strong>Export
 Credential</strong>, which creates an opaque Vault package. Revoked credentials
 cannot be changed.</p>
+<p><img alt="Manage Credential dialog" src="../../../assets/images/picokeyapp/fido/expiration.png" /></p>
+<h2 id="individual-credential-lifecycle">Individual credential lifecycle<a class="headerlink" href="#individual-credential-lifecycle" title="Permanent link">&para;</a></h2>
+<p>The gear opens the <strong>Manage Credential</strong> dialog for that specific credential.</p>
+<ul>
+<li><strong>Set expiration</strong> stores an optional expiration date and time. The board
+  requires a configured RTC to set this value. When the RTC reaches the
+  expiration time, the credential becomes <code>EXPIRED</code> and Pico FIDO rejects
+  assertions for it.</li>
+<li><strong>Revoke</strong> immediately marks the credential as <code>REVOKED</code> and prevents it
+  from being used for assertions.</li>
+</ul>
+<p>Expired and revoked credentials remain listed so their status can be audited;
+they are not deleted automatically. The operation applies only to the
+selected credential, so other credentials on the board remain unaffected.
+Neither operation removes the corresponding registration at a relying party,
+and the current firmware does not provide a way to reactivate an expired or
+revoked credential.</p>
 <p><img alt="Large Blob management" src="../../../assets/images/picokeyapp/fido/largeblobs.png" /></p>
 <hr />
 <h2 id="credential-details-shown">Credential details shown<a class="headerlink" href="#credential-details-shown" title="Permanent link">&para;</a></h2>
