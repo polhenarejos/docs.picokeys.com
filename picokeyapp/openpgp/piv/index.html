@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3674,12 +3674,12 @@
 
 
 <h1 id="piv">PIV<a class="headerlink" href="#piv" title="Permanent link">&para;</a></h1>
-<p>This page documents the <strong>OpenPGP &gt; PIV</strong> view in PicoKey App.</p>
+<p>Use <strong>OpenPGP &gt; PIV</strong> in PicoKey App to view PIV status and manage PIV slots.</p>
 <p><img alt="PIV view (top)" src="../../../assets/images/picokeyapp/openpgp/piv-1.png" />
 <img alt="PIV view (bottom)" src="../../../assets/images/picokeyapp/openpgp/piv-2.png" /></p>
 <hr />
 <h2 id="piv-status">PIV status<a class="headerlink" href="#piv-status" title="Permanent link">&para;</a></h2>
-<p>The <strong>PIV Status</strong> panel includes:</p>
+<p>The <strong>PIV Status</strong> panel shows:</p>
 <ul>
 <li><code>Version</code></li>
 <li><code>Serial</code></li>
@@ -3694,14 +3694,14 @@
 <li><code>Unblock PIN</code></li>
 <li><code>Set MGM Key</code></li>
 </ul>
-<p>PIV unlock is performed using the <strong>MGM key</strong> (management key), not the user PIN.</p>
+<p>Unlock the PIV session with the <strong>MGM key</strong> (management key); the user PIN does not unlock it.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Default PIN/PUK/MGM values should be changed before production use.</p>
 </div>
 <hr />
 <h2 id="slot-model">Slot model<a class="headerlink" href="#slot-model" title="Permanent link">&para;</a></h2>
-<p>The view shows standard PIV slot groups:</p>
+<p>The view groups the standard PIV slots into:</p>
 <ul>
 <li><strong>Authentication Slot (9A)</strong></li>
 <li><strong>Signature Slot (9C)</strong></li>
@@ -3709,7 +3709,7 @@
 <li><strong>Card Authentication Slot (9E)</strong></li>
 <li><strong>Retired Slots</strong></li>
 </ul>
-<p>Per-slot metadata shown in the UI:</p>
+<p>For each slot, the UI shows:</p>
 <ul>
 <li><code>Current algorithm</code></li>
 <li><code>PIN policy</code></li>
@@ -3717,7 +3717,7 @@
 <li><code>Origin</code> (for example <code>Generated</code> or <code>Imported</code>)</li>
 <li>Certificate state (<code>Present</code> or <code>Missing</code>)</li>
 </ul>
-<p>Typical slot actions:</p>
+<p>Depending on the slot state, you may also see:</p>
 <ul>
 <li><code>Generate</code></li>
 <li><code>Import</code></li>
@@ -3731,7 +3731,7 @@
 </div>
 <hr />
 <h2 id="import-key-workflow">Import key workflow<a class="headerlink" href="#import-key-workflow" title="Permanent link">&para;</a></h2>
-<p>The import modal (<code>Import Key - Authentication (9A)</code>) is used to load an existing private key into a PIV slot.</p>
+<p>Use the <code>Import Key - Authentication (9A)</code> dialog to load an existing private key into a PIV slot.</p>
 <p><img alt="PIV import key dialog" src="../../../assets/images/picokeyapp/openpgp/piv-import.png" /></p>
 <h3 id="fields-and-controls">Fields and controls<a class="headerlink" href="#fields-and-controls" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3763,7 +3763,7 @@
 </div>
 <hr />
 <h2 id="rotate-key-workflow">Rotate key workflow<a class="headerlink" href="#rotate-key-workflow" title="Permanent link">&para;</a></h2>
-<p>The rotate modal (<code>Rotate Key - Signature (9C)</code>) moves an active key to another slot.</p>
+<p>Use the <code>Rotate Key - Signature (9C)</code> dialog to move an active key to another slot.</p>
 <p><img alt="PIV rotate dialog" src="../../../assets/images/picokeyapp/openpgp/piv-rotate.png" /></p>
 <h3 id="fields-and-controls_1">Fields and controls<a class="headerlink" href="#fields-and-controls_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3771,7 +3771,7 @@
 <li><code>Rotate</code>: executes the move.</li>
 <li><code>Cancel</code>: closes the modal without changes.</li>
 </ul>
-<p>Active keys can be moved to active or retired slots.</p>
+<p>You can move an active key to another active slot or to a retired slot.</p>
 <h3 id="recommended-flow_1">Recommended flow<a class="headerlink" href="#recommended-flow_1" title="Permanent link">&para;</a></h3>
 <ol>
 <li>In the source slot, click <strong>Rotate</strong>.</li>
@@ -3780,16 +3780,16 @@
 </ol>
 <h3 id="result_1">Result<a class="headerlink" href="#result_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The key is reassigned to the selected destination slot.</li>
+<li>The key moves to the selected destination slot.</li>
 <li>Occupancy indicators in <strong>Retired Slots</strong> are updated when rotating keys into retired positions.</li>
 <li>Disabled rotate actions in some slots indicate there is no key material available to move.</li>
-<li>Current firmware can move retired keys back to active slots; verify the
-  destination and certificate association before committing the move.</li>
+<li>Current firmware can also move a retired key back to an active slot. Check
+  the destination and certificate association before committing the move.</li>
 <li>Choosing <code>Delete permanently</code> removes key material irreversibly.</li>
 </ul>
 <hr />
 <h2 id="retired-slots">Retired slots<a class="headerlink" href="#retired-slots" title="Permanent link">&para;</a></h2>
-<p>The <strong>Retired Slots</strong> panel includes:</p>
+<p>The <strong>Retired Slots</strong> panel shows:</p>
 <ul>
 <li>Slot selector (example: <code>Retired 4 (0x85)</code>)</li>
 <li>Occupancy indicator for retired slots (<code>R1</code> to <code>R20</code>)</li>
@@ -3806,7 +3806,7 @@ certificate history and recovery workflows.</p>
 </div>
 <hr />
 <h2 id="registration-requirement">Registration requirement<a class="headerlink" href="#registration-requirement" title="Permanent link">&para;</a></h2>
-<p>This panel requires a registered board in PicoKey App. If the board is not registered, controls are restricted.</p>
+<p>Register the board in PicoKey App before using this panel; otherwise, controls are restricted.</p>
 
 
 
@@ -3862,10 +3862,10 @@ certificate history and recovery workflows.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

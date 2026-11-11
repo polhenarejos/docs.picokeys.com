@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3513,24 +3513,24 @@
 </tr>
 </tbody>
 </table>
-<p>Those numbers are not cosmetic. They determine whether RSA is practical for your workflow at all.</p>
+<p>These timings help determine whether RSA fits your workflow, especially when key generation is part of regular provisioning.</p>
 <h2 id="ecc-is-usually-the-sensible-default">ECC is usually the sensible default<a class="headerlink" href="#ecc-is-usually-the-sensible-default" title="Permanent link">&para;</a></h2>
-<p>For most day-to-day OpenPGP use:</p>
+<p>For everyday OpenPGP use, ECC is often more practical because:</p>
 <ul>
 <li>ECC generation is much faster</li>
 <li>interactive workflows feel saner</li>
 <li>automation is less likely to hit timeouts or impatient users</li>
 </ul>
-<p>If you do not have a specific RSA requirement, do not make large RSA your default choice.</p>
+<p>Unless you have a specific RSA requirement, prefer ECC for new deployments.</p>
 <h2 id="firmware-support-is-not-client-support">Firmware support is not client support<a class="headerlink" href="#firmware-support-is-not-client-support" title="Permanent link">&para;</a></h2>
-<p>This is the recurring mistake in OpenPGP docs.</p>
+<p>Keep firmware support and client support separate when you evaluate a feature.</p>
 <p>Examples:</p>
 <ul>
 <li>AES may exist in firmware but not be easy to use in mainstream OpenPGP tools</li>
 <li>advanced card functions may require lower-level tooling</li>
 <li>GnuPG, OpenSC, and PKCS#11 clients do not surface the same feature set</li>
 </ul>
-<p>So "supported by Pico OpenPGP" must always be qualified by the client path.</p>
+<p>When you say that Pico OpenPGP supports a feature, name the client path you have tested as well.</p>
 <h2 id="practical-rule">Practical rule<a class="headerlink" href="#practical-rule" title="Permanent link">&para;</a></h2>
 <p>Before you depend on a feature, verify all three:</p>
 <ol>
@@ -3594,10 +3594,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

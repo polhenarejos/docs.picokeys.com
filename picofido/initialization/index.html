@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3521,7 +3521,7 @@
 
 
 <h1 id="setup-and-policy">Setup and policy<a class="headerlink" href="#setup-and-policy" title="Permanent link">&para;</a></h1>
-<p>From zero to a working Pico FIDO device: flash it, confirm the host sees it, and set the policies that matter before you enroll real credentials.</p>
+<p>To prepare a Pico FIDO device, flash it, confirm that the host can see it, and choose the policies you need before enrolling real credentials.</p>
 <h2 id="build-or-download">Build or download<a class="headerlink" href="#build-or-download" title="Permanent link">&para;</a></h2>
 <p>Upstream supports two normal paths:</p>
 <ul>
@@ -3538,7 +3538,7 @@ mkdir<span class="w"> </span>build
 make
 </code></pre></div>
 <p>If you omit <code>PICO_BOARD</code>, <code>USB_VID</code>, and <code>USB_PID</code>, upstream says the defaults are <code>pico</code> and <code>FEFF:FCFD</code>.</p>
-<p>The upstream README also documents <code>VIDPID=value</code> presets such as <code>Yubikey5</code>, <code>NitroFIDO2</code>, and others. Those presets are useful for interop testing. They should not be confused with permission to redistribute firmware under someone else's USB identity.</p>
+<p>The upstream README also documents <code>VIDPID=value</code> presets such as <code>Yubikey5</code> and <code>NitroFIDO2</code> for interoperability testing. Use these presets for testing, and obtain permission before redistributing firmware under someone else's USB identity.</p>
 <h2 id="flash-the-board">Flash the board<a class="headerlink" href="#flash-the-board" title="Permanent link">&para;</a></h2>
 <p>For UF2-capable Raspberry Pi Pico-family boards:</p>
 <ol>
@@ -3550,7 +3550,7 @@ make
 <p>For ESP32-S3 boards, upstream sends users through the ESP32 flasher flow instead.</p>
 <h2 id="first-validation">First validation<a class="headerlink" href="#first-validation" title="Permanent link">&para;</a></h2>
 <p>Pico FIDO uses the FIDO HID interface for WebAuthn and CTAP. That means basic FIDO use does not depend on CCID or smart-card middleware.</p>
-<p>Check the minimum first:</p>
+<p>Start by checking that the host can see the device:</p>
 <ul>
 <li>open a browser and try a WebAuthn registration flow</li>
 <li>or use a libfido2-based tool such as <code>fido2-token -L</code></li>
@@ -3558,14 +3558,14 @@ make
 </ul>
 <p>If you are testing <code>ykman</code>, Yubico Authenticator, or Nitrokey-oriented tools, be careful: those tools may care about reader name, VID/PID, or both.</p>
 <h2 id="set-a-pin-early">Set a PIN early<a class="headerlink" href="#set-a-pin-early" title="Permanent link">&para;</a></h2>
-<p>Do this before real enrollment if the device will hold anything important.</p>
+<p>Set a PIN before enrolling important credentials, because:</p>
 <p>The reasons are the same as on other FIDO authenticators:</p>
 <ul>
 <li>many management operations require PIN-authenticated context</li>
 <li>relying parties may request user verification</li>
 <li>a device with no PIN is easier to misuse locally</li>
 </ul>
-<p>Upstream also claims support for <code>minPinLength</code>. That is useful, but it is only useful if your operators understand the policy and your clients behave correctly once it is enforced.</p>
+<p>Upstream also claims support for <code>minPinLength</code>. It helps only when operators understand the policy and clients behave correctly after it is enforced.</p>
 <h2 id="attestation-and-policy-choices">Attestation and policy choices<a class="headerlink" href="#attestation-and-policy-choices" title="Permanent link">&para;</a></h2>
 <p>Upstream advertises:</p>
 <ul>
@@ -3573,12 +3573,12 @@ make
 <li>enterprise attestation</li>
 <li>RP-scoped restrictions and related policy controls</li>
 </ul>
-<p>Use these deliberately.</p>
+<p>Choose these settings deliberately, since they affect relying-party trust and privacy:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>"The firmware can emit attestation" is not the same thing as "your relying parties should trust or require it."</p>
 </div>
-<p>Restrictive RP policy is similar: it is valuable only if you document it well enough that later failures are explainable.</p>
+<p>Document any restrictive RP policy so operators can explain later authentication failures.</p>
 <h2 id="hardware-note">Hardware note<a class="headerlink" href="#hardware-note" title="Permanent link">&para;</a></h2>
 <p>From a security point of view, board choice is not cosmetic:</p>
 <ul>
@@ -3641,10 +3641,10 @@ make
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

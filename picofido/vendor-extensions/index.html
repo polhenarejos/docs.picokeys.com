@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3499,15 +3499,15 @@
 
 
 <h1 id="vendor-extensions">Vendor extensions<a class="headerlink" href="#vendor-extensions" title="Permanent link">&para;</a></h1>
-<p>This page covers Pico FIDO behavior that goes beyond baseline FIDO interoperability.</p>
-<p>That does not make these features bad. It means they should be documented honestly: useful, powerful, and less portable.</p>
+<p>Pico FIDO includes vendor extensions beyond baseline FIDO interoperability.</p>
+<p>These features can be useful, but they are less portable than baseline FIDO behavior and should be documented accordingly.</p>
 <h2 id="user-pin-split">User PIN split<a class="headerlink" href="#user-pin-split" title="Permanent link">&para;</a></h2>
 <p>The current PicoKeys docs describe a dual-context model:</p>
 <ul>
 <li>Admin PIN for full management</li>
 <li>User PIN for a restricted subset of actions</li>
 </ul>
-<p>That is not part of normal WebAuthn portability. It is a product-specific management model.</p>
+<p>This product-specific management model does not carry over to ordinary WebAuthn clients.</p>
 <p>If you enable it, write down:</p>
 <ul>
 <li>who holds the Admin PIN</li>
@@ -3524,16 +3524,16 @@
 <li>authenticator configuration</li>
 <li>reset and persistent management actions</li>
 </ul>
-<p>This is powerful because it turns Pico FIDO into something closer to a policy-managed authenticator. It is also where assumptions about "works like any other FIDO key" stop being true.</p>
+<p>Permission masks make Pico FIDO more like a policy-managed authenticator, so clients may behave differently from how they do with a standard FIDO key.</p>
 <h2 id="extended-credential-views">Extended credential views<a class="headerlink" href="#extended-credential-views" title="Permanent link">&para;</a></h2>
-<p>The current docs also describe app-level operations such as:</p>
+<p>PicoKey App also provides management operations such as:</p>
 <ul>
 <li>exporting metadata as JSON or CSV</li>
 <li>listing creation dates, algorithms, counters, and <code>credProtect</code> state</li>
 <li>filtering by RP, user, or credential identifier</li>
 <li>per-credential Large Blob handling</li>
 </ul>
-<p>These are management conveniences, not guaranteed cross-platform behaviors.</p>
+<p>These management features are useful within the PicoKey App, but other platforms are not guaranteed to expose them.</p>
 <h2 id="how-to-think-about-these-features">How to think about these features<a class="headerlink" href="#how-to-think-about-these-features" title="Permanent link">&para;</a></h2>
 <p>Use vendor extensions when:</p>
 <ul>
@@ -3543,7 +3543,7 @@
 </ul>
 <p>Do not build a portability story around them unless you have tested the exact host tools you intend to support.</p>
 <h2 id="conservative-rule">Conservative rule<a class="headerlink" href="#conservative-rule" title="Permanent link">&para;</a></h2>
-<p>If a feature is not part of the baseline CTAP/WebAuthn path, assume it needs explicit interoperability testing before you promise it to anyone else.</p>
+<p>Test interoperability explicitly before promising support for any feature outside the baseline CTAP/WebAuthn path.</p>
 
 
 
@@ -3599,10 +3599,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

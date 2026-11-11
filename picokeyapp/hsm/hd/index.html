@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3596,8 +3596,8 @@
 
 
 <h1 id="pico-hsm-hierarchical-deterministic-hd-bip32">Pico HSM Hierarchical Deterministic (HD / BIP32)<a class="headerlink" href="#pico-hsm-hierarchical-deterministic-hd-bip32" title="Permanent link">&para;</a></h1>
-<p>This page documents <strong>HSM &gt; Management &gt; BIP32</strong> in PicoKey App.</p>
-<p>The BIP32 tab provides hierarchical deterministic key workflows:</p>
+<p>Use <strong>HSM &gt; Management &gt; BIP32</strong> in PicoKey App to manage hierarchical deterministic keys.</p>
+<p>The BIP32 tab lets you:</p>
 <ul>
 <li>Initialize master material</li>
 <li>Derive child keys / XPUB data by derivation path</li>
@@ -3606,7 +3606,7 @@
 </ul>
 <hr />
 <h2 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h2>
-<p>Before running BIP32 operations:</p>
+<p>Before running a BIP32 operation:</p>
 <ol>
 <li>Go to <code>HSM &gt; Management</code>.</li>
 <li>Enter <code>PIN</code>.</li>
@@ -3617,7 +3617,7 @@
 <p><img alt="HSM unlock" src="../../../assets/images/picokeyapp/hsm/unlock.png" /></p>
 <hr />
 <h2 id="main-controls">Main controls<a class="headerlink" href="#main-controls" title="Permanent link">&para;</a></h2>
-<p>Common controls in BIP32:</p>
+<p>The main controls are:</p>
 <ul>
 <li><strong>Operation</strong>: <code>Initialize</code>, <code>Derive</code>, <code>Decode XPUB</code>, <code>Sign</code></li>
 <li><strong>Master ID</strong>: identifier that binds a master node to its curve type (<code>0-255</code>)</li>
@@ -3632,7 +3632,7 @@
 </ul>
 <hr />
 <h2 id="initialize">Initialize<a class="headerlink" href="#initialize" title="Permanent link">&para;</a></h2>
-<p>Initializes HD material for the selected master ID.</p>
+<p>Initialize HD material for the selected master ID.</p>
 <p><img alt="HD initialize" src="../../../assets/images/picokeyapp/hsm/hd-initialize.png" /></p>
 <p>Visible fields:</p>
 <ul>
@@ -3640,7 +3640,7 @@
 <li><strong>Seed file (optional)</strong>: optional seed input from file</li>
 <li><strong>Derivation path</strong></li>
 </ul>
-<p>If no seed file is provided, initialization uses internal/random generation according to device behavior.</p>
+<p>If you leave <strong>Seed file (optional)</strong> empty, the device generates the seed according to its firmware behavior.</p>
 <hr />
 <h2 id="derive">Derive<a class="headerlink" href="#derive" title="Permanent link">&para;</a></h2>
 <p>Derives BIP32 child output from a derivation path and selected master.</p>
@@ -3651,10 +3651,10 @@
 <li><strong>Input/Output (text)</strong>: output is written in the same box</li>
 <li><strong>Text input/output is hex</strong> toggle</li>
 </ul>
-<p>After execution, status feedback appears in the bottom message area (depth/child/fingerprint summary).</p>
+<p>After execution, the bottom message area shows status information, including the depth, child, and fingerprint.</p>
 <hr />
 <h2 id="decode-xpub">Decode XPUB<a class="headerlink" href="#decode-xpub" title="Permanent link">&para;</a></h2>
-<p>Decodes an XPUB value to structured JSON metadata.</p>
+<p>Decode an XPUB value to view its metadata as JSON.</p>
 <p><img alt="HD decode XPUB" src="../../../assets/images/picokeyapp/hsm/hd-decode-xpub.png" /></p>
 <p>Visible output:</p>
 <ul>
@@ -3668,27 +3668,20 @@
 <hr />
 <h2 id="sign-with-derivation-path">Sign with derivation path<a class="headerlink" href="#sign-with-derivation-path" title="Permanent link">&para;</a></h2>
 <p>BIP32 signing uses the selected master plus derivation path.</p>
-<p>Two I/O modes are available, similar to the Cipher tab.</p>
+<p>As in the Cipher tab, signing supports both text-box and file flows.</p>
 <h3 id="sign-with-text-box-flow">Sign with text box flow<a class="headerlink" href="#sign-with-text-box-flow" title="Permanent link">&para;</a></h3>
 <p><img alt="HD sign text" src="../../../assets/images/picokeyapp/hsm/hd-sign-text.png" /></p>
-<p>Behavior:</p>
-<ul>
-<li>Enter data in <strong>Input/Output (text)</strong></li>
-<li>Output replaces the same text box after execution</li>
-<li><code>Text input/output is hex</code> switches between plain text and hex</li>
-</ul>
+<p>Enter data in <strong>Input/Output (text)</strong>. After signing, the app replaces it with
+the output. Use <code>Text input/output is hex</code> to switch between plain text and
+hexadecimal input/output.</p>
 <h3 id="sign-with-file-flow">Sign with file flow<a class="headerlink" href="#sign-with-file-flow" title="Permanent link">&para;</a></h3>
 <p><img alt="HD sign file" src="../../../assets/images/picokeyapp/hsm/hd-sign-file.png" /></p>
-<p>Behavior:</p>
-<ul>
-<li><strong>Data file (required for Sign)</strong>: input file to sign</li>
-<li><strong>Output file</strong>: destination file for signature/result</li>
-<li><strong>Browse</strong> buttons select file paths</li>
-</ul>
+<p>Choose the file to sign with <strong>Data file (required for Sign)</strong>, then select a
+destination with <strong>Output file</strong>. The <strong>Browse</strong> buttons open the file picker.</p>
 <hr />
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>Master ID</code> lets you keep multiple independent HD roots and associates each root with its selected curve type.</li>
+<li>Use <code>Master ID</code> to keep multiple independent HD roots, each associated with its selected curve type.</li>
 <li>A valid derivation path is required for derive/sign operations.</li>
 <li><code>BIP32</code> operations are available only after a successful unlock.</li>
 </ul>
@@ -3747,10 +3740,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

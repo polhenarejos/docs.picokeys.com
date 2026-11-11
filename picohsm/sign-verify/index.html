@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3471,7 +3471,7 @@
 
 
 <h1 id="sign-and-verify">Sign and verify<a class="headerlink" href="#sign-and-verify" title="Permanent link">&para;</a></h1>
-<p>Signing is the most common proof that Pico HSM is working as intended: the host gets a signature, the private key stays inside the device.</p>
+<p>Signing is a useful first check of Pico HSM: the host receives a signature while the private key stays inside the device.</p>
 <h2 id="prepare-sample-data">Prepare sample data<a class="headerlink" href="#prepare-sample-data" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"This is a test string. Be safe, be secure."</span><span class="w"> </span>&gt;<span class="w"> </span>data
 </code></pre></div>
@@ -3519,7 +3519,7 @@ openssl<span class="w"> </span>ec<span class="w"> </span>-inform<span class="w">
 <li>some mechanisms exist in firmware but are awkward in generic CLI tooling</li>
 <li>signature success proves the session, PIN, and key object are all aligned correctly</li>
 </ul>
-<p>That makes sign-and-verify one of the best diagnostic workflows after initial provisioning.</p>
+<p>For this reason, sign-and-verify is a useful diagnostic workflow after provisioning.</p>
 
 
 
@@ -3575,10 +3575,10 @@ openssl<span class="w"> </span>ec<span class="w"> </span>-inform<span class="w">
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

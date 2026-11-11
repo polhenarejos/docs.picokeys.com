@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3752,8 +3752,8 @@
 
 
 <h1 id="pico-hsm-key-management">Pico HSM Key Management<a class="headerlink" href="#pico-hsm-key-management" title="Permanent link">&para;</a></h1>
-<p>This page documents <strong>HSM &gt; Management &gt; Keys</strong> in PicoKey App.</p>
-<p>It covers:</p>
+<p>Use <strong>HSM &gt; Management &gt; Keys</strong> in PicoKey App to manage keys, domains, certificates, and data objects.</p>
+<p>From this view, you can:</p>
 <ul>
 <li>Unlocking the HSM session and using the collapsed session panel</li>
 <li>Key domain setup and DKEK workflows</li>
@@ -3763,22 +3763,22 @@
 <p><img alt="Pico HSM management" src="../../../assets/images/picokeyapp/hsm/management.png" /></p>
 <hr />
 <h2 id="load-management-session">Load management session<a class="headerlink" href="#load-management-session" title="Permanent link">&para;</a></h2>
-<p>When opening <code>HSM &gt; Management</code>, the first state is the unlock view.</p>
+<p>When you open <code>HSM &gt; Management</code>, PicoKey App first shows the unlock view.</p>
 <p><img alt="HSM unlock" src="../../../assets/images/picokeyapp/hsm/unlock.png" /></p>
 <ol>
 <li>Enter the user <code>PIN</code>.</li>
 <li>Click <strong>Unlock</strong>.</li>
 <li>Wait until key loading finishes.</li>
 </ol>
-<p>After a successful unlock, the <code>Session</code> section collapses to save space.</p>
-<p>If you expand the <code>Session</code> section again, you can access maintenance actions:</p>
+<p>After unlocking, the <code>Session</code> section collapses to save space.</p>
+<p>Expand <code>Session</code> again to access maintenance actions:</p>
 <p><img alt="HSM reload" src="../../../assets/images/picokeyapp/hsm/reload.png" /></p>
 <h3 id="session-buttons">Session buttons<a class="headerlink" href="#session-buttons" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Reload</strong>: reloads keys/domains/certificates for the current authenticated session.</li>
 <li><strong>Change PIN</strong>: opens the PIN change flow.</li>
 </ul>
-<p>When PIN is blocked, additional recovery actions are shown:</p>
+<p>If the PIN is blocked, the panel also shows these recovery actions:</p>
 <ul>
 <li><strong>Unblock PIN</strong></li>
 <li><strong>Reset Retries</strong></li>
@@ -3789,12 +3789,12 @@
 </div>
 <hr />
 <h2 id="keys-view-layout">Keys view layout<a class="headerlink" href="#keys-view-layout" title="Permanent link">&para;</a></h2>
-<p>The <code>Keys</code> tab has two main areas:</p>
+<p>The <code>Keys</code> tab is divided into two areas:</p>
 <ul>
 <li>Left panel: hierarchical tree (<code>No domain</code>, <code>Domain N</code>, keys, certificates, data objects)</li>
 <li>Right panel: context actions and details for the selected item</li>
 </ul>
-<p>Tabs shown at the top:</p>
+<p>Use the tabs at the top to switch between:</p>
 <ul>
 <li><strong>Keys</strong>: key tree and key/domain actions</li>
 <li><strong>Cipher</strong>: cryptographic operations view</li>
@@ -3806,13 +3806,13 @@
 <h3 id="1-setup-a-new-key-domain">1) Setup a new key domain<a class="headerlink" href="#1-setup-a-new-key-domain" title="Permanent link">&para;</a></h3>
 <p>Select a domain marked as <code>(not created)</code>.</p>
 <p><img alt="Key domain setup" src="../../../assets/images/picokeyapp/hsm/key-domain-setup.png" /></p>
-<p>Available actions in this state:</p>
+<p>When a domain is marked <code>(not created)</code>, you can:</p>
 <ul>
 <li><strong>Set up</strong>: creates the key domain.</li>
 <li><strong>Create DKEK Share</strong>: creates a DKEK share file in <code>.pbe</code> format so it can be imported later.</li>
 </ul>
 <h3 id="2-create-dkek-share-pbe">2) Create DKEK share (<code>.pbe</code>)<a class="headerlink" href="#2-create-dkek-share-pbe" title="Permanent link">&para;</a></h3>
-<p>Click <strong>Create DKEK Share</strong> to open the DKEK share creation dialog.</p>
+<p>Click <strong>Create DKEK Share</strong> to open the dialog and create a DKEK share.</p>
 <p><img alt="Create DKEK share" src="../../../assets/images/picokeyapp/hsm/create-dkek.png" /></p>
 <p>Dialog fields:</p>
 <ul>
@@ -3826,9 +3826,9 @@
 <p><img alt="Key domain missing DKEK" src="../../../assets/images/picokeyapp/hsm/key-domain-missing-dkek.png" /></p>
 <p>A password dialog is shown:</p>
 <p><img alt="Key domain import DKEK password" src="../../../assets/images/picokeyapp/hsm/key-domain-import-dkek.png" /></p>
-<p>This step loads the DKEK share into the domain using the share password.</p>
+<p>The app uses the share password to load the DKEK share into the domain.</p>
 <h3 id="4-domain-ready-state">4) Domain ready state<a class="headerlink" href="#4-domain-ready-state" title="Permanent link">&para;</a></h3>
-<p>When the required DKEK material is present, the domain shows a <code>KCV</code> and full actions:</p>
+<p>Once the domain has the required DKEK material, it shows a <code>KCV</code> and these actions:</p>
 <p><img alt="Key domain complete" src="../../../assets/images/picokeyapp/hsm/key-domain-complete.png" /></p>
 <p>Domain buttons:</p>
 <ul>
@@ -3866,7 +3866,7 @@
 </ul>
 <hr />
 <h2 id="key-details-actions">Key details actions<a class="headerlink" href="#key-details-actions" title="Permanent link">&para;</a></h2>
-<p>When a key is selected in the tree, the right panel shows metadata and action buttons.</p>
+<p>Select a key in the tree to view its metadata and actions in the right panel.</p>
 <p><img alt="Key details" src="../../../assets/images/picokeyapp/hsm/key-details.png" /></p>
 <p>Common key actions:</p>
 <ul>
@@ -3891,7 +3891,7 @@
 </div>
 <hr />
 <h2 id="certificate-details">Certificate details<a class="headerlink" href="#certificate-details" title="Permanent link">&para;</a></h2>
-<p>When you select an item under <code>Certificates</code> (for example <code>Device</code>, <code>CVCA</code>, <code>DVCA</code>), the right panel shows certificate metadata.</p>
+<p>Select a certificate under <code>Certificates</code> (such as <code>Device</code>, <code>CVCA</code>, or <code>DVCA</code>) to view its metadata in the right panel.</p>
 <p><img alt="Certificate details" src="../../../assets/images/picokeyapp/hsm/certificate-details.png" /></p>
 <p>Visible fields:</p>
 <ul>
@@ -3908,7 +3908,7 @@
 <p>This action exports certificate data only, not the private key.</p>
 </div>
 <h3 id="certificate-import">Certificate import<a class="headerlink" href="#certificate-import" title="Permanent link">&para;</a></h3>
-<p>When the root <code>Certificates</code> node is selected, the right panel shows the import action.</p>
+<p>Select the root <code>Certificates</code> node to open certificate import actions.</p>
 <p><img alt="Certificate import" src="../../../assets/images/picokeyapp/hsm/certificate-import.png" /></p>
 <p>Action:</p>
 <ul>
@@ -3917,7 +3917,7 @@
 </ul>
 <hr />
 <h2 id="data-objects-import-object">Data objects (Import Object)<a class="headerlink" href="#data-objects-import-object" title="Permanent link">&para;</a></h2>
-<p>Selecting <code>Data Objects &gt; Public</code> shows import actions for public data objects.</p>
+<p>Select <code>Data Objects &gt; Public</code> to import public data objects.</p>
 <p><img alt="Import object" src="../../../assets/images/picokeyapp/hsm/import-object.png" /></p>
 <p>Available actions:</p>
 <ul>
@@ -3929,7 +3929,7 @@
 <p><code>Data Objects &gt; Private</code> is reserved for private objects and follows the same tree navigation pattern.</p>
 <hr />
 <h2 id="registration-requirement">Registration requirement<a class="headerlink" href="#registration-requirement" title="Permanent link">&para;</a></h2>
-<p>This panel requires a registered board in PicoKey App. If the board is not registered, management actions are restricted.</p>
+<p>Register the board in PicoKey App before using this panel; otherwise, management actions are restricted.</p>
 
 
 
@@ -3985,10 +3985,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3559,7 +3559,8 @@
 
 
 <h1 id="capability-map">Capability map<a class="headerlink" href="#capability-map" title="Permanent link">&para;</a></h1>
-<p>This page groups the Pico HSM feature set into operational categories. It is based on the upstream README and should be read as "firmware claims", not as "every generic tool exposes this equally well."</p>
+<p>The upstream README groups Pico HSM capabilities by use. These are firmware
+claims, and generic host tools may expose only part of the feature set.</p>
 <h2 id="key-generation-and-storage">Key generation and storage<a class="headerlink" href="#key-generation-and-storage" title="Permanent link">&para;</a></h2>
 <p>Upstream claims support for:</p>
 <ul>
@@ -3592,7 +3593,7 @@
 <li>ChaCha20-Poly1305</li>
 <li>HKDF, PBKDF2, and X9.63 KDF</li>
 </ul>
-<p>That is a large surface area for a microcontroller-based device. Test the specific mechanisms you need before assuming tool support is mature.</p>
+<p>Because this is a broad feature set for a microcontroller-based device, test each mechanism you plan to use with your chosen host tools.</p>
 <h2 id="wrapped-key-and-domain-workflows">Wrapped-key and domain workflows<a class="headerlink" href="#wrapped-key-and-domain-workflows" title="Permanent link">&para;</a></h2>
 <p>Pico HSM's more distinctive features include:</p>
 <ul>
@@ -3602,7 +3603,7 @@
 <li>wrapped-key export and import</li>
 <li>XKEK-style sharing schemes</li>
 </ul>
-<p>These are powerful, but they are also the part least likely to be well represented by generic PKCS#11 frontends.</p>
+<p>These workflows offer more control, although generic PKCS#11 frontends are less likely to expose them fully.</p>
 <h2 id="data-and-metadata">Data and metadata<a class="headerlink" href="#data-and-metadata" title="Permanent link">&para;</a></h2>
 <p>Upstream also claims support for:</p>
 <ul>
@@ -3611,7 +3612,7 @@
 <li>attestation objects</li>
 <li>RTC-backed time functions</li>
 </ul>
-<p>This lets the device carry more than keys, but it does not turn it into a general file store.</p>
+<p>The device can therefore store some supporting data alongside keys, although it is not a general file store.</p>
 <h2 id="transport-and-platform-features">Transport and platform features<a class="headerlink" href="#transport-and-platform-features" title="Permanent link">&para;</a></h2>
 <p>The README also advertises:</p>
 <ul>
@@ -3631,7 +3632,7 @@
 <li>whether the middleware exposes it</li>
 <li>whether the client you intend to use can drive it without custom tooling</li>
 </ul>
-<p>That rule avoids most disappointment.</p>
+<p>Checking each layer before deployment helps avoid surprises.</p>
 <h2 id="storage-and-authorization-changes">Storage and authorization changes<a class="headerlink" href="#storage-and-authorization-changes" title="Permanent link">&para;</a></h2>
 <p>Current firmware also hardens the operational boundary around the feature set:</p>
 <ul>
@@ -3701,10 +3702,10 @@ the exact host tool and recovery workflow you depend on.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

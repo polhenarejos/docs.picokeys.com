@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3474,10 +3474,10 @@
 
 
 <h1 id="anti-rollback">Anti-rollback<a class="headerlink" href="#anti-rollback" title="Permanent link">&para;</a></h1>
-<p>Secure boot prevents unsigned firmware from running. Anti-rollback addresses a different problem: old firmware that is still correctly signed.</p>
-<p>If an older signed image contains a serious vulnerability, secure boot alone may still allow it. Anti-rollback is the mechanism that refuses firmware below a configured floor.</p>
+<p>Secure boot blocks unsigned firmware. Anti-rollback covers a separate case: an old image that is still correctly signed.</p>
+<p>If an older signed image contains a serious vulnerability, secure boot alone may still allow it to run. Anti-rollback rejects firmware below a configured version floor.</p>
 <h2 id="why-it-exists">Why it exists<a class="headerlink" href="#why-it-exists" title="Permanent link">&para;</a></h2>
-<p>The downgrade threat is simple:</p>
+<p>The downgrade can happen in a few steps:</p>
 <ol>
 <li>a device owner signs firmware version A</li>
 <li>version A later turns out to have a security bug</li>
@@ -3486,15 +3486,15 @@
 </ol>
 <p>Anti-rollback closes that path when implemented and enabled correctly.</p>
 <h2 id="irreversibility">Irreversibility<a class="headerlink" href="#irreversibility" title="Permanent link">&para;</a></h2>
-<p>On RP2350-class hardware, rollback state is normally backed by one-time-programmable state. That means:</p>
+<p>On RP2350-class hardware, rollback state is normally stored in one-time-programmable memory. As a result:</p>
 <ul>
 <li>floors go up, not down</li>
 <li>rollback budget is finite</li>
 <li>mistakes can orphan older images permanently</li>
 </ul>
-<p>This is a production feature, not a day-one convenience setting.</p>
+<p>Use this production feature only after you have planned for those permanent limits.</p>
 <h2 id="applicability">Applicability<a class="headerlink" href="#applicability" title="Permanent link">&para;</a></h2>
-<p>Use this page as the model. Do not assume the commands from another project apply directly to Pico FIDO or Pico OpenPGP.</p>
+<p>Use these questions to guide verification; commands from another project may not apply to Pico FIDO or Pico OpenPGP.</p>
 <p>For PicoKeys firmware, verify:</p>
 <ul>
 <li>board family</li>
@@ -3504,7 +3504,7 @@
 <li>documented rollback behavior</li>
 </ul>
 <h2 id="operational-rule">Operational rule<a class="headerlink" href="#operational-rule" title="Permanent link">&para;</a></h2>
-<p>Raise a rollback floor only for a reason you can name:</p>
+<p>Raise the rollback floor only when you have a clear reason, such as:</p>
 <ul>
 <li>a security fix blocks downgrade exploitation</li>
 <li>old signed images should no longer be accepted</li>
@@ -3566,10 +3566,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

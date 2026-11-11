@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3545,7 +3545,7 @@
 <p>Start with:</p>
 <div class="highlight"><pre><span></span><code>gpg<span class="w"> </span>--card-status
 </code></pre></div>
-<p>If this does not work, fix PC/SC, CCID, or scdaemon setup before trying key generation.</p>
+<p>If the card is not visible, check PC/SC, CCID, and scdaemon before trying to generate keys.</p>
 <h2 id="pins">PINs<a class="headerlink" href="#pins" title="Permanent link">&para;</a></h2>
 <p>The OpenPGP card model uses:</p>
 <table>
@@ -3570,7 +3570,7 @@
 </tr>
 </tbody>
 </table>
-<p>Change defaults before real use:</p>
+<p>Change the default credentials before using the card with important material:</p>
 <div class="highlight"><pre><span></span><code>gpg<span class="w"> </span>--card-edit
 gpg/card&gt;<span class="w"> </span>admin
 gpg/card&gt;<span class="w"> </span>passwd
@@ -3581,7 +3581,7 @@ gpg/card&gt;<span class="w"> </span>admin
 gpg/card&gt;<span class="w"> </span>key-attr
 gpg/card&gt;<span class="w"> </span>generate
 </code></pre></div>
-<p><code>key-attr</code> is selected per role. Use it deliberately:</p>
+<p>Choose attributes separately for each role, and check which slot you are configuring:</p>
 <ul>
 <li>signing key</li>
 <li>decryption key</li>
@@ -3596,7 +3596,7 @@ gpg&gt;<span class="w"> </span>key<span class="w"> </span><span class="m">1</spa
 gpg&gt;<span class="w"> </span>keytocard
 gpg&gt;<span class="w"> </span>save
 </code></pre></div>
-<p>This keeps the operational trade-off explicit:</p>
+<p>The choice depends on your recovery needs:</p>
 <ul>
 <li>on-card generation minimizes exposure</li>
 <li>import lets you maintain an off-card recovery story</li>
@@ -3615,9 +3615,9 @@ gpg<span class="w"> </span>--export-ssh-key<span class="w"> </span>YOURKEY<span 
 </code></pre></div>
 <h2 id="uif-touch-policy">UIF / touch policy<a class="headerlink" href="#uif-touch-policy" title="Permanent link">&para;</a></h2>
 <p>Upstream claims User Interaction Flag support. If enabled for a slot, PIN alone is not enough; the device also requires physical confirmation.</p>
-<p>Use it where silent signing or decryption by a compromised host is a concern, and document it so operators understand the wait.</p>
+<p>Enable it when you want a physical confirmation before signing or decrypting, and tell operators why the device may wait for a touch.</p>
 <h2 id="reset">Reset<a class="headerlink" href="#reset" title="Permanent link">&para;</a></h2>
-<p>A factory reset of the OpenPGP applet should be treated as destructive:</p>
+<p>A factory reset is destructive and may clear:</p>
 <ul>
 <li>keys are wiped</li>
 <li>PIN state is reset</li>
@@ -3679,10 +3679,10 @@ gpg<span class="w"> </span>--export-ssh-key<span class="w"> </span>YOURKEY<span 
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

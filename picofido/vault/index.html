@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3503,8 +3503,8 @@
 credentials between enrolled Pico FIDO devices. The exported object is an
 authenticated, opaque package; the normal host workflow does not receive the
 credential private key in plaintext.</p>
-<p>Vault is a vendor extension. It is separate from ordinary WebAuthn, CTAP, and
-browser passkey behavior.</p>
+<p>Vault is a vendor extension that operates separately from ordinary WebAuthn,
+CTAP, and browser passkey flows.</p>
 <h2 id="research-reference">Research reference<a class="headerlink" href="#research-reference" title="Permanent link">&para;</a></h2>
 <p>The design is described in Pol Henarejos, <em>Vaulted Passkeys: A Device-Bound
 Proposal for Authenticated Credential Export and Import</em> (2026), available on
@@ -3527,8 +3527,8 @@ Proposal for Authenticated Credential Export and Import</em> (2026), available o
 <li>a license file and network access when requesting the Vault certificate</li>
 <li>physical access to the board's <code>BOOTSEL</code> button</li>
 </ul>
-<p>The enroller provisions the Vault. It does not flash firmware, export
-credentials, or import credentials.</p>
+<p>The enroller provisions the Vault; firmware flashing and credential export or
+import are handled elsewhere.</p>
 <h2 id="enroll-a-board">Enroll a board<a class="headerlink" href="#enroll-a-board" title="Permanent link">&para;</a></h2>
 <p>Clone the enroller and install it in an isolated Python environment, then
 create an encrypted enrollment envelope:</p>
@@ -3567,8 +3567,9 @@ to:</p>
 <li>import the selected credentials on that board.</li>
 </ol>
 <p>The Vault workflow preserves credential metadata that cannot be reconstructed
-from the private key alone. Imported credentials remain distinct from native
-credentials and do not copy the destination device's native signature counter.</p>
+from the private key alone. Imported credentials remain separate from native
+credentials, and they do not copy the destination device's native signature
+counter.</p>
 <p>Four authenticated encryption profiles are available:</p>
 <table>
 <thead>
@@ -3596,19 +3597,18 @@ credentials and do not copy the destination device's native signature counter.</
 </tr>
 </tbody>
 </table>
-<p>The local Vault store may contain credentials from multiple Vault IDs. They are
-grouped by Vault ID, but only credentials belonging to the active Vault can be
-imported. Credentials from another Vault can be displayed in the local store
-but cannot be imported into the current board.</p>
+<p>The local Vault store groups credentials by Vault ID and may contain several
+groups. You can display every group, but only credentials in the active Vault
+can be imported to the current board.</p>
 <p>The same enrollment envelope can be used to enroll multiple boards into one
 Vault domain. Those boards report the same Vault ID and can exchange exported
 credentials. Create a new envelope only when a separate Vault domain is
 intended.</p>
 <h2 id="recovery-and-retirement">Recovery and retirement<a class="headerlink" href="#recovery-and-retirement" title="Permanent link">&para;</a></h2>
-<p>The enrollment JSON is an encrypted recovery copy of the Vault material. It is
-not replaceable by the board PIN. Losing its passphrase makes the file
-unusable; losing both the board copy and the recovery copy prevents recovery
-of credentials in that Vault domain.</p>
+<p>The enrollment JSON is an encrypted recovery copy of the Vault material, and
+the board PIN cannot replace it. Without its passphrase the file is unusable;
+if both the board copy and recovery copy are lost, credentials in that Vault
+domain cannot be recovered.</p>
 <p>To use a replacement board, reuse the original enrollment JSON and verify that
 the new board reports the same Vault ID. Creating a new envelope creates a new
 Vault domain.</p>
@@ -3673,10 +3673,10 @@ or exported package as a recovery-asset incident and rotate the Vault domain.</p
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

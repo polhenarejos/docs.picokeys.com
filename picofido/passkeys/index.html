@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3609,33 +3609,33 @@
 
 
 <h1 id="passkeys-and-ctap">Passkeys and CTAP<a class="headerlink" href="#passkeys-and-ctap" title="Permanent link">&para;</a></h1>
-<p>The FIDO half of the device: passkeys, second-factor security-key logins, discoverable credentials, and legacy U2F.</p>
-<p>Pico FIDO speaks CTAP over HID, so standard WebAuthn browsers and OS dialogs should drive the core FIDO flows without extra smart-card middleware. What varies in practice is not the protocol but the host tooling around it.</p>
+<p>Pico FIDO supports passkeys, second-factor security-key logins, discoverable credentials, and legacy U2F.</p>
+<p>Pico FIDO speaks CTAP over HID, allowing standard WebAuthn browsers and operating-system dialogs to handle core FIDO flows without smart-card middleware. Host tools still vary in the details they expose.</p>
 <h2 id="registering-and-logging-in">Registering and logging in<a class="headerlink" href="#registering-and-logging-in" title="Permanent link">&para;</a></h2>
-<p>The normal mental model is:</p>
+<p>The core flow is:</p>
 <ul>
 <li><code>makeCredential</code> registers a credential</li>
 <li><code>getAssertion</code> uses it later</li>
 <li>discoverable credentials let the authenticator identify an account without an allow-list</li>
 <li>credential management lists and deletes stored records when policy permits</li>
 </ul>
-<p>That is the stable part. The unstable part is client UX:</p>
+<p>The protocol flow is consistent, while client interfaces differ in how they expose it:</p>
 <ul>
 <li>browsers expose different amounts of detail</li>
 <li>resident-credential cleanup is surfaced differently by each platform</li>
 <li>vendor-aware tools may show more than generic tools</li>
 </ul>
 <h2 id="touch-and-user-presence">Touch and user presence<a class="headerlink" href="#touch-and-user-presence" title="Permanent link">&para;</a></h2>
-<p>Upstream documents user presence through a physical button. That should be treated as a real part of the device contract, not as a decorative feature.</p>
+<p>Upstream documents user presence through a physical button, so confirm that the expected button behavior is part of your device setup.</p>
 <p>If you are testing on custom hardware:</p>
 <ul>
 <li>verify that the board really exposes the expected confirmation path</li>
 <li>do not assume every board profile gives the same physical interaction behavior</li>
 </ul>
-<p>For supported boards with proper confirmation wiring, a FIDO operation is not just "the host asked"; it is "the host asked and the user confirmed."</p>
+<p>On supported boards with confirmation wiring, the device requires a user confirmation before completing the requested operation.</p>
 <h2 id="set-a-pin-first">Set a PIN first<a class="headerlink" href="#set-a-pin-first" title="Permanent link">&para;</a></h2>
 <p>Before relying on the device, set a PIN and verify that user verification behaves as expected.</p>
-<p>Why first:</p>
+<p>Set the PIN early because:</p>
 <ul>
 <li>many management operations depend on it</li>
 <li>some relying parties request UV</li>
@@ -3643,7 +3643,7 @@
 </ul>
 <p>If a registration suddenly starts prompting for a PIN, that is often expected behavior, not a malfunction.</p>
 <h2 id="resident-passkeys">Resident passkeys<a class="headerlink" href="#resident-passkeys" title="Permanent link">&para;</a></h2>
-<p>Upstream advertises discoverable credentials and credential management. These are the modern passkey workflows that matter most in practice.</p>
+<p>Upstream advertises discoverable credentials and credential management, which support the passkey workflows most users rely on.</p>
 <p>The important operational consequences are:</p>
 <ul>
 <li>credentials live on the device</li>
@@ -3657,10 +3657,10 @@
 <li>list it with your intended management tool</li>
 <li>delete it and verify the relying party behavior afterwards</li>
 </ol>
-<p>That is more meaningful than reading a raw feature list.</p>
+<p>Testing this flow confirms that the full lifecycle works with your chosen management tool.</p>
 <h2 id="non-resident-registrations-and-u2f">Non-resident registrations and U2F<a class="headerlink" href="#non-resident-registrations-and-u2f" title="Permanent link">&para;</a></h2>
 <p>Pico FIDO also supports classic second-factor style registrations and legacy U2F compatibility according to upstream.</p>
-<p>These flows are usually easier operationally because:</p>
+<p>These flows are often easier to operate because:</p>
 <ul>
 <li>they do not rely on discoverable storage in the same way</li>
 <li>many mainstream services still understand them well</li>
@@ -3709,7 +3709,7 @@
 <li><code>largeBlobKey</code></li>
 <li>large blobs</li>
 </ul>
-<p>This is exactly the kind of area where host support is uneven. A good rule is:</p>
+<p>Host support varies here, so check each layer separately:</p>
 <ul>
 <li>firmware support is necessary</li>
 <li>client support is separate</li>
@@ -3741,7 +3741,7 @@ login behavior.</p>
 <li>self attestation</li>
 <li>enterprise attestation</li>
 </ul>
-<p>Treat these as deployment features, not default recommendations. They affect trust and privacy assumptions and should not be enabled casually just because they are available.</p>
+<p>Treat attestation as a deployment choice because it affects trust and privacy assumptions. Enable it only when your relying parties and operators need it.</p>
 <h2 id="reset-and-recovery">Reset and recovery<a class="headerlink" href="#reset-and-recovery" title="Permanent link">&para;</a></h2>
 <p>A proper FIDO evaluation also needs one destructive test on non-critical hardware:</p>
 <ul>
@@ -3806,10 +3806,10 @@ login behavior.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3474,16 +3474,16 @@
 
 
 <h1 id="daily-use">Daily use<a class="headerlink" href="#daily-use" title="Permanent link">&para;</a></h1>
-<p>Once the card is provisioned, the day-to-day workflows are the ordinary OpenPGP ones:</p>
+<p>Once the card is provisioned, you can use it for the usual OpenPGP workflows:</p>
 <ul>
 <li>signing</li>
 <li>decryption</li>
 <li>authentication</li>
 </ul>
-<p>The card should feel boring here. If it does not, the host setup or role model is probably still wrong.</p>
+<p>These workflows should behave predictably. If they do not, check the host setup and the credential role in use.</p>
 <h2 id="signing">Signing<a class="headerlink" href="#signing" title="Permanent link">&para;</a></h2>
 <p>The signature key is used for normal OpenPGP signing operations through GnuPG or another card-aware client.</p>
-<p>Verify one signing flow early with the exact client you intend to use later. This is the fastest way to confirm:</p>
+<p>Test a signing flow early with the client you plan to use. This confirms that:</p>
 <ul>
 <li>the card is visible</li>
 <li><code>PW1</code> works</li>
@@ -3491,9 +3491,9 @@
 </ul>
 <h2 id="decryption">Decryption<a class="headerlink" href="#decryption" title="Permanent link">&para;</a></h2>
 <p>The decryption path is where performance and middleware issues become more visible, especially with larger RSA keys.</p>
-<p>Test one full decrypt workflow, not just card enumeration, before calling a platform "supported."</p>
+<p>Before treating a platform as supported, test a complete decryption workflow as well as card detection.</p>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>Authentication workflows often depend on host-agent setup as much as on the card itself. If you use the card for SSH or similar agent-backed paths, treat that as its own validation item.</p>
+<p>Authentication workflows depend on the host agent as well as the card. If you use the card for SSH or another agent-backed path, validate that workflow separately.</p>
 <h2 id="uif-and-confirmation">UIF and confirmation<a class="headerlink" href="#uif-and-confirmation" title="Permanent link">&para;</a></h2>
 <p>Upstream claims support for user-interaction flag behavior. If you enable confirmation requirements, document them clearly so operators understand why a command appears to wait on the device.</p>
 
@@ -3551,10 +3551,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

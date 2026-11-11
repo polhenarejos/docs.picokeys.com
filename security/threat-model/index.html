@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3540,10 +3540,11 @@
 
 
 <h1 id="threat-model">Threat model<a class="headerlink" href="#threat-model" title="Permanent link">&para;</a></h1>
-<p>This page states what the PicoKeys firmware families can reasonably protect against and where the boundary ends.</p>
-<p>It is intentionally conservative.</p>
+<p>PicoKeys firmware provides different protections depending on the product and
+hardware. This model also identifies the threats that remain outside their
+scope, using conservative assumptions about those protections.</p>
 <h2 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h2>
-<p>Depending on firmware, the assets include:</p>
+<p>Depending on the firmware, protected assets may include:</p>
 <ul>
 <li>FIDO master seed</li>
 <li>resident passkeys</li>
@@ -3563,7 +3564,7 @@
 <li>retry counters and lockouts</li>
 <li>applet-specific management keys or policy gates</li>
 </ul>
-<p>What remains true:</p>
+<p>Even with those defenses:</p>
 <ul>
 <li>a compromised host can request operations while the device is connected</li>
 <li>if the user authorizes an operation, the device may perform it</li>
@@ -3576,7 +3577,7 @@
 <li>RP2350/RP2354 and ESP32-S3 class devices provide stronger primitives</li>
 <li>OTP-backed sealing and secure boot are meaningful only after correct provisioning</li>
 </ul>
-<p>Do not describe a device as hardened merely because the firmware supports hardening in theory.</p>
+<p>Describe a device as hardened only when the required protections have been provisioned and verified on that hardware.</p>
 <h2 id="firmware-replacement">Firmware replacement<a class="headerlink" href="#firmware-replacement" title="Permanent link">&para;</a></h2>
 <p>Secure boot and lock mechanisms can prevent unauthorized firmware from running, but only when enabled correctly on hardware that supports them.</p>
 <p>Anti-rollback is a separate concern. It prevents older signed firmware from being accepted after the owner raises the rollback floor.</p>
@@ -3590,7 +3591,7 @@
 <li>power and EM side channels</li>
 <li>invasive lab extraction</li>
 </ul>
-<p>If your threat model includes a funded lab, use certified secure hardware.</p>
+<p>For threats involving a well-funded laboratory, use certified secure hardware.</p>
 <h2 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h2>
 <p>The firmware families documented here are USB-facing. There is no independent network stack in the device model.</p>
 <p>Network exposure comes from the host or from services using the credentials, not from the device itself.</p>
@@ -3602,7 +3603,7 @@
 <li>the provisioning state</li>
 <li>the host tool path used to verify it</li>
 </ul>
-<p>Without those four pieces, the claim is probably too vague.</p>
+<p>Include all four details so readers can understand exactly what the claim covers.</p>
 
 
 
@@ -3658,10 +3659,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

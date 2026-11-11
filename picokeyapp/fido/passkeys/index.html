@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3540,11 +3540,11 @@
 
 
 <h1 id="passkeys">Passkeys<a class="headerlink" href="#passkeys" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>Passkeys panel</strong> in PicoKey App FIDO management.</p>
+<p>Use the <strong>Passkeys panel</strong> to review and manage resident FIDO credentials stored on the device.</p>
 <p><img alt="Passkeys view" src="../../../assets/images/picokeyapp/fido/passkeys.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Passkeys panel lists resident FIDO credentials stored on the device and their metadata.</p>
+<p>The panel lists resident FIDO credentials with their metadata, and provides actions for each credential.</p>
 <ul>
 <li>Credential source and relying party information</li>
 <li>Username / user handle when available</li>
@@ -3552,7 +3552,7 @@
 </ul>
 <hr />
 <h2 id="per-credential-actions">Per-credential actions<a class="headerlink" href="#per-credential-actions" title="Permanent link">&para;</a></h2>
-<p>Each credential row has these actions:</p>
+<p>Each row includes these actions when they are available:</p>
 <ul>
 <li><strong>Copy Credential ID</strong></li>
 <li><strong>Large Blob</strong>: manage the credential’s Large Blob when it has one</li>
@@ -3569,7 +3569,7 @@ Credential</strong>, which creates an opaque Vault package. Revoked credentials
 cannot be changed.</p>
 <p><img alt="Manage Credential dialog" src="../../../assets/images/picokeyapp/fido/expiration.png" /></p>
 <h2 id="individual-credential-lifecycle">Individual credential lifecycle<a class="headerlink" href="#individual-credential-lifecycle" title="Permanent link">&para;</a></h2>
-<p>The gear opens the <strong>Manage Credential</strong> dialog for that specific credential.</p>
+<p>Click the gear to open the <strong>Manage Credential</strong> dialog for the selected credential.</p>
 <ul>
 <li><strong>Set expiration</strong> stores an optional expiration date and time. The board
   requires a configured RTC to set this value. When the RTC reaches the
@@ -3587,7 +3587,7 @@ revoked credential.</p>
 <p><img alt="Large Blob management" src="../../../assets/images/picokeyapp/fido/largeblobs.png" /></p>
 <hr />
 <h2 id="credential-details-shown">Credential details shown<a class="headerlink" href="#credential-details-shown" title="Permanent link">&para;</a></h2>
-<p>The Passkeys list includes additional metadata to help administration and troubleshooting:</p>
+<p>The list also shows metadata that can help with administration and troubleshooting:</p>
 <ul>
 <li>Algorithm</li>
 <li>Curve</li>
@@ -3600,16 +3600,16 @@ revoked credential.</p>
 </ul>
 <hr />
 <h2 id="selection-and-bulk-operations">Selection and bulk operations<a class="headerlink" href="#selection-and-bulk-operations" title="Permanent link">&para;</a></h2>
-<p>The panel supports filtering credentials by common fields, including:</p>
+<p>Filter credentials by common fields such as:</p>
 <ul>
 <li>RP (Relying Party)</li>
 <li>User</li>
 <li>Credential ID</li>
 <li>Other searchable credential fields shown in the table</li>
 </ul>
-<p>Each credential row has a selection switch. Use <strong>Select all</strong> to select the
-currently displayed credentials, then choose one of these actions from the
-bulk-action menu:</p>
+<p>Each row has a selection switch. To apply an action to several credentials,
+use <strong>Select all</strong> for the displayed results, then choose an action from the
+bulk menu:</p>
 <ul>
 <li><strong>Export selected</strong>: exports the selected credentials to Vault using the
   chosen export algorithm.</li>
@@ -3697,10 +3697,10 @@ credential already exported to the active Vault is skipped.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

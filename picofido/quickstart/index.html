@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3543,7 +3543,7 @@
 
 
 <h1 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h1>
-<p>From zero to a working Pico FIDO device in a short test cycle: flash it, set a PIN, register one passkey, and verify one recovery path.</p>
+<p>This quick start takes a Pico FIDO device from flashing through passkey registration and one recovery check.</p>
 <h2 id="what-you-need">What you need<a class="headerlink" href="#what-you-need" title="Permanent link">&para;</a></h2>
 <ul>
 <li>a supported board</li>
@@ -3562,13 +3562,13 @@
 </ol>
 <p>For ESP32-S3 boards, use the upstream flasher flow.</p>
 <h2 id="2-confirm-the-host-sees-a-fido-authenticator">2. Confirm the host sees a FIDO authenticator<a class="headerlink" href="#2-confirm-the-host-sees-a-fido-authenticator" title="Permanent link">&para;</a></h2>
-<p>The simplest check is a standard WebAuthn site. If the browser sees the device, the FIDO path is alive.</p>
+<p>Start with a standard WebAuthn site; if the browser detects the device, the FIDO connection is working.</p>
 <p>An alternative CLI-level check is a libfido2-based tool such as:</p>
 <div class="highlight"><pre><span></span><code>fido2-token<span class="w"> </span>-L
 </code></pre></div>
 <p>If the device is not visible here, stop and fix detection first.</p>
 <h2 id="3-set-a-pin">3. Set a PIN<a class="headerlink" href="#3-set-a-pin" title="Permanent link">&para;</a></h2>
-<p>Set a PIN before real enrollment. The exact tool depends on the host path you use, but the outcome should be the same:</p>
+<p>Set a PIN before enrolling real credentials. The tool depends on your host setup, but you should confirm that:</p>
 <ul>
 <li>a PIN exists</li>
 <li>the device prompts for it when a UV-gated operation requires it</li>
@@ -3581,14 +3581,13 @@
 <li>physical confirmation works</li>
 <li>login with the same credential succeeds</li>
 </ul>
-<p>This proves the core FIDO path, not just enumeration.</p>
 <h2 id="5-test-one-management-action">5. Test one management action<a class="headerlink" href="#5-test-one-management-action" title="Permanent link">&para;</a></h2>
 <p>Before calling the setup done, also test one stored-credential management action:</p>
 <ul>
 <li>list a resident credential</li>
 <li>or delete one test credential and confirm the relying party behavior</li>
 </ul>
-<p>The point is to verify not only authentication but also the management path you expect to use later.</p>
+<p>This confirms that both authentication and the management path you plan to use are working.</p>
 <h2 id="6-test-one-destructive-recovery-path-on-non-critical-hardware">6. Test one destructive recovery path on non-critical hardware<a class="headerlink" href="#6-test-one-destructive-recovery-path-on-non-critical-hardware" title="Permanent link">&para;</a></h2>
 <p>Before trusting a deployment model, test at least one reset flow on a disposable setup:</p>
 <ul>
@@ -3597,7 +3596,7 @@
 <li>reset</li>
 <li>confirm what survived and what did not</li>
 </ul>
-<p>This is the difference between "we assume recovery works" and "we have seen it work."</p>
+<p>This test gives you evidence that recovery works on the setup you plan to use.</p>
 
 
 
@@ -3653,10 +3652,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3586,21 +3586,21 @@
 
 
 <h1 id="slots">Slots<a class="headerlink" href="#slots" title="Permanent link">&para;</a></h1>
-<p>This section describes the <strong>slot management view</strong> in PicoKey App.</p>
-<p>Slots are used to configure and manage <strong>OTP, static password, and related features</strong> supported by the device firmware.</p>
+<p>Use the <strong>slot management view</strong> in PicoKey App to configure OTP and related features.</p>
+<p>Each slot can hold an <strong>OTP, static password, or related function</strong> supported by the device firmware.</p>
 <p><img alt="Slots view" src="../../../assets/images/picokeyapp/fido/slots.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The Slots view shows all available slots supported by the device.</p>
-<p>Each slot can be in one of the following states:</p>
+<p>Each slot is either:</p>
 <ul>
-<li>Empty</li>
-<li>Configured with a specific function</li>
+<li>empty; or</li>
+<li>configured with a specific function.</li>
 </ul>
 <p>Slots are independent from each other and can be configured individually.</p>
 <hr />
 <h2 id="slot-activation">Slot activation<a class="headerlink" href="#slot-activation" title="Permanent link">&para;</a></h2>
-<p>Each slot is activated by pressing the <strong>BOOTSEL</strong> button <strong>N consecutive times</strong>, where <code>N</code> is the slot number.</p>
+<p>To activate a slot, press the <strong>BOOTSEL</strong> button <strong>N consecutive times</strong>, where <code>N</code> is the slot number.</p>
 <ul>
 <li>Slot 1: press once</li>
 <li>Slot 2: press twice in a row</li>
@@ -3611,7 +3611,7 @@
 <p class="admonition-title">Note</p>
 <p>Presses must be consecutive so the device can map the sequence to the correct slot.</p>
 </div>
-<p>For slots configured as <strong>Static Password</strong>, <strong>YubiOTP</strong>, or <strong>HOTP</strong>, activation makes the device type the generated secret/code on the host as if it were a USB keyboard.</p>
+<p>For <strong>Static Password</strong>, <strong>YubiOTP</strong>, and <strong>HOTP</strong> slots, activation types the configured output on the host through the USB keyboard interface.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This keyboard-style output does not apply to <strong>Challenge-Response</strong> slots.</p>
@@ -3619,15 +3619,11 @@
 <hr />
 <h2 id="slot-states">Slot states<a class="headerlink" href="#slot-states" title="Permanent link">&para;</a></h2>
 <h3 id="empty">Empty<a class="headerlink" href="#empty" title="Permanent link">&para;</a></h3>
-<p>An empty slot:</p>
-<ul>
-<li>Does not contain any configuration</li>
-<li>Is available for new provisioning</li>
-<li>Does not perform any action when triggered</li>
-</ul>
+<p>An empty slot has no configuration, so you can provision it for a new
+function. Triggering it has no effect.</p>
 <hr />
 <h3 id="configured">Configured<a class="headerlink" href="#configured" title="Permanent link">&para;</a></h3>
-<p>A configured slot shows:</p>
+<p>A configured slot shows its number, function, and any other available details:</p>
 <ul>
 <li>The slot number</li>
 <li>The configuration type</li>
@@ -3644,7 +3640,7 @@
 </div>
 <hr />
 <h2 id="slot-actions">Slot actions<a class="headerlink" href="#slot-actions" title="Permanent link">&para;</a></h2>
-<p>Each slot exposes a set of actions through icons:</p>
+<p>Use the icons to configure or manage a slot:</p>
 <ul>
 <li><a href="chalresp/">Challenge-response</a></li>
 <li><a href="static-password/">Static password</a></li>
@@ -3653,7 +3649,7 @@
 <li>Delete slot configuration</li>
 </ul>
 <h3 id="delete-slot-configuration">Delete slot configuration<a class="headerlink" href="#delete-slot-configuration" title="Permanent link">&para;</a></h3>
-<p>Deletes the slot configuration.</p>
+<p>Delete the slot configuration to:</p>
 <ul>
 <li>Returns the slot to the empty state</li>
 <li>Removes all associated data</li>
@@ -3664,7 +3660,7 @@
 </div>
 <hr />
 <h2 id="registration-requirement">Registration requirement<a class="headerlink" href="#registration-requirement" title="Permanent link">&para;</a></h2>
-<p>This panel requires a registered board in PicoKey App. If the board is not registered, slot action buttons are disabled.</p>
+<p>Register the board in PicoKey App before using the slot actions; otherwise, the buttons are disabled.</p>
 
 
 
@@ -3720,10 +3716,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

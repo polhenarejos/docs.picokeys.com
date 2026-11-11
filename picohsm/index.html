@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -1664,10 +1664,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-it-is-plainly" class="md-nav__link">
+  <a href="#what-it-supports" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What it is, plainly
+        What it supports
       
     </span>
   </a>
@@ -1697,10 +1697,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-read-the-rest-of-this-section" class="md-nav__link">
+  <a href="#recommended-evaluation-order" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to read the rest of this section
+        Recommended evaluation order
       
     </span>
   </a>
@@ -3443,10 +3443,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-it-is-plainly" class="md-nav__link">
+  <a href="#what-it-supports" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What it is, plainly
+        What it supports
       
     </span>
   </a>
@@ -3476,10 +3476,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-read-the-rest-of-this-section" class="md-nav__link">
+  <a href="#recommended-evaluation-order" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to read the rest of this section
+        Recommended evaluation order
       
     </span>
   </a>
@@ -3515,8 +3515,8 @@
 
 
 <h1 id="pico-hsm">Pico HSM<a class="headerlink" href="#pico-hsm" title="Permanent link">&para;</a></h1>
-<p>Pico HSM is the broadest and most ambitious firmware in the PicoKeys family. It is meant to turn a supported board into a compact hardware security module with smart-card style transport and a large cryptographic surface.</p>
-<p>That makes documentation quality more important, not less. A long feature list without boundaries is not useful.</p>
+<p>Pico HSM gives a supported board a broad cryptographic feature set and smart-card transport, making it the most HSM-oriented firmware in the PicoKeys family.</p>
+<p>Because the feature set is broad, these pages explain where each capability applies and what host support it needs.</p>
 <h2 id="start-here">Start here<a class="headerlink" href="#start-here" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="first-steps/">First steps</a>: detect the device, verify middleware, and establish a safe baseline</li>
@@ -3527,15 +3527,15 @@
 <li><a href="aes/">AES</a>: symmetric operations</li>
 <li><a href="backup-restore/">Backup and restore</a>: wrapped-key workflows and DKEK assumptions</li>
 </ul>
-<h2 id="what-it-is-plainly">What it is, plainly<a class="headerlink" href="#what-it-is-plainly" title="Permanent link">&para;</a></h2>
-<p>Pico HSM is not just "a device that can sign." Upstream claims support for:</p>
+<h2 id="what-it-supports">What it supports<a class="headerlink" href="#what-it-supports" title="Permanent link">&para;</a></h2>
+<p>Upstream lists support for a broad range of cryptographic and management functions:</p>
 <ul>
 <li>RSA, ECC, EdDSA, AES, HMAC, CMAC, KDFs, and secure messaging</li>
 <li>wrapped-key import/export through DKEK-based workflows</li>
 <li>key domains, threshold shares, attestation, counters, and public-key authentication</li>
 <li>USB CCID transport and PKCS#11 integration</li>
 </ul>
-<p>This is closer to an HSM-style appliance than the other firmware families.</p>
+<p>Together, these features make Pico HSM more appliance-like than the other firmware families.</p>
 <h2 id="what-it-is-not">What it is not<a class="headerlink" href="#what-it-is-not" title="Permanent link">&para;</a></h2>
 <p>It is not:</p>
 <ul>
@@ -3543,7 +3543,7 @@
 <li>a secure element</li>
 <li>a guarantee that every advertised capability is equally well surfaced by generic desktop tooling</li>
 </ul>
-<p>There is real capability here, but host-tool maturity varies sharply by feature.</p>
+<p>Host-tool support varies by feature, so a firmware capability may still require a specific client or additional setup.</p>
 <h2 id="security-posture">Security posture<a class="headerlink" href="#security-posture" title="Permanent link">&para;</a></h2>
 <p>The upstream README describes a model where:</p>
 <ul>
@@ -3552,13 +3552,13 @@
 <li>PIN-derived material gates key use</li>
 <li>RP2350/RP2354 and ESP32-S3 class hardware can back that model with stronger secure-boot, secure-lock, and OTP-backed protection</li>
 </ul>
-<p>The boundary is just as important:</p>
+<p>The device still has these limits:</p>
 <ul>
 <li>a compromised host can still drive authorized operations</li>
 <li>RP2040 does not offer the same at-rest protection story</li>
 <li>physical and certification-grade threats are outside what these boards can honestly claim to solve</li>
 </ul>
-<h2 id="how-to-read-the-rest-of-this-section">How to read the rest of this section<a class="headerlink" href="#how-to-read-the-rest-of-this-section" title="Permanent link">&para;</a></h2>
+<h2 id="recommended-evaluation-order">Recommended evaluation order<a class="headerlink" href="#recommended-evaluation-order" title="Permanent link">&para;</a></h2>
 <p>The practical order is:</p>
 <ol>
 <li>establish host connectivity and PIN workflow</li>
@@ -3566,7 +3566,7 @@
 <li>validate the exact host tools you plan to use</li>
 <li>only then move on to backup, wrapped-key, or higher-assurance workflows</li>
 </ol>
-<p>That order avoids confusing "feature exists" with "feature is operationally ready for this deployment."</p>
+<p>Following that order helps confirm that a feature works with the host tools and deployment you intend to use.</p>
 <h2 id="current-storage-behavior">Current storage behavior<a class="headerlink" href="#current-storage-behavior" title="Permanent link">&para;</a></h2>
 <p>Recent firmware work moves HSM key material toward authenticated SDK object
 containers while retaining compatibility with supported legacy layouts. The
@@ -3635,10 +3635,10 @@ DKEK backup and restore procedure.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

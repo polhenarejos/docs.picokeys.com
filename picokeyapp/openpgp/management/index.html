@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3696,11 +3696,11 @@
 
 
 <h1 id="openpgp-management">OpenPGP Management<a class="headerlink" href="#openpgp-management" title="Permanent link">&para;</a></h1>
-<p>This page documents the <strong>OpenPGP &gt; Management</strong> view in PicoKey App.</p>
+<p>Use <strong>OpenPGP &gt; Management</strong> in PicoKey App to check card status and manage OpenPGP keys.</p>
 <p><img alt="OpenPGP management overview" src="../../../assets/images/picokeyapp/openpgp/management-basic-1.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The OpenPGP management view is organized into:</p>
+<p>The view groups its controls into:</p>
 <ul>
 <li><strong>OpenPGP Card Status</strong> (card metadata and PIN/session state)</li>
 <li><strong>Operation modes</strong>:</li>
@@ -3722,8 +3722,8 @@
 <li><code>PW1</code> (user context)</li>
 <li><code>PW3</code> (admin context)</li>
 </ul>
-<p>Admin-level operations require <code>PW3</code> unlock. This includes key generation/export workflows and editing protected card settings.</p>
-<p>When only <code>PW1</code> is unlocked, the panel remains readable but admin-write actions stay restricted.</p>
+<p>Unlock with <code>PW3</code> to generate or export keys and edit protected card settings.</p>
+<p>With only <code>PW1</code> unlocked, you can still read the panel, while admin-level changes remain restricted.</p>
 <hr />
 <h2 id="card-status">Card status<a class="headerlink" href="#card-status" title="Permanent link">&para;</a></h2>
 <p>The <strong>OpenPGP Card Status</strong> section shows:</p>
@@ -3740,7 +3740,7 @@
 <li><code>Login data</code></li>
 <li><code>PIN retries</code> for <code>PW1</code>, <code>RC</code>, and <code>PW3</code></li>
 </ul>
-<p>The panel also displays this hint:</p>
+<p>The panel also reminds you that:</p>
 <ul>
 <li><code>Tip: Click editable values to edit</code></li>
 </ul>
@@ -3753,13 +3753,13 @@
 <h2 id="operation-modes">Operation modes<a class="headerlink" href="#operation-modes" title="Permanent link">&para;</a></h2>
 <p>OpenPGP management provides two operation modes:</p>
 <h3 id="basic-mode">Basic mode<a class="headerlink" href="#basic-mode" title="Permanent link">&para;</a></h3>
-<p>In <strong>Basic</strong> mode, key operations are global for the OpenPGP keyset:</p>
+<p>In <strong>Basic</strong> mode, each key operation applies to the entire OpenPGP keyset:</p>
 <ul>
 <li><strong>Generate</strong> creates/regenerates key material for all three slots (<code>SIG</code>, <code>DEC</code>, <code>AUT</code>).</li>
 <li><strong>Export</strong> exports public keys for all three slots in one global operation.</li>
 </ul>
 <h3 id="advanced-mode">Advanced mode<a class="headerlink" href="#advanced-mode" title="Permanent link">&para;</a></h3>
-<p>In <strong>Advanced</strong> mode, operations are granular per slot:</p>
+<p>In <strong>Advanced</strong> mode, you can work with each slot separately:</p>
 <ul>
 <li><strong>Generate</strong> is available independently for each slot (<code>SIG</code>, <code>DEC</code>, <code>AUT</code>).</li>
 <li><strong>Export</strong> can be executed for a single slot, exporting only that slot's public key.</li>
@@ -3771,7 +3771,7 @@
 </div>
 <hr />
 <h2 id="key-slots-sig-dec-aut">Key slots (SIG / DEC / AUT)<a class="headerlink" href="#key-slots-sig-dec-aut" title="Permanent link">&para;</a></h2>
-<p>Each slot panel exposes:</p>
+<p>For each slot, the panel shows:</p>
 <ul>
 <li><strong>Fingerprint</strong> (or <code>[none]</code> when empty)</li>
 <li><strong>Key attributes</strong> selector (algorithm/key type)</li>
@@ -3819,7 +3819,7 @@
 </div>
 <hr />
 <h2 id="registration-requirement">Registration requirement<a class="headerlink" href="#registration-requirement" title="Permanent link">&para;</a></h2>
-<p>This panel requires a registered board in PicoKey App. If the board is not registered, controls are restricted.</p>
+<p>Register the board in PicoKey App before using this panel; otherwise, controls are restricted.</p>
 
 
 
@@ -3875,10 +3875,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

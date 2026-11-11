@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3510,8 +3510,8 @@ workflow</a>; it does not enroll a board.</p>
 <p>Select <strong>FIDO &gt; Vault</strong> and click <strong>Refresh</strong>. The panel shows the Vault ID
 when the board is enrolled. If it is not enrolled, the panel points to the
 standalone enroller.</p>
-<p>The local store may contain packages from multiple Vault IDs. The panel groups
-them by Vault ID and shows the active board's Vault ID at the top.</p>
+<p>The local store can contain packages from several Vault IDs. The panel groups
+them by ID and shows the active board's Vault ID at the top.</p>
 <h2 id="export-a-passkey">Export a passkey<a class="headerlink" href="#export-a-passkey" title="Permanent link">&para;</a></h2>
 <p>From <strong>FIDO &gt; Passkeys</strong>, choose one or more resident credentials and select an
 export profile:</p>
@@ -3535,27 +3535,25 @@ private key.</p>
 <li>Open <strong>FIDO &gt; Vault</strong> and click <strong>Refresh</strong>.</li>
 <li>Select a credential and use its import button, or choose <strong>Import selected</strong>.</li>
 </ol>
-<p>Only packages whose Vault ID matches the active board can be imported. A
-package from another Vault remains visible in its group but its import action
-is disabled. Imported credentials are shown in the destination's passkey list
-as separate resident credentials.</p>
-<p>The same encrypted enrollment envelope can be used to enroll multiple boards.
-Those boards report the same Vault ID and can exchange exported credentials
-through the same Vault domain. Create a new envelope only when a separate Vault
-domain is intended.</p>
+<p>You can import only packages whose Vault ID matches the active board. Packages
+from other Vaults remain visible in their groups, but their import actions are
+disabled. Imported credentials appear in the destination's passkey list as
+separate resident credentials.</p>
+<p>You can use the same encrypted enrollment envelope for multiple boards. They
+will report the same Vault ID and can exchange exported credentials through
+that Vault domain. Create another envelope only when you want a separate Vault
+domain.</p>
 <p>Use <strong>Select all</strong> and <strong>Import selected</strong> for a bulk import from the active
 Vault group. The panel also provides an import button for each eligible row.</p>
 <h2 id="delete-local-vault-records">Delete local Vault records<a class="headerlink" href="#delete-local-vault-records" title="Permanent link">&para;</a></h2>
 <p>The row delete button and <strong>Delete selected</strong> remove packages from the local
-Vault store. They do not delete a credential already imported into a board.
-Deleting the local package is therefore a backup-store operation, not a
-device credential-management operation.</p>
+Vault store. They leave any credential already imported into a board in place,
+so deleting a package affects the backup store rather than the device.</p>
 <h2 id="security-and-recovery">Security and recovery<a class="headerlink" href="#security-and-recovery" title="Permanent link">&para;</a></h2>
-<p>Keep the enrollment JSON, its passphrase, device PIN, and exported packages
-under separate protection. The App cannot reset a lost enrollment passphrase.
-If a package or enrollment secret is exposed, treat it as a recovery incident
-and rotate the Vault domain according to the <a href="https://github.com/polhenarejos/pico-vault-enroller/blob/main/docs/operations.md">Vault operations
-guide</a>.</p>
+<p>Protect the enrollment JSON, its passphrase, device PIN, and exported packages
+separately. PicoKey App cannot reset a lost enrollment passphrase. If a package
+or enrollment secret is exposed, treat it as a recovery incident and rotate
+the Vault domain according to the <a href="https://github.com/polhenarejos/pico-vault-enroller/blob/main/docs/operations.md">Vault operations guide</a>.</p>
 
 
 
@@ -3611,10 +3609,10 @@ guide</a>.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

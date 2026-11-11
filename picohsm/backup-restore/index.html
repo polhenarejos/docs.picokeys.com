@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3493,8 +3493,9 @@
 
 
 <h1 id="backup-and-restore">Backup and restore<a class="headerlink" href="#backup-and-restore" title="Permanent link">&para;</a></h1>
-<p>Backup in Pico HSM does not mean "export the private key as plaintext." It means "wrap key material under a DKEK-based scheme and move it under controlled conditions."</p>
-<p>That distinction is the whole point.</p>
+<p>Pico HSM backs up private keys by wrapping them under a DKEK-based scheme and
+moving them under controlled conditions. It does not export private keys as
+plaintext.</p>
 <h2 id="core-idea">Core idea<a class="headerlink" href="#core-idea" title="Permanent link">&para;</a></h2>
 <p>The upstream model relies on:</p>
 <ul>
@@ -3502,7 +3503,7 @@
 <li>wrapped export</li>
 <li>controlled unwrap on a compatible destination</li>
 </ul>
-<p>If you do not understand your DKEK story, you do not yet have a backup story.</p>
+<p>Before relying on backups, make sure you understand how DKEK shares are created, stored, and recovered.</p>
 <h2 id="generate-or-provision-the-dkek-path">Generate or provision the DKEK path<a class="headerlink" href="#generate-or-provision-the-dkek-path" title="Permanent link">&para;</a></h2>
 <p>The simplified example is:</p>
 <div class="highlight"><pre><span></span><code>pkcs11-tool<span class="w"> </span><span class="se">\</span>
@@ -3512,7 +3513,7 @@
 <span class="w">  </span>--id<span class="w"> </span><span class="m">01</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--pin<span class="w"> </span><span class="m">648219</span>
 </code></pre></div>
-<p>In real deployments, upstream also describes share-based and threshold workflows. Those need operational runbooks, not just commands.</p>
+<p>For real deployments, the upstream project also describes share-based and threshold workflows; document those procedures in an operational runbook.</p>
 <h2 id="export-a-wrapped-key">Export a wrapped key<a class="headerlink" href="#export-a-wrapped-key" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>pkcs11-tool<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--export-key<span class="w"> </span><span class="se">\</span>
@@ -3540,7 +3541,7 @@
 <li>the destination device is not prepared correctly</li>
 <li>the team thinks "we have export files" means "we have tested recovery"</li>
 </ul>
-<p>Only the last point is avoidable by discipline alone, and it is also the most common.</p>
+<p>The third problem is avoidable: restore a backup on a test device before relying on it.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>A backup workflow that has never been restored on a test device is not a backup workflow. It is a hypothesis.</p>
@@ -3600,10 +3601,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

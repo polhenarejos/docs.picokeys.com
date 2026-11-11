@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3540,7 +3540,7 @@
 
 
 <h1 id="pins-and-roles">PINs and roles<a class="headerlink" href="#pins-and-roles" title="Permanent link">&para;</a></h1>
-<p>Pico OpenPGP follows the usual OpenPGP card split between user and admin credentials. If you ignore that split, many later failures look mysterious when they are not.</p>
+<p>Pico OpenPGP separates user and admin credentials, and many apparent command failures come from using the wrong role.</p>
 <h2 id="the-three-domains">The three domains<a class="headerlink" href="#the-three-domains" title="Permanent link">&para;</a></h2>
 <p>The important credentials are:</p>
 <table>
@@ -3565,7 +3565,7 @@
 </tr>
 </tbody>
 </table>
-<p>The exact UI differs by tool, but the role boundary does not.</p>
+<p>Tools present these credentials differently, but the roles stay the same.</p>
 <h2 id="pw1"><code>PW1</code><a class="headerlink" href="#pw1" title="Permanent link">&para;</a></h2>
 <p>This is the day-to-day user context:</p>
 <ul>
@@ -3588,14 +3588,14 @@
 <p>The reset code is a recovery credential. Treat it accordingly.</p>
 <p>If you keep it equal to an easily known admin secret or fail to document who holds it, the recovery model is weak even if the firmware supports it correctly.</p>
 <h2 id="retry-counters-and-lockouts">Retry counters and lockouts<a class="headerlink" href="#retry-counters-and-lockouts" title="Permanent link">&para;</a></h2>
-<p>This is where many users get surprised:</p>
+<p>Keep these retry-counter behaviors in mind:</p>
 <ul>
 <li>each PIN domain has its own retry logic</li>
 <li>a wrong attempt decrements the relevant counter</li>
 <li>a correct entry resets that counter</li>
 <li>a blocked admin path is far more painful than a blocked user path</li>
 </ul>
-<p>That is not Pico-specific. It is still worth stating explicitly because it defines the recovery runbook.</p>
+<p>These rules apply to the OpenPGP card model generally, and they should be reflected in your recovery runbook.</p>
 <h2 id="practical-rule">Practical rule<a class="headerlink" href="#practical-rule" title="Permanent link">&para;</a></h2>
 <p>Before any sensitive operation, know which context you are in:</p>
 <ol>
@@ -3603,15 +3603,14 @@
 <li>a user session does not imply an admin session</li>
 <li>reconnects can clear the context you assumed was still active</li>
 </ol>
-<p>Most "the card refused the command" reports reduce to one of those.</p>
+<p>When a command is refused, check these three conditions before looking for a firmware fault.</p>
 <h2 id="admin-less-mode">Admin-less mode<a class="headerlink" href="#admin-less-mode" title="Permanent link">&para;</a></h2>
 <p>Some current firmware builds support an optional admin-less mode inspired by
 <a href="https://wiki.debian.org/GNUK">Gnuk</a>. In that mode, <code>PW3</code> can remain
 unconfigured and the configured user PIN can also authorize operations
 normally associated with <code>PW3</code>. Configuring a distinct <code>PW3</code> disables that
 relationship.</p>
-<p>Treat this as a deliberate policy choice, not as a shortcut around the role
-model:</p>
+<p>Choose this mode deliberately and document how it changes the role model:</p>
 <ul>
 <li>enable it only when a single operator credential is acceptable;</li>
 <li>verify the mode after changing PINs or migrating KDF settings; and</li>
@@ -3675,10 +3674,10 @@ the Gnuk behavior is the design precedent, not a shared implementation.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

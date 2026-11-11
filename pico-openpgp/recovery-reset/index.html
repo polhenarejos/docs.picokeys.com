@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3474,24 +3474,24 @@
 
 
 <h1 id="recovery-and-reset">Recovery and reset<a class="headerlink" href="#recovery-and-reset" title="Permanent link">&para;</a></h1>
-<p>Recovery is where the role split between <code>PW1</code>, <code>PW3</code>, and the reset code stops being theory.</p>
+<p>The role split between <code>PW1</code>, <code>PW3</code>, and the reset code determines which recovery options remain available after a lockout.</p>
 <h2 id="user-pin-recovery">User-PIN recovery<a class="headerlink" href="#user-pin-recovery" title="Permanent link">&para;</a></h2>
 <p>If <code>PW1</code> becomes blocked, the intended recovery path is through the administrative or reset-code mechanism, depending on how the card was provisioned.</p>
-<p>That recovery path should be tested before the card holds important material.</p>
+<p>Test the recovery path before storing important material on the card.</p>
 <h2 id="admin-lockout">Admin lockout<a class="headerlink" href="#admin-lockout" title="Permanent link">&para;</a></h2>
-<p>An admin-path problem is more serious than a user-path problem because it blocks key and policy management, not just day-to-day use.</p>
-<p>Do not assume you can improvise recovery later. Write the runbook down while the setup is still fresh.</p>
+<p>An admin-path problem blocks key and policy management as well as day-to-day use, so it is more serious than a user-path problem.</p>
+<p>Document the admin recovery steps while the setup is fresh, so operators can follow them during a lockout.</p>
 <h2 id="factory-reset">Factory reset<a class="headerlink" href="#factory-reset" title="Permanent link">&para;</a></h2>
-<p>A full reset is the cleanest way to prove what the applet really wipes:</p>
+<p>Test a full reset on non-critical material to see which of these items it clears:</p>
 <ul>
 <li>keys</li>
 <li>PIN state</li>
 <li>cardholder metadata</li>
 <li>recovery material</li>
 </ul>
-<p>Run this test on non-critical hardware at least once. Otherwise the reset story is still theoretical.</p>
+<p>Run this test on non-critical hardware at least once, then record the actual reset behavior.</p>
 <h2 id="conservative-rule">Conservative rule<a class="headerlink" href="#conservative-rule" title="Permanent link">&para;</a></h2>
-<p>If you have not tested both a blocked-user recovery and one full reset path, your operational documentation is incomplete.</p>
+<p>Your recovery documentation is complete only after you have tested both a blocked-user recovery and a full reset path.</p>
 
 
 
@@ -3547,10 +3547,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

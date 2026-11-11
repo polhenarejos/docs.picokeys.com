@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3618,28 +3618,18 @@
 
 
 <h1 id="slot-static-password">Slot: Static Password<a class="headerlink" href="#slot-static-password" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>Static Password slot type</strong> available in PicoKey App.</p>
-<p>The Static Password slot stores a fixed password that is emitted by the device as <strong>keyboard input</strong> when triggered.</p>
+<p>A <strong>Static Password slot</strong> stores a fixed password and types it as <strong>keyboard input</strong> when triggered.</p>
 <p><img alt="Static Password slot" src="../../../../assets/images/picokeyapp/fido/slots-staticpassword.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Static Password slot allows the device to:</p>
-<ul>
-<li>Store a static password securely</li>
-<li>Emit the password as keystrokes</li>
-<li>Behave as a USB keyboard when activated</li>
-</ul>
-<p>This mechanism is compatible with systems that accept keyboard input.</p>
+<p>The device stores a fixed password and types it through its USB keyboard
+interface when the slot is activated. This works with systems that accept
+keyboard input.</p>
 <hr />
 <h2 id="activation-mechanism">Activation mechanism<a class="headerlink" href="#activation-mechanism" title="Permanent link">&para;</a></h2>
 <p>The Static Password slot is activated through the <strong>OTP / button interface</strong>.</p>
-<p>Activation works as follows:</p>
-<ul>
-<li>The user presses the BOOTSEL button <strong>N times</strong></li>
-<li><code>N</code> corresponds to the slot number</li>
-<li>Once activated, the device types the stored password</li>
-<li>The password is sent as if typed on a physical keyboard</li>
-</ul>
+<p>Press the BOOTSEL button <strong>N times</strong>, where <code>N</code> is the slot number. The device
+then types the stored password into the host as keyboard input.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>No software on the host is required beyond standard USB HID keyboard support.</p>
@@ -3647,34 +3637,25 @@
 <hr />
 <h2 id="slot-configuration">Slot configuration<a class="headerlink" href="#slot-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="password">Password<a class="headerlink" href="#password" title="Permanent link">&para;</a></h3>
-<p>Defines the static password stored in the slot.</p>
-<ul>
-<li>The password is stored securely on the device</li>
-<li>The password cannot be retrieved once stored</li>
-<li>The maximum length is limited by the slot implementation</li>
-</ul>
+<p>Enter the fixed password for this slot. The device stores it securely and
+does not return it after setup; the slot implementation also limits its
+maximum length.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Losing the password means it cannot be recovered from the device.</p>
 </div>
 <hr />
 <h3 id="append-enter">Append Enter<a class="headerlink" href="#append-enter" title="Permanent link">&para;</a></h3>
-<p>When enabled:</p>
-<ul>
-<li>A newline (Enter key) is sent after the password</li>
-<li>Useful for automatic form submission</li>
-</ul>
+<p>When enabled, the device sends Enter after the password, which can submit a
+form automatically.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Enable this option when logging into terminals or login forms.</p>
 </div>
 <hr />
 <h3 id="keyboard-layout">Keyboard layout<a class="headerlink" href="#keyboard-layout" title="Permanent link">&para;</a></h3>
-<p>Defines how characters are translated into keyboard scancodes.</p>
-<ul>
-<li>Different layouts affect how characters are typed</li>
-<li>The selected layout must match the host system keyboard layout</li>
-</ul>
+<p>The selected layout controls how characters map to keyboard scancodes. Match
+it to the host's keyboard layout to avoid incorrect characters.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>A mismatched keyboard layout may produce incorrect characters.</p>
@@ -3682,8 +3663,8 @@
 <hr />
 <h2 id="save-and-cancel">Save and cancel<a class="headerlink" href="#save-and-cancel" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Save</strong> stores the password permanently in the slot</li>
-<li><strong>Cancel</strong> discards the configuration</li>
+<li><strong>Save</strong> stores the password permanently in the slot.</li>
+<li><strong>Cancel</strong> discards the changes.</li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -3691,19 +3672,16 @@
 </div>
 <hr />
 <h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
-<p>The Static Password slot:</p>
-<ul>
-<li>Does not expose the password over software interfaces</li>
-<li>Emits the password only as keyboard input</li>
-<li>Can be triggered without host authentication</li>
-</ul>
+<p>The device does not expose the password through software interfaces; it types
+it through the keyboard interface and does not require host authentication to
+trigger the slot.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Anyone with physical access to the device may trigger the slot.</p>
 </div>
 <hr />
 <h2 id="typical-use-cases">Typical use cases<a class="headerlink" href="#typical-use-cases" title="Permanent link">&para;</a></h2>
-<p>Common use cases include:</p>
+<p>Static Password slots can help with:</p>
 <ul>
 <li>Login to systems without password managers</li>
 <li>Unlocking encrypted volumes</li>
@@ -3716,12 +3694,9 @@
 </div>
 <hr />
 <h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>No challenge-response</li>
-<li>No host-side verification</li>
-<li>Password is static</li>
-<li>Susceptible to shoulder surfing or screen recording</li>
-</ul>
+<p>This slot does not use challenge-response or host-side verification. Because
+the password is fixed and typed visibly, it can be exposed through shoulder
+surfing or screen recording.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This slot prioritizes convenience over cryptographic authentication.</p>
@@ -3781,10 +3756,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

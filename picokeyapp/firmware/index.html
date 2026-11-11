@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3606,25 +3606,27 @@
 
 
 <h1 id="firmware-update">Firmware update<a class="headerlink" href="#firmware-update" title="Permanent link">&para;</a></h1>
-<p>This section explains how to update the firmware of a PicoKeys device using <strong>PicoKey App</strong>.</p>
+<p>Use <strong>PicoKey App</strong> to update the firmware running on a PicoKeys device.</p>
 <p>Firmware updates modify the software running on the device and may affect available features and behavior.</p>
 <p><img alt="Firmware" src="../../assets/images/picokeyapp/firmware.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Firmware updates are used to:</p>
+<p>An update can:</p>
 <ul>
-<li>Install a new firmware variant (e.g. Pico HSM, Pico FIDO, Pico OpenPGP)</li>
-<li>Update an existing firmware to a newer version</li>
-<li>Recover a device in case of a corrupted or incomplete firmware</li>
+<li>install a different firmware variant, such as Pico HSM, Pico FIDO, or Pico OpenPGP;</li>
+<li>update the current firmware; or</li>
+<li>recover a device with corrupted or incomplete firmware.</li>
 </ul>
 <p>Firmware updates are <strong>explicit user actions</strong> and are never performed automatically.</p>
 <hr />
 <h2 id="supported-update-modes">Supported update modes<a class="headerlink" href="#supported-update-modes" title="Permanent link">&para;</a></h2>
-<p>Depending on the device state and firmware, PicoKey App may support firmware updates when the device is <strong>BOOTSEL / RESCUE mode</strong>. For new or freshly flashed devices, <strong>RESCUE mode is expected</strong>.</p>
+<p>Depending on the firmware and device state, PicoKey App may support updates in
+<strong>BOOTSEL / RESCUE mode</strong>. New or freshly flashed devices are expected to be in
+<strong>RESCUE mode</strong>.</p>
 <p>For regular firmware variants, upgrade actions require a registered board in PicoKey App. Rescue firmware update paths may still be available for recovery workflows.</p>
 <hr />
 <h2 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
-<p>Before performing a firmware update:</p>
+<p>Before you start the update:</p>
 <ul>
 <li>Ensure the device is connected directly to the computer</li>
 <li>Avoid USB hubs during the update</li>
@@ -3647,7 +3649,7 @@ and require manual intervention.</p>
 <p>Once in BOOTSEL / RESCUE mode, PicoKey App should detect the device again.</p>
 <hr />
 <h2 id="performing-a-firmware-update">Performing a firmware update<a class="headerlink" href="#performing-a-firmware-update" title="Permanent link">&para;</a></h2>
-<p>The typical firmware update process is:</p>
+<p>To install an update:</p>
 <ol>
 <li>Open the firmware update section in PicoKey App</li>
 <li>Use <strong>Search</strong> to pick the firmware file to be installed
@@ -3657,7 +3659,7 @@ and require manual intervention.</p>
 <li>Reconnect the device if requested</li>
 </ol>
 <p>You can also load a <strong>specific firmware file from local disk</strong> using the file search/open action in the firmware panel (custom firmware path).</p>
-<p>During the update:</p>
+<p>While the update runs:</p>
 <ul>
 <li>Progress information may be displayed</li>
 <li>The device may temporarily disconnect and reconnect</li>
@@ -3674,13 +3676,13 @@ and require manual intervention.</p>
 </div>
 <hr />
 <h2 id="after-the-update">After the update<a class="headerlink" href="#after-the-update" title="Permanent link">&para;</a></h2>
-<p>After a successful firmware update:</p>
+<p>After the update completes:</p>
 <ul>
 <li>The device may reboot automatically</li>
 <li>The reported firmware version should change accordingly</li>
 <li>Available features in PicoKey App may change depending on the firmware</li>
 </ul>
-<p>It is recommended to:</p>
+<p>Then:</p>
 <ul>
 <li>Return to <strong>Home</strong></li>
 <li>Verify firmware version and device status</li>
@@ -3688,7 +3690,7 @@ and require manual intervention.</p>
 </ul>
 <hr />
 <h2 id="firmware-update-and-configuration">Firmware update and configuration<a class="headerlink" href="#firmware-update-and-configuration" title="Permanent link">&para;</a></h2>
-<p>Installing a new firmware may:</p>
+<p>Installing a different firmware may:</p>
 <ul>
 <li>Reset some configuration settings</li>
 <li>Require re-commissioning</li>
@@ -3701,7 +3703,7 @@ not by PicoKey App itself.</p>
 </div>
 <hr />
 <h2 id="if-something-goes-wrong">If something goes wrong<a class="headerlink" href="#if-something-goes-wrong" title="Permanent link">&para;</a></h2>
-<p>If the firmware update fails:</p>
+<p>If an update fails:</p>
 <ul>
 <li>Do not unplug the device immediately</li>
 <li>Follow any instructions shown by PicoKey App</li>
@@ -3778,10 +3780,10 @@ not by PicoKey App itself.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

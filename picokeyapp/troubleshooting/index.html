@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -4032,11 +4032,10 @@
 
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
-<p>This section lists the most common issues encountered when using <strong>PicoKey App</strong>, together with their causes and recommended actions.</p>
-<p>Read this section carefully before opening a support ticket.</p>
+<p>Use this guide to check common PicoKey App problems before opening a support ticket.</p>
 <hr />
 <h2 id="device-not-detected">Device not detected<a class="headerlink" href="#device-not-detected" title="Permanent link">&para;</a></h2>
-<p>PicoKey App does not detect any connected device.</p>
+<p>PicoKey App does not detect the connected device.</p>
 <h3 id="possible-causes">Possible causes<a class="headerlink" href="#possible-causes" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The device is not connected correctly</li>
@@ -4061,7 +4060,7 @@
 <h2 id="device-detected-but-in-unexpected-connection-mode">Device detected but in unexpected connection mode<a class="headerlink" href="#device-detected-but-in-unexpected-connection-mode" title="Permanent link">&para;</a></h2>
 <p>The device is detected, but the <strong>Connection</strong> field shows an unexpected value.</p>
 <h3 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h3>
-<p>Depending on the firmware and device state, the connection mode may vary.</p>
+<p>The connection mode depends on the firmware and device state.</p>
 <p>Common modes include:</p>
 <ul>
 <li><code>RESCUE</code> (BOOTSEL / recovery mode)</li>
@@ -4069,9 +4068,9 @@
 </ul>
 <h3 id="what-to-do">What to do<a class="headerlink" href="#what-to-do" title="Permanent link">&para;</a></h3>
 <ul>
-<li>For new or freshly flashed devices, <code>RESCUE</code> mode is expected</li>
-<li>If the device should be in normal mode, try reconnecting it</li>
-<li>If unsure, proceed with commissioning only when instructed</li>
+<li>A new or freshly flashed device is expected to be in <code>RESCUE</code> mode.</li>
+<li>If the device should be in normal mode, reconnect it and check again.</li>
+<li>If you are unsure, commission the device only when instructed.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4081,8 +4080,8 @@
 <h2 id="license-installed-but-board-is-not-registered">License installed but board is not registered<a class="headerlink" href="#license-installed-but-board-is-not-registered" title="Permanent link">&para;</a></h2>
 <p>A license is installed, but the board status remains <strong>Not registered</strong>.</p>
 <h3 id="explanation_1">Explanation<a class="headerlink" href="#explanation_1" title="Permanent link">&para;</a></h3>
-<p>Installing a license and registering a board are <strong>two separate steps</strong>.</p>
-<p>A license must be installed first, and then explicitly bound to a board.</p>
+<p>Installing a license and registering a board are <strong>separate steps</strong>. Install
+the license first, then bind it to the selected board.</p>
 <h3 id="recommended-actions_1">Recommended actions<a class="headerlink" href="#recommended-actions_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Go to <strong>About → License</strong></li>
@@ -4098,8 +4097,8 @@
 <h2 id="selected-the-wrong-board-type">Selected the wrong board type<a class="headerlink" href="#selected-the-wrong-board-type" title="Permanent link">&para;</a></h2>
 <p>The wrong board type was selected during registration.</p>
 <h3 id="explanation_2">Explanation<a class="headerlink" href="#explanation_2" title="Permanent link">&para;</a></h3>
-<p>Board type selection is <strong>user-controlled</strong> and <strong>irreversible</strong>.</p>
-<p>Once a board is registered, the selected board type <strong>cannot be changed</strong>.</p>
+<p>Board type selection is <strong>user-controlled</strong> and <strong>irreversible</strong>. Once the
+board is registered, you cannot change the selected type.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>Selecting an incorrect board type cannot be undone.</p>
@@ -4107,13 +4106,13 @@
 </div>
 <h3 id="what-to-do_1">What to do<a class="headerlink" href="#what-to-do_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Do <strong>not</strong> attempt to work around this by selecting a similar board</li>
-<li>Do <strong>not</strong> attempt to re-register the board</li>
+<li>Do <strong>not</strong> select a similar board as a workaround.</li>
+<li>Do <strong>not</strong> try to register the board again.</li>
 </ul>
 <p>Instead, open a support ticket and explain the situation.</p>
 <hr />
 <h2 id="my-board-does-not-appear-in-the-board-list">My board does not appear in the board list<a class="headerlink" href="#my-board-does-not-appear-in-the-board-list" title="Permanent link">&para;</a></h2>
-<p>The board model you are using does not appear in the board selection list.</p>
+<p>The board selection list does not include your board model.</p>
 <h3 id="recommended-actions_2">Recommended actions<a class="headerlink" href="#recommended-actions_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Do not proceed with board registration</li>
@@ -4135,7 +4134,7 @@
 </ul>
 <hr />
 <h2 id="firmware-update-fails">Firmware update fails<a class="headerlink" href="#firmware-update-fails" title="Permanent link">&para;</a></h2>
-<p>A firmware update does not complete successfully.</p>
+<p>The firmware update does not complete successfully.</p>
 <h3 id="possible-causes_1">Possible causes<a class="headerlink" href="#possible-causes_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>USB connection interrupted</li>
@@ -4158,8 +4157,8 @@
 <h2 id="features-missing-after-firmware-update">Features missing after firmware update<a class="headerlink" href="#features-missing-after-firmware-update" title="Permanent link">&para;</a></h2>
 <p>Some features are missing after installing or updating firmware.</p>
 <h3 id="explanation_3">Explanation<a class="headerlink" href="#explanation_3" title="Permanent link">&para;</a></h3>
-<p>Available features depend on the <strong>installed firmware</strong>, not on PicoKey App itself.</p>
-<p>Installing a different firmware variant may:</p>
+<p>Available features depend on the <strong>installed firmware</strong> rather than PicoKey App.</p>
+<p>Installing another firmware variant may:</p>
 <ul>
 <li>Enable new features</li>
 <li>Disable features available in a previous firmware</li>
@@ -4179,7 +4178,7 @@
 <h2 id="permission-issues-linux">Permission issues (Linux)<a class="headerlink" href="#permission-issues-linux" title="Permanent link">&para;</a></h2>
 <p>The device is detected, but operations fail on Linux.</p>
 <h3 id="explanation_4">Explanation<a class="headerlink" href="#explanation_4" title="Permanent link">&para;</a></h3>
-<p>Linux systems may require additional USB permissions.</p>
+<p>Linux may require additional USB permissions before the device can be used.</p>
 <h3 id="recommended-actions_5">Recommended actions<a class="headerlink" href="#recommended-actions_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Check udev rules</li>
@@ -4192,7 +4191,7 @@
 </div>
 <hr />
 <h2 id="when-to-open-a-support-ticket">When to open a support ticket<a class="headerlink" href="#when-to-open-a-support-ticket" title="Permanent link">&para;</a></h2>
-<p>Open a support ticket if:</p>
+<p>Open a support ticket when:</p>
 <ul>
 <li>The correct board model is not listed</li>
 <li>Firmware recovery is not possible</li>
@@ -4200,7 +4199,7 @@
 </ul>
 <p>Use the official issue tracker:</p>
 <p><a href="https://github.com/polhenarejos/picokeyapp/issues">https://github.com/polhenarejos/picokeyapp/issues</a></p>
-<p>Provide as much detail as possible to speed up resolution.</p>
+<p>Include the details above so the support team can investigate the issue.</p>
 
 
 
@@ -4256,10 +4255,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

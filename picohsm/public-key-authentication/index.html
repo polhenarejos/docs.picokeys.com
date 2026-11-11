@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3516,7 +3516,7 @@
 
 <h1 id="public-key-authentication">Public key authentication<a class="headerlink" href="#public-key-authentication" title="Permanent link">&para;</a></h1>
 <p>Public-key authentication lets Pico HSM gate access with a challenge-response flow instead of relying only on an interactive PIN entry pattern.</p>
-<p>That makes it useful for automation, but only if you model the trust boundary correctly.</p>
+<p>This can simplify automation, provided you account for the trust boundary around the device and its authentication key.</p>
 <h2 id="high-level-flow">High-level flow<a class="headerlink" href="#high-level-flow" title="Permanent link">&para;</a></h2>
 <ol>
 <li>generate or provision an authentication key</li>
@@ -3524,7 +3524,7 @@
 <li>sign a challenge with the private key in the device</li>
 <li>verify the signature with the public key</li>
 </ol>
-<p>If verification succeeds, the holder of the device-controlled private key is authenticated.</p>
+<p>Successful verification shows that the device-controlled private key signed the challenge.</p>
 <h2 id="generate-an-authentication-key">Generate an authentication key<a class="headerlink" href="#generate-an-authentication-key" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>pkcs11-tool<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--keygen<span class="w"> </span><span class="se">\</span>
@@ -3561,7 +3561,7 @@ openssl<span class="w"> </span>ec<span class="w"> </span>-inform<span class="w">
 <li>the public-key path removes some PIN friction, not the need for trust boundaries</li>
 <li>key management for the authentication key now becomes part of your automation security story</li>
 </ul>
-<p>Use it where non-interactive access is genuinely needed, not as a reflex replacement for PIN-gated workflows.</p>
+<p>Use this flow when non-interactive access is needed, and keep PIN-gated workflows where human authorization is required.</p>
 
 
 
@@ -3617,10 +3617,10 @@ openssl<span class="w"> </span>ec<span class="w"> </span>-inform<span class="w">
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

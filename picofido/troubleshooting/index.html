@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3522,17 +3522,17 @@
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
 <h2 id="the-browser-does-not-see-the-device">The browser does not see the device<a class="headerlink" href="#the-browser-does-not-see-the-device" title="Permanent link">&para;</a></h2>
-<p>Start with the obvious checks:</p>
+<p>First check the USB connection and confirm the board booted into firmware:</p>
 <ul>
 <li>replug the board</li>
 <li>confirm the board really booted into firmware rather than USB mass-storage mode</li>
 <li>test with a second browser or a CLI FIDO tool</li>
 </ul>
-<p>If the browser cannot see any FIDO device at all, do not debug passkeys yet.</p>
+<p>If neither the browser nor a CLI tool sees a FIDO device, resolve detection before debugging passkey registration.</p>
 <h2 id="registration-prompts-for-a-pin-unexpectedly">Registration prompts for a PIN unexpectedly<a class="headerlink" href="#registration-prompts-for-a-pin-unexpectedly" title="Permanent link">&para;</a></h2>
-<p>That is often expected. A PIN-gated flow is not a failure; it is the authenticator enforcing user verification or management authorization.</p>
+<p>This prompt is often expected because the authenticator requires user verification or management authorization for the requested operation.</p>
 <h2 id="a-yubico-oriented-tool-cannot-see-the-device">A Yubico-oriented tool cannot see the device<a class="headerlink" href="#a-yubico-oriented-tool-cannot-see-the-device" title="Permanent link">&para;</a></h2>
-<p>This may be an identity or reader-name issue rather than a FIDO protocol issue. Verify whether the tool depends on a YubiKey-like USB identity or reader naming convention.</p>
+<p>The tool may be relying on a YubiKey-like USB identity or reader name. Check those requirements before treating the issue as a FIDO protocol failure.</p>
 <h2 id="a-relying-party-rejects-an-algorithm-or-extension">A relying party rejects an algorithm or extension<a class="headerlink" href="#a-relying-party-rejects-an-algorithm-or-extension" title="Permanent link">&para;</a></h2>
 <p>Do not assume firmware failure first. Check:</p>
 <ol>
@@ -3540,9 +3540,9 @@
 <li>what the browser requests</li>
 <li>what the relying party accepts</li>
 </ol>
-<p>These are three different layers.</p>
+<p>The authenticator, browser, and relying party each apply their own support rules.</p>
 <h2 id="resident-credential-management-is-inconsistent-between-clients">Resident credential management is inconsistent between clients<a class="headerlink" href="#resident-credential-management-is-inconsistent-between-clients" title="Permanent link">&para;</a></h2>
-<p>That is common. Test resident-credential listing and deletion with the exact management path you plan to support operationally.</p>
+<p>Clients expose resident-credential management differently. Test listing and deletion with the exact management path you plan to support.</p>
 <h2 id="security-features-behave-differently-across-boards">Security features behave differently across boards<a class="headerlink" href="#security-features-behave-differently-across-boards" title="Permanent link">&para;</a></h2>
 <p>If a claim about secure lock, secure boot, or OTP-backed protection seems inconsistent, confirm the exact board first. The supported hardware families do not share one identical security baseline.</p>
 
@@ -3600,10 +3600,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

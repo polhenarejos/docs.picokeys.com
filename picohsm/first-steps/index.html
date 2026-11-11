@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3493,14 +3493,14 @@
 
 
 <h1 id="first-steps">First steps<a class="headerlink" href="#first-steps" title="Permanent link">&para;</a></h1>
-<p>Treat Pico HSM like a smart-card-attached cryptographic device, not like a USB file you can start using blindly.</p>
+<p>Pico HSM is a smart-card-attached cryptographic device, so first confirm that the host can communicate with it.</p>
 <h2 id="1-get-the-device-detected">1. Get the device detected<a class="headerlink" href="#1-get-the-device-detected" title="Permanent link">&para;</a></h2>
 <p>Upstream expects CCID and OpenSC-style tooling. Start with detection:</p>
 <div class="highlight"><pre><span></span><code>opensc-tool<span class="w"> </span>-l
 opensc-tool<span class="w"> </span>-a
 opensc-tool<span class="w"> </span>-an
 </code></pre></div>
-<p>You want to prove three things:</p>
+<p>These checks confirm that:</p>
 <ul>
 <li>the operating system sees a reader</li>
 <li>the middleware sees a card</li>
@@ -3511,7 +3511,7 @@ opensc-tool<span class="w"> </span>-an
 <p>Once the reader path is healthy, list stored objects:</p>
 <div class="highlight"><pre><span></span><code>pkcs11-tool<span class="w"> </span>--list-objects<span class="w"> </span>--pin<span class="w"> </span><span class="m">648219</span>
 </code></pre></div>
-<p>Use the real PIN for your device, obviously. The purpose here is not the object list itself. It is to confirm that authenticated PKCS#11 traffic works end to end.</p>
+<p>Replace the example PIN with your device's PIN. The object list is only a check that authenticated PKCS#11 traffic works end to end.</p>
 <h2 id="3-start-with-a-disposable-key">3. Start with a disposable key<a class="headerlink" href="#3-start-with-a-disposable-key" title="Permanent link">&para;</a></h2>
 <p>Before importing real material or enabling advanced policies, generate a test key and prove you can:</p>
 <ul>
@@ -3526,7 +3526,7 @@ opensc-tool<span class="w"> </span>-an
 <li>RP2040 is the weakest platform for at-rest protection</li>
 <li>RP2350/RP2354 and ESP32-S3 are where secure boot, secure lock, and OTP-backed claims become relevant</li>
 </ul>
-<p>If you are evaluating the HSM seriously, note the exact board used during testing.</p>
+<p>Record the exact board model whenever you evaluate the HSM, since platform choice affects its security properties.</p>
 <h2 id="5-do-not-start-with-advanced-workflows">5. Do not start with advanced workflows<a class="headerlink" href="#5-do-not-start-with-advanced-workflows" title="Permanent link">&para;</a></h2>
 <p>Avoid this order:</p>
 <ul>
@@ -3542,7 +3542,7 @@ opensc-tool<span class="w"> </span>-an
 <li>sign or decrypt test data</li>
 <li>then move to wrapped-key and admin workflows</li>
 </ol>
-<p>It is slower once, and faster overall.</p>
+<p>This sequence adds a few checks up front and makes later troubleshooting easier.</p>
 
 
 
@@ -3598,10 +3598,10 @@ opensc-tool<span class="w"> </span>-an
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

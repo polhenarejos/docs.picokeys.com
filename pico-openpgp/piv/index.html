@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3519,13 +3519,13 @@
 
 <h1 id="piv">PIV<a class="headerlink" href="#piv" title="Permanent link">&para;</a></h1>
 <p>PIV is a smart-card application model for X.509 certificates, client authentication, smart-card login, PKCS#11, and related workflows.</p>
-<p>For a standalone Pico OpenPGP deployment, verify that your firmware image actually includes the PIV applet before treating any command here as applicable.</p>
+<p>Before following these steps on a standalone Pico OpenPGP device, check that its firmware image includes the PIV applet.</p>
 <h2 id="applicability-check">Applicability check<a class="headerlink" href="#applicability-check" title="Permanent link">&para;</a></h2>
 <p>Before provisioning, confirm the applet exists:</p>
 <div class="highlight"><pre><span></span><code>ykman<span class="w"> </span>piv<span class="w"> </span>info
 </code></pre></div>
 <p>or use OpenSC/PCSC tooling to inspect available applications.</p>
-<p>If the command cannot find a PIV applet, this page is not applicable to that firmware image.</p>
+<p>If the command cannot find a PIV applet, the instructions below do not apply to that firmware image.</p>
 <h2 id="defaults-and-provisioning">Defaults and provisioning<a class="headerlink" href="#defaults-and-provisioning" title="Permanent link">&para;</a></h2>
 <p>PIV deployments normally include:</p>
 <ul>
@@ -3534,7 +3534,7 @@
 <li>management key</li>
 <li>key slots such as <code>9a</code>, <code>9c</code>, <code>9d</code>, and <code>9e</code></li>
 </ul>
-<p>Change defaults before real use. Public defaults are provisioning state, not production state.</p>
+<p>Change the published default credentials before production use.</p>
 <h2 id="generate-a-key">Generate a key<a class="headerlink" href="#generate-a-key" title="Permanent link">&para;</a></h2>
 <p>Typical Yubico-style tooling uses:</p>
 <div class="highlight"><pre><span></span><code>ykman<span class="w"> </span>piv<span class="w"> </span>keys<span class="w"> </span>generate<span class="w"> </span>--algorithm<span class="w"> </span>ECCP256<span class="w"> </span>9a<span class="w"> </span>pub.pem
@@ -3546,14 +3546,14 @@ ykman<span class="w"> </span>piv<span class="w"> </span>certificates<span class=
 <div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-D<span class="w"> </span>/usr/lib/opensc-pkcs11.so
 ssh<span class="w"> </span>-I<span class="w"> </span>/usr/lib/opensc-pkcs11.so<span class="w"> </span>you@host
 </code></pre></div>
-<p>The exact module path depends on the operating system.</p>
+<p>The PKCS#11 module path varies by operating system.</p>
 <h2 id="caveats">Caveats<a class="headerlink" href="#caveats" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>ykman piv</code> may depend on YubiKey-like reader naming.</li>
 <li>PIV support is not the same thing as OpenPGP support.</li>
 <li>Imported keys and generated keys have different attestation and recovery properties.</li>
 </ul>
-<p>Treat PIV as its own applet with its own lifecycle.</p>
+<p>PIV has a separate applet and lifecycle, so manage it independently from OpenPGP.</p>
 <h2 id="current-policy-defaults">Current policy defaults<a class="headerlink" href="#current-policy-defaults" title="Permanent link">&para;</a></h2>
 <p>The current firmware reports slot metadata for PIN and touch policy, origin,
 and algorithm. Unless explicitly overridden, the defaults are:</p>
@@ -3563,7 +3563,7 @@ and algorithm. Unless explicitly overridden, the defaults are:</p>
 <li>other key slots: PIN required once per authenticated session; and</li>
 <li>generated/imported keys: no touch requirement.</li>
 </ul>
-<p>These defaults are not a substitute for reviewing slot metadata. Set an
+<p>Review the reported slot metadata before relying on these defaults. Set an
 explicit policy when your deployment requires touch or a different PIN
 boundary.</p>
 <p>The PIV attestation key and its metadata are exposed through slot <code>F9</code>. Retired
@@ -3624,10 +3624,10 @@ move operation deliberately and verify the destination slot before committing.</
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3596,29 +3596,18 @@
 
 
 <h1 id="slot-challenge-response">Slot: Challenge-Response<a class="headerlink" href="#slot-challenge-response" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>Challenge-Response slot type</strong> available in PicoKey App.</p>
-<p>This slot implements a <strong>host-driven challenge–response mechanism</strong>, where the host generates a challenge, the device signs it, and the host verifies the response.</p>
+<p>A <strong>Challenge-Response slot</strong> uses a host-driven mechanism: the host creates a challenge, the device processes it, and the host verifies the response.</p>
 <p><img alt="Challenge-Response slot" src="../../../../assets/images/picokeyapp/fido/slots-chalresp.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Challenge-Response slot is designed to:</p>
-<ul>
-<li>Bind authentication to a secret stored on the device</li>
-<li>Require host-side verification</li>
-<li>Avoid storing reusable secrets on the host</li>
-</ul>
-<p>The authentication flow is driven by the host application.</p>
+<p>The host application drives authentication using a secret stored on the device.
+It verifies the response itself, so it does not need to keep a reusable secret.</p>
 <hr />
 <h2 id="authentication-model">Authentication model<a class="headerlink" href="#authentication-model" title="Permanent link">&para;</a></h2>
-<p>The Challenge-Response mechanism works as follows:</p>
-<ul>
-<li>The host generates a random challenge</li>
-<li>The challenge is sent to the device</li>
-<li>The device signs or processes the challenge using the slot secret</li>
-<li>The response is returned to the host</li>
-<li>The host verifies the response</li>
-<li>Authentication succeeds only if the response matches the expected value</li>
-</ul>
+<p>The host first generates a random challenge and sends it to the device. The
+device uses the slot secret to process the challenge, then returns a response
+for the host to verify. Authentication succeeds only when that response
+matches the expected value.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The device does not decide whether authentication succeeds.
@@ -3627,23 +3616,17 @@ Validation is entirely performed by the host.</p>
 <hr />
 <h2 id="slot-configuration">Slot configuration<a class="headerlink" href="#slot-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="key">Key<a class="headerlink" href="#key" title="Permanent link">&para;</a></h3>
-<p>Defines the <strong>secret key</strong> used for challenge processing.</p>
-<ul>
-<li>The key is stored securely on the device</li>
-<li>The key length is limited by the slot implementation</li>
-<li>Once configured, the key cannot be retrieved in plaintext</li>
-</ul>
+<p>Enter the <strong>secret key</strong> used to process challenges. The device stores it
+securely, limits its length according to the slot implementation, and does
+not return it in plaintext after configuration.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Losing the key means the challenge-response authentication cannot be validated anymore.</p>
 </div>
 <hr />
 <h3 id="require-touch">Require touch<a class="headerlink" href="#require-touch" title="Permanent link">&para;</a></h3>
-<p>When enabled:</p>
-<ul>
-<li>User presence is required to generate a response</li>
-<li>The device waits for a physical touch or confirmation</li>
-</ul>
+<p>When enabled, the device waits for a physical touch or confirmation before it
+generates a response.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Requiring touch prevents unattended or automated authentication attempts.</p>
@@ -3651,8 +3634,8 @@ Validation is entirely performed by the host.</p>
 <hr />
 <h2 id="save-and-cancel">Save and cancel<a class="headerlink" href="#save-and-cancel" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Save</strong> stores the slot configuration permanently</li>
-<li><strong>Cancel</strong> discards all changes</li>
+<li><strong>Save</strong> stores the slot configuration permanently.</li>
+<li><strong>Cancel</strong> discards the changes.</li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -3660,19 +3643,16 @@ Validation is entirely performed by the host.</p>
 </div>
 <hr />
 <h2 id="security-properties">Security properties<a class="headerlink" href="#security-properties" title="Permanent link">&para;</a></h2>
-<p>The Challenge-Response slot provides:</p>
-<ul>
-<li>Protection against replay attacks (if challenges are random)</li>
-<li>No static secrets sent over the interface</li>
-<li>Optional user presence enforcement</li>
-</ul>
+<p>Random challenges help prevent replay attacks. The slot does not send a static
+secret over the interface, and you can require user presence before it
+responds.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Security depends entirely on correct challenge generation and verification on the host side.</p>
 </div>
 <hr />
 <h2 id="typical-use-cases">Typical use cases<a class="headerlink" href="#typical-use-cases" title="Permanent link">&para;</a></h2>
-<p>Common uses for Challenge-Response slots include:</p>
+<p>Challenge-Response slots are commonly used for:</p>
 <ul>
 <li>Device-bound authentication for custom applications</li>
 <li>Licensing or entitlement checks</li>
@@ -3685,11 +3665,8 @@ Validation is entirely performed by the host.</p>
 </div>
 <hr />
 <h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>No built-in verification on the device</li>
-<li>No standardized protocol (application-specific)</li>
-<li>Host implementation is required</li>
-</ul>
+<p>The device does not verify the response, the protocol is application-specific,
+and the host must implement verification.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This slot is intended for advanced users and custom integrations.</p>
@@ -3749,10 +3726,10 @@ Validation is entirely performed by the host.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

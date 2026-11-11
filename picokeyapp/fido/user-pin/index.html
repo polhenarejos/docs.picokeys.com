@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3518,15 +3518,14 @@
 
 
 <h1 id="user-pin-vendor-feature">User PIN (Vendor Feature)<a class="headerlink" href="#user-pin-vendor-feature" title="Permanent link">&para;</a></h1>
-<p>This page describes the PicoKey vendor feature that adds a second FIDO PIN context with separate permissions.</p>
+<p>The User PIN feature adds a second FIDO PIN context with its own permissions.</p>
 <h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p>This feature is designed for <strong>multi-user FIDO Passkeys</strong> scenarios.</p>
-<p>It allows an Admin to decide which operations are allowed for a User context and which are not.</p>
+<p>This feature supports <strong>multi-user FIDO passkeys</strong> by letting an Admin choose which operations the User context can perform.</p>
 <p>Typical use case: an organization configures the key with a manager/admin account first, then hands the key to a worker account with reduced administration permissions.</p>
 <p><img alt="User PIN permissions" src="../../../assets/images/picokeyapp/fido/user-pin.png" /></p>
 <hr />
 <h2 id="what-this-feature-adds">What this feature adds<a class="headerlink" href="#what-this-feature-adds" title="Permanent link">&para;</a></h2>
-<p>This is <strong>not</strong> a standard FIDO behavior. It is a vendor extension implemented by PicoKey firmware and PicoKey App.</p>
+<p>This vendor extension is implemented by PicoKey firmware and PicoKey App; it is outside the standard FIDO behavior.</p>
 <p>The device can operate with two PIN contexts:</p>
 <ul>
 <li><strong>Admin PIN</strong>: full management permissions.</li>
@@ -3535,7 +3534,7 @@
 <p>Each context has its <strong>own PIN value</strong>.</p>
 <hr />
 <h2 id="permission-model">Permission model<a class="headerlink" href="#permission-model" title="Permanent link">&para;</a></h2>
-<p>When <code>User PIN</code> is enabled, Admin can define what User is allowed to do in Passkeys management.</p>
+<p>When <code>User PIN</code> is enabled, Admin can set which Passkeys management actions the User context may perform.</p>
 <p>The following permissions can be enabled or disabled for User context:</p>
 <ul>
 <li>Create credentials</li>
@@ -3546,7 +3545,7 @@
 <li>Persistent credential management</li>
 <li>Reset authenticator</li>
 </ul>
-<p>Default behavior:</p>
+<p>By default:</p>
 <ul>
 <li>All permissions are enabled by default.</li>
 <li><strong>Authentication is always enabled</strong> and cannot be effectively removed, otherwise the user would not be able to authenticate to any service.</li>
@@ -3558,14 +3557,11 @@
 <li>If <code>User PIN</code> is <strong>disabled</strong>: only Admin context is active.</li>
 <li>If <code>User PIN</code> is <strong>enabled</strong>: device defaults to <strong>User context</strong> after each connect/reconnect.</li>
 </ul>
-<p>This means opening PicoKey App with an enabled User PIN starts in User context unless you explicitly switch.</p>
+<p>When User PIN is enabled, PicoKey App opens in User context after each connection unless you switch to Admin.</p>
 <hr />
 <h2 id="context-switching-in-picokey-app">Context switching in PicoKey App<a class="headerlink" href="#context-switching-in-picokey-app" title="Permanent link">&para;</a></h2>
-<p>Context selection is done in <strong>FIDO &gt; Passkeys</strong> using the context switch.</p>
-<p>Precondition:</p>
-<ul>
-<li>A PIN must already be configured for the active context. If PIN is not set up, context switch is not available.</li>
-</ul>
+<p>Switch contexts in <strong>FIDO &gt; Passkeys</strong>.</p>
+<p>The switch is available only after a PIN has been configured for the active context.</p>
 <p>Operational sequence:</p>
 <ol>
 <li>Connect device (loads User context by default when enabled).</li>
@@ -3577,9 +3573,9 @@
 <hr />
 <h2 id="practical-notes">Practical notes<a class="headerlink" href="#practical-notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Treat Admin and User PIN as separate credentials.</li>
-<li>Define User permissions with least privilege.</li>
-<li>If management actions are unavailable, verify current context before troubleshooting.</li>
+<li>Keep the Admin and User PINs as separate credentials.</li>
+<li>Give the User context only the permissions it needs.</li>
+<li>If management actions are unavailable, check the current context before troubleshooting.</li>
 </ul>
 
 
@@ -3636,10 +3632,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

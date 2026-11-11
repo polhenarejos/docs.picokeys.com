@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3618,29 +3618,19 @@
 
 
 <h1 id="slot-hotp">Slot: HOTP<a class="headerlink" href="#slot-hotp" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>HOTP (HMAC-Based One-Time Password) slot type</strong> available in PicoKey App.</p>
-<p>The HOTP slot generates a numeric one-time password derived from a shared secret and emits it as <strong>keyboard input</strong> when triggered.</p>
+<p>An <strong>HOTP (HMAC-Based One-Time Password) slot</strong> generates a numeric code from a shared secret and types it as <strong>keyboard input</strong> when triggered.</p>
 <p><img alt="HOTP slot" src="../../../../assets/images/picokeyapp/fido/slots-hotp.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The HOTP slot allows the device to:</p>
-<ul>
-<li>Store a shared secret securely</li>
-<li>Generate a one-time password (HOTP)</li>
-<li>Emit the generated code as keystrokes</li>
-<li>Behave as a USB keyboard when activated</li>
-</ul>
-<p>The generated code follows the HOTP model and is intended to be verified by a remote system that shares the same secret.</p>
+<p>The device stores a shared secret and uses it to generate HOTP codes when the
+slot is activated. It types each code through its USB keyboard interface, and
+a remote system verifies the code using the same secret.</p>
 <hr />
 <h2 id="activation-mechanism">Activation mechanism<a class="headerlink" href="#activation-mechanism" title="Permanent link">&para;</a></h2>
 <p>The HOTP slot is activated through the <strong>OTP / button interface</strong>.</p>
-<p>Activation works as follows:</p>
-<ul>
-<li>The user presses the BOOTSEL button <strong>N times</strong></li>
-<li><code>N</code> corresponds to the slot number</li>
-<li>The device generates a new HOTP value</li>
-<li>The HOTP code is typed on the host system as keyboard input</li>
-</ul>
+<p>Press the BOOTSEL button <strong>N times</strong>, where <code>N</code> is the slot number. The device
+then generates the next HOTP value and types it into the host as keyboard
+input.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>No dedicated software is required on the host beyond USB HID keyboard support.</p>
@@ -3648,19 +3638,16 @@
 <hr />
 <h2 id="slot-configuration">Slot configuration<a class="headerlink" href="#slot-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="key">Key<a class="headerlink" href="#key" title="Permanent link">&para;</a></h3>
-<p>Defines the shared secret used to generate HOTP values.</p>
-<ul>
-<li>The key is stored securely on the device</li>
-<li>The key cannot be retrieved once stored</li>
-<li>The maximum key length is limited by the slot implementation</li>
-</ul>
+<p>Enter the shared secret used to generate HOTP values. The device stores it
+securely and does not return it after setup; the slot implementation also
+limits its maximum length.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If the secret is lost, the HOTP sequence cannot be regenerated or validated.</p>
 </div>
 <hr />
 <h3 id="number-of-digits">Number of digits<a class="headerlink" href="#number-of-digits" title="Permanent link">&para;</a></h3>
-<p>Defines the length of the generated HOTP code.</p>
+<p>Choose how many digits the generated code contains:</p>
 <p>Supported values:</p>
 <ul>
 <li>6 digits</li>
@@ -3672,11 +3659,8 @@
 </div>
 <hr />
 <h3 id="append-enter">Append Enter<a class="headerlink" href="#append-enter" title="Permanent link">&para;</a></h3>
-<p>When enabled:</p>
-<ul>
-<li>An Enter key is sent after the HOTP code</li>
-<li>Useful for automatic form submission</li>
-</ul>
+<p>When enabled, the device sends Enter after the code, which can submit a form
+automatically.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Enable this option when authenticating into login forms or terminals.</p>
@@ -3684,8 +3668,8 @@
 <hr />
 <h2 id="save-and-cancel">Save and cancel<a class="headerlink" href="#save-and-cancel" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Save</strong> stores the HOTP configuration permanently</li>
-<li><strong>Cancel</strong> discards the configuration</li>
+<li><strong>Save</strong> stores the HOTP configuration permanently.</li>
+<li><strong>Cancel</strong> discards the changes.</li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -3693,19 +3677,15 @@
 </div>
 <hr />
 <h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
-<p>The HOTP slot:</p>
-<ul>
-<li>Generates a new code on each activation</li>
-<li>Does not expose the shared secret</li>
-<li>Emits the code only as keyboard input</li>
-</ul>
+<p>Each activation generates a new code. The device keeps the shared secret
+private and emits the code only as keyboard input.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>HOTP counters must remain synchronized with the verification system.</p>
 </div>
 <hr />
 <h2 id="typical-use-cases">Typical use cases<a class="headerlink" href="#typical-use-cases" title="Permanent link">&para;</a></h2>
-<p>Common use cases include:</p>
+<p>Use HOTP slots for:</p>
 <ul>
 <li>Two-factor authentication systems</li>
 <li>Legacy systems without TOTP support</li>
@@ -3718,12 +3698,9 @@
 </div>
 <hr />
 <h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Counter-based (no time component)</li>
-<li>Requires host-side verification</li>
-<li>Susceptible to desynchronization</li>
-<li>Keyboard-based emission only</li>
-</ul>
+<p>HOTP uses a counter rather than time, so the device and verifier can become
+desynchronized. The verifier must check each code, and the device emits codes
+only through the keyboard interface.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For time-based OTP, consider using TOTP-capable solutions if available.</p>
@@ -3783,10 +3760,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3796,13 +3796,13 @@
 
 
 <h1 id="pico-hsm-initialization">Pico HSM Initialization<a class="headerlink" href="#pico-hsm-initialization" title="Permanent link">&para;</a></h1>
-<p>This page documents the <strong>security initialization options</strong> available for <strong>Pico HSM</strong> when using PicoKey App.</p>
-<p>These settings control <strong>PIN policies, key protection mechanisms, and recovery options</strong>.</p>
+<p>Use PicoKey App to set the <strong>security initialization options</strong> for <strong>Pico HSM</strong>.</p>
+<p>These settings define <strong>PIN policies, key protection, and recovery options</strong>.</p>
 <p><img alt="Pico HSM initialization" src="../../../assets/images/picokeyapp/hsm/initialize.png" /></p>
 <hr />
 <h2 id="pin-configuration">PIN configuration<a class="headerlink" href="#pin-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="user-pin">User PIN<a class="headerlink" href="#user-pin" title="Permanent link">&para;</a></h3>
-<p>Defines the primary user PIN.</p>
+<p>Set the primary user PIN here.</p>
 <ul>
 <li>Required for cryptographic operations</li>
 <li>Protects private keys and stored objects</li>
@@ -3813,7 +3813,7 @@
 </div>
 <hr />
 <h3 id="so-pin">SO PIN<a class="headerlink" href="#so-pin" title="Permanent link">&para;</a></h3>
-<p>Defines the Security Officer PIN.</p>
+<p>Set the Security Officer PIN here.</p>
 <ul>
 <li>Used for administrative operations</li>
 <li>Required for certain reset and recovery commands</li>
@@ -3824,7 +3824,7 @@
 </div>
 <hr />
 <h3 id="pin-retries">PIN retries<a class="headerlink" href="#pin-retries" title="Permanent link">&para;</a></h3>
-<p>Configures the number of allowed incorrect PIN attempts.</p>
+<p>Choose how many incorrect PIN attempts are allowed.</p>
 <ul>
 <li>Applies to both user PIN and SO PIN</li>
 <li>Exceeding the limit blocks access</li>
@@ -3848,14 +3848,14 @@ key domain can be configured independently with different DKEK shares.</p>
 </div>
 <hr />
 <h3 id="puk-authentications">PUK authentications<a class="headerlink" href="#puk-authentications" title="Permanent link">&para;</a></h3>
-<p>Defines the total number of public keys supported for authentication.</p>
+<p>Set how many public keys can be used for authentication.</p>
 <ul>
 <li>Used when PKA is enabled</li>
 <li>Adds an additional authentication mechanism without PIN</li>
 </ul>
 <hr />
 <h3 id="puk-minimum-authentications">PUK minimum authentications<a class="headerlink" href="#puk-minimum-authentications" title="Permanent link">&para;</a></h3>
-<p>Defines the number of minimum of public keys for authentication.</p>
+<p>Set the minimum number of public keys required for authentication.</p>
 <ul>
 <li>Used when PKA is enabled</li>
 </ul>
@@ -3869,8 +3869,8 @@ key domain can be configured independently with different DKEK shares.</p>
 <hr />
 <h2 id="additional-options">Additional options<a class="headerlink" href="#additional-options" title="Permanent link">&para;</a></h2>
 <h3 id="reset-retry-counter-command">Reset retry counter command<a class="headerlink" href="#reset-retry-counter-command" title="Permanent link">&para;</a></h3>
-<p>Allows resetting the retry counter via command in case PIN is locked. It also
-allows PIN resetting.</p>
+<p>Allows a command to reset the retry counter when the PIN is blocked, and can
+also allow a PIN reset.</p>
 <ul>
 <li>Useful for controlled recovery scenarios</li>
 </ul>
@@ -3882,34 +3882,34 @@ will be lost permanently.</p>
 </div>
 <hr />
 <h3 id="transport-pin">Transport PIN<a class="headerlink" href="#transport-pin" title="Permanent link">&para;</a></h3>
-<p>Allows setting a temporary PIN during transport or provisioning.</p>
+<p>Allows you to set a temporary PIN for transport or provisioning.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Transport PINs should be changed immediately after deployment.</p>
 </div>
 <hr />
 <h3 id="pka-replaceable">PKA replaceable<a class="headerlink" href="#pka-replaceable" title="Permanent link">&para;</a></h3>
-<p>Allows replacement of public key authentication data.</p>
+<p>Allows public-key authentication data to be replaced.</p>
 <hr />
 <h3 id="combined-pin-pka-authentication">Combined PIN &amp; PKA authentication<a class="headerlink" href="#combined-pin-pka-authentication" title="Permanent link">&para;</a></h3>
-<p>Requires both PIN and public key authentication.</p>
+<p>Require both the PIN and public-key authentication.</p>
 <ul>
 <li>Provides multi-factor protection</li>
 </ul>
 <hr />
 <h3 id="reset-retry-counter-only-resets-error-counter">Reset Retry Counter only resets error counter<a class="headerlink" href="#reset-retry-counter-only-resets-error-counter" title="Permanent link">&para;</a></h3>
-<p>Reset Retry command only resets retry counter, not the PIN.</p>
+<p>The Reset Retry command clears the retry counter without changing the PIN.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This option is usable only when Reset Retry Counter command is enabled.</p>
 </div>
 <hr />
 <h3 id="force-device-certificate">Force Device Certificate<a class="headerlink" href="#force-device-certificate" title="Permanent link">&para;</a></h3>
-<p>Downloads and resigns the attestation certificate. Do not use unless you experiment
-issues with 3rd party apps.</p>
+<p>Downloads and re-signs the attestation certificate. Use this only if you
+encounter issues with third-party applications.</p>
 <hr />
 <h2 id="initialization-process">Initialization process<a class="headerlink" href="#initialization-process" title="Permanent link">&para;</a></h2>
-<p>After configuring all parameters:</p>
+<p>After setting the parameters:</p>
 <ul>
 <li>Click <strong>Initialize</strong></li>
 <li>The device is provisioned with the selected security configuration</li>
@@ -3973,10 +3973,10 @@ issues with 3rd party apps.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

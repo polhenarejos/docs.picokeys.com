@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3642,34 +3642,31 @@
 
 
 <h1 id="accounts">Accounts<a class="headerlink" href="#accounts" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>Accounts panel</strong> in PicoKey App FIDO management.</p>
+<p>Use the <strong>Accounts panel</strong> to manage OATH accounts stored on the device.</p>
 <p><img alt="Accounts view" src="../../../assets/images/picokeyapp/fido/accounts.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Accounts panel manages OATH accounts stored on the device.</p>
+<p>The panel lets you:</p>
 <ul>
-<li>List existing accounts</li>
-<li>Add TOTP accounts</li>
-<li>Add HOTP accounts</li>
-<li>Rename existing accounts</li>
-<li>Delete existing accounts</li>
-<li>Review account status before provisioning</li>
+<li>list existing accounts;</li>
+<li>add TOTP and HOTP accounts;</li>
+<li>rename or delete accounts; and</li>
+<li>review account status before provisioning.</li>
 </ul>
 <hr />
 <h2 id="access-control-oath-password">Access control (OATH password)<a class="headerlink" href="#access-control-oath-password" title="Permanent link">&para;</a></h2>
-<p>The OATH applet can be protected with an access password.</p>
-<p>Depending on device state, the panel exposes:</p>
+<p>You can protect the OATH applet with an access password. Depending on the device state, the panel offers:</p>
 <ul>
 <li><strong>Set Access</strong>: define an OATH access password</li>
 <li><strong>Unlock</strong>: unlock the OATH session</li>
 <li><strong>Change Access</strong>: rotate the OATH access password</li>
 <li><strong>Clear Access</strong>: remove the OATH access password</li>
 </ul>
-<p>When locked, account content is hidden until unlock.</p>
+<p>When the applet is locked, account details remain hidden until you unlock it.</p>
 <hr />
 <h2 id="adding-accounts">Adding accounts<a class="headerlink" href="#adding-accounts" title="Permanent link">&para;</a></h2>
 <h3 id="add-totp">Add TOTP<a class="headerlink" href="#add-totp" title="Permanent link">&para;</a></h3>
-<p>Use the TOTP form to create time-based OTP entries.</p>
+<p>Use the TOTP form to add an entry that generates time-based codes.</p>
 <p><img alt="Add TOTP account" src="../../../assets/images/picokeyapp/fido/accounts-add-totp.png" /></p>
 <h4 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3686,7 +3683,7 @@
 <p>Exact field names can vary slightly depending on firmware and app version.</p>
 </div>
 <h3 id="add-hotp">Add HOTP<a class="headerlink" href="#add-hotp" title="Permanent link">&para;</a></h3>
-<p>Use the HOTP form to create counter-based OTP entries.</p>
+<p>Use the HOTP form to add an entry that generates counter-based codes.</p>
 <p><img alt="Add HOTP account" src="../../../assets/images/picokeyapp/fido/accounts-add-hotp.png" /></p>
 <h4 id="fields_1">Fields<a class="headerlink" href="#fields_1" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3700,28 +3697,28 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>HOTP codes advance when the counter increases, while TOTP codes rotate based on time.</p>
+<p>HOTP codes use a counter that advances with each code; TOTP codes rotate over time.</p>
 </div>
 <hr />
 <h2 id="account-operations">Account operations<a class="headerlink" href="#account-operations" title="Permanent link">&para;</a></h2>
-<p>For each account, management actions include:</p>
+<p>For each account, you can:</p>
 <ul>
 <li><strong>Rename</strong></li>
 <li><strong>Delete</strong></li>
 </ul>
-<p>For OTP usage:</p>
+<p>When you use the codes:</p>
 <ul>
-<li>TOTP entries are refreshed automatically with the period timer.</li>
-<li>Clicking a TOTP/HOTP code chip copies the current code to clipboard.</li>
-<li>For HOTP, clicking the chip also triggers a new counter-based calculation.</li>
+<li>TOTP entries refresh automatically according to their period.</li>
+<li>Click a TOTP or HOTP code chip to copy the current code to the clipboard.</li>
+<li>For HOTP, clicking the chip also calculates the next counter-based code.</li>
 </ul>
 <hr />
 <h2 id="locked-state">Locked state<a class="headerlink" href="#locked-state" title="Permanent link">&para;</a></h2>
-<p>When the OATH applet is protected, account data is hidden until unlock.</p>
+<p>When the OATH applet is protected, unlock it before viewing account data.</p>
 <p><img alt="Accounts locked" src="../../../assets/images/picokeyapp/fido/accounts-locked.png" /></p>
 <hr />
 <h2 id="registration-requirement">Registration requirement<a class="headerlink" href="#registration-requirement" title="Permanent link">&para;</a></h2>
-<p>This panel requires a registered board in PicoKey App. If the board is not registered, account management actions are restricted.</p>
+<p>The board must be registered in PicoKey App before you can manage accounts. Otherwise, account actions are restricted.</p>
 
 
 
@@ -3777,10 +3774,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

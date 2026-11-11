@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3493,12 +3493,12 @@
 
 
 <h1 id="asymmetric-ciphering">Asymmetric ciphering<a class="headerlink" href="#asymmetric-ciphering" title="Permanent link">&para;</a></h1>
-<p>Pico HSM exposes two different ideas under this heading:</p>
+<p>This section covers two asymmetric-key operations:</p>
 <ul>
 <li>RSA decryption</li>
 <li>ECDH shared-secret derivation</li>
 </ul>
-<p>Those are related only in the sense that both use asymmetric keys.</p>
+<p>Both use asymmetric keys, but they serve different purposes: RSA decrypts data, while ECDH derives a shared secret.</p>
 <h2 id="prepare-sample-data">Prepare sample data<a class="headerlink" href="#prepare-sample-data" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">"This is a test string. Be safe, be secure."</span><span class="w"> </span>&gt;<span class="w"> </span>data
 </code></pre></div>
@@ -3527,7 +3527,7 @@ openssl<span class="w"> </span>rsa<span class="w"> </span>-inform<span class="w"
 </code></pre></div>
 <h2 id="rsa-pkcs-and-rsa-x509-exist-but-carefully">RSA-PKCS and RSA-X.509 exist, but carefully<a class="headerlink" href="#rsa-pkcs-and-rsa-x509-exist-but-carefully" title="Permanent link">&para;</a></h2>
 <p>Upstream examples also show <code>RSA-PKCS</code> and <code>RSA-X-509</code>.</p>
-<p>The documentation should be blunt here:</p>
+<p>Use the following guidance when choosing between these mechanisms:</p>
 <ul>
 <li><code>RSA-PKCS</code> exists largely for compatibility</li>
 <li><code>RSA-X-509</code> is low-level and easy to misuse</li>
@@ -3549,7 +3549,7 @@ pkcs11-tool<span class="w"> </span><span class="se">\</span>
 <div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>pkeyutl<span class="w"> </span>-derive<span class="w"> </span>-out<span class="w"> </span>bob-mine.der<span class="w"> </span>-inkey<span class="w"> </span>bob.pem<span class="w"> </span>-peerkey<span class="w"> </span><span class="m">11</span>.pub
 cmp<span class="w"> </span>bob-mine.der<span class="w"> </span>mine-bob.der
 </code></pre></div>
-<p>If <code>cmp</code> prints nothing, the derived secrets match.</p>
+<p>When <code>cmp</code> prints nothing, the two derived secrets match.</p>
 <h2 id="practical-caution">Practical caution<a class="headerlink" href="#practical-caution" title="Permanent link">&para;</a></h2>
 <p>Asymmetric ciphering is where users often discover that:</p>
 <ul>
@@ -3557,7 +3557,7 @@ cmp<span class="w"> </span>bob-mine.der<span class="w"> </span>mine-bob.der
 <li>the host tool syntax is obscure</li>
 <li>the intended application still needs adaptation</li>
 </ul>
-<p>That is normal. Test the full application path, not just the raw cryptographic primitive.</p>
+<p>This is common with low-level cryptographic tools, so test the full application path as well as the primitive itself.</p>
 
 
 
@@ -3613,10 +3613,10 @@ cmp<span class="w"> </span>bob-mine.der<span class="w"> </span>mine-bob.der
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

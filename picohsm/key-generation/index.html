@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3515,7 +3515,7 @@
 
 
 <h1 id="key-generation">Key generation<a class="headerlink" href="#key-generation" title="Permanent link">&para;</a></h1>
-<p>Key generation is the cleanest Pico HSM workflow because it uses the device exactly as intended: create private material inside the device and export only what must be public.</p>
+<p>Key generation is a straightforward way to use Pico HSM: create private material inside the device and export only its public part.</p>
 <h2 id="supported-families">Supported families<a class="headerlink" href="#supported-families" title="Permanent link">&para;</a></h2>
 <p>According to upstream, Pico HSM supports:</p>
 <ul>
@@ -3542,7 +3542,7 @@
 <span class="w">  </span>--label<span class="w"> </span>ec-key<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--pin<span class="w"> </span><span class="m">648219</span>
 </code></pre></div>
-<p>For many deployments, this is the practical default.</p>
+<p>For many deployments, an EC key is the practical default.</p>
 <h2 id="export-the-public-part">Export the public part<a class="headerlink" href="#export-the-public-part" title="Permanent link">&para;</a></h2>
 <p>For RSA:</p>
 <div class="highlight"><pre><span></span><code>pkcs11-tool<span class="w"> </span><span class="se">\</span>
@@ -3561,7 +3561,7 @@ openssl<span class="w"> </span>rsa<span class="w"> </span>-inform<span class="w"
 openssl<span class="w"> </span>ec<span class="w"> </span>-inform<span class="w"> </span>DER<span class="w"> </span>-pubin<span class="w"> </span>-in<span class="w"> </span>ec_pub.der<span class="w"> </span>-out<span class="w"> </span>ec_pub.pem
 </code></pre></div>
 <h2 id="validate-immediately">Validate immediately<a class="headerlink" href="#validate-immediately" title="Permanent link">&para;</a></h2>
-<p>Do not stop at generation. Immediately:</p>
+<p>After generation, check that the key is usable:</p>
 <ul>
 <li>list the object</li>
 <li>export the public key</li>
@@ -3574,7 +3574,7 @@ openssl<span class="w"> </span>ec<span class="w"> </span>-inform<span class="w">
 <li>unsupported or oddly named curve identifiers in host tools can mislead users</li>
 <li>a generated key is only useful if your intended client stack can consume it later</li>
 </ul>
-<p>That last point is why key generation should always be followed by one end-to-end application test.</p>
+<p>For that reason, follow key generation with an end-to-end test in the application that will use the key.</p>
 
 
 
@@ -3630,10 +3630,10 @@ openssl<span class="w"> </span>ec<span class="w"> </span>-inform<span class="w">
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

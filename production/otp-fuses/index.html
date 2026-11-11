@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3708,8 +3708,8 @@
 
 
 <h1 id="otp-fuses">OTP fuses<a class="headerlink" href="#otp-fuses" title="Permanent link">&para;</a></h1>
-<p>Here, OTP means one-time-programmable chip fuses, not Yubico one-time passwords.</p>
-<p>PicoKeys uses the same logical idea on RP2350/RP2354 and ESP32-S3 class devices, but the hardware names are different:</p>
+<p>Here, OTP refers to one-time-programmable chip fuses, not Yubico one-time passwords.</p>
+<p>PicoKeys uses one-time-programmable storage on both RP2350/RP2354 and ESP32-S3 devices, although each platform names its hardware differently:</p>
 <ul>
 <li>RP2350/RP2354: OTP rows and page locks.</li>
 <li>ESP32-S3: eFuse key blocks, purpose fields, secure-boot enable bits, revoke bits, and debug-disable bits.</li>
@@ -3725,7 +3725,6 @@
 <li><strong>Chip OTP/eFuse</strong>: irreversible hardware state used for root keys, secure boot, lockout, and sealing.</li>
 <li><strong>Pico FIDO OTP slots</strong>: Yubico OTP, HOTP, static password, and challenge-response credentials.</li>
 </ul>
-<p>This page is only about chip OTP/eFuse state.</p>
 <h2 id="logical-keys">Logical keys<a class="headerlink" href="#logical-keys" title="Permanent link">&para;</a></h2>
 <p>PicoKeys initializes two 32-byte hardware-backed values when the relevant OTP/eFuse storage is empty:</p>
 <table>
@@ -3749,9 +3748,9 @@
 </tr>
 </tbody>
 </table>
-<p>The exact storage differs by platform.</p>
+<p>The tables below show how that storage maps to each platform.</p>
 <h2 id="rp2350-rp2354">RP2350 / RP2354<a class="headerlink" href="#rp2350-rp2354" title="Permanent link">&para;</a></h2>
-<p>For RP2350-class builds, the SDK defines:</p>
+<p>For RP2350-class builds, the SDK defines these rows:</p>
 <table>
 <thead>
 <tr>
@@ -3783,7 +3782,7 @@
 </tr>
 </tbody>
 </table>
-<p>After writing each new key, the firmware writes anti-imaging chaff:</p>
+<p>After writing each key, the firmware also writes anti-imaging chaff:</p>
 <table>
 <thead>
 <tr>
@@ -3804,7 +3803,7 @@
 </table>
 <p>The chaff is the bitwise complement of the raw key data, written at <code>row + 32</code>.</p>
 <h3 id="rp2350-page-lock">RP2350 page lock<a class="headerlink" href="#rp2350-page-lock" title="Permanent link">&para;</a></h3>
-<p>After writing or migrating the MKEK/DEVK material, the firmware locks the OTP page containing those rows:</p>
+<p>After writing or migrating MKEK/DEVK material, the firmware locks the OTP page containing those rows:</p>
 <table>
 <thead>
 <tr>
@@ -3823,7 +3822,7 @@
 </table>
 <p>The code calls <code>otp_lock_page(OTP_MKEK_ROW &gt;&gt; 6)</code>, and <code>0xE90 &gt;&gt; 6</code> is page <code>58</code>.</p>
 <h3 id="rp2350-secure-boot">RP2350 secure boot<a class="headerlink" href="#rp2350-secure-boot" title="Permanent link">&para;</a></h3>
-<p>When secure boot is enabled through <code>otp_enable_secure_boot()</code>, these RP2350 OTP areas are modified:</p>
+<p>When you enable secure boot through <code>otp_enable_secure_boot()</code>, the firmware modifies these RP2350 OTP areas:</p>
 <table>
 <thead>
 <tr>
@@ -3856,7 +3855,9 @@
 </table>
 <p>The secure-boot key hash currently used by the SDK is the fixed 32-byte value also present in <code>config/rp2350/secure_boot.json</code>.</p>
 <h3 id="rp2350-anti-rollback">RP2350 anti-rollback<a class="headerlink" href="#rp2350-anti-rollback" title="Permanent link">&para;</a></h3>
-<p>The current PicoKeys SDK code inspected here enables secure boot and secure lock, but this documentation should not claim a PicoKeys-specific rollback fuse map unless the provisioning tool for the target firmware exposes and documents it.</p>
+<p>The inspected PicoKeys SDK code enables secure boot and secure lock, but it
+does not establish a PicoKeys-specific rollback fuse map. Rely on such a map
+only when the target firmware's provisioning tool exposes and documents it.</p>
 <p>The RP2350 boot ROM has rollback support, but burning rollback state is a separate production decision from burning MKEK/DEVK and secure-boot state.</p>
 <h2 id="esp32-s3">ESP32-S3<a class="headerlink" href="#esp32-s3" title="Permanent link">&para;</a></h2>
 <p>ESP32-S3 does not use RP2350-style OTP rows. It uses eFuse key blocks and named eFuse fields.</p>
@@ -3888,7 +3889,7 @@
 <li>the key-purpose field with <code>esp_efuse_set_keypurpose_dis_write()</code></li>
 </ul>
 <h3 id="esp32-s3-secure-boot">ESP32-S3 secure boot<a class="headerlink" href="#esp32-s3-secure-boot" title="Permanent link">&para;</a></h3>
-<p>When <code>otp_enable_secure_boot()</code> is called on ESP32-S3:</p>
+<p>When the firmware calls <code>otp_enable_secure_boot()</code> on ESP32-S3, it burns:</p>
 <table>
 <thead>
 <tr>
@@ -3913,7 +3914,7 @@
 </table>
 <p>If a digest for the requested index already exists, the code verifies that it matches the expected PicoKeys digest before continuing.</p>
 <h3 id="esp32-s3-secure-lock">ESP32-S3 secure lock<a class="headerlink" href="#esp32-s3-secure-lock" title="Permanent link">&para;</a></h3>
-<p>If secure lock is requested, the SDK additionally burns:</p>
+<p>If you request secure lock, the SDK also burns:</p>
 <table>
 <thead>
 <tr>
@@ -3984,7 +3985,7 @@
 <li>optional JTAG / USB-JTAG / USB-serial-JTAG disable bits when secure lock is requested</li>
 </ul>
 <h2 id="conservative-operating-rule">Conservative operating rule<a class="headerlink" href="#conservative-operating-rule" title="Permanent link">&para;</a></h2>
-<p>Before any fuse-burning workflow:</p>
+<p>Before burning any fuses:</p>
 <ol>
 <li>confirm the exact chip family</li>
 <li>confirm the exact firmware build and provisioning command</li>
@@ -4047,10 +4048,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

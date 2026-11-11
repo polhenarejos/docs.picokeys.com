@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3652,12 +3652,12 @@
 
 
 <h1 id="pico-hsm-cipher">Pico HSM Cipher<a class="headerlink" href="#pico-hsm-cipher" title="Permanent link">&para;</a></h1>
-<p>This page documents <strong>HSM &gt; Management &gt; Cipher</strong> in PicoKey App.</p>
-<p>The <code>Cipher</code> tab executes crypto operations using an existing key (<code>Key ID</code>).</p>
+<p>Use <strong>HSM &gt; Management &gt; Cipher</strong> in PicoKey App to run operations with an existing key.</p>
+<p>The <code>Cipher</code> tab runs cryptographic operations using the selected <code>Key ID</code>.</p>
 <p><img alt="Cipher sign" src="../../../assets/images/picokeyapp/hsm/cipher-sign.png" /></p>
 <hr />
 <h2 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h2>
-<p>Before running cipher operations:</p>
+<p>Before you run an operation:</p>
 <ol>
 <li>Go to <code>HSM &gt; Management</code>.</li>
 <li>Enter <code>PIN</code>.</li>
@@ -3679,25 +3679,18 @@
 </ul>
 <hr />
 <h2 id="io-flow">I/O flow<a class="headerlink" href="#io-flow" title="Permanent link">&para;</a></h2>
-<p>Two input/output modes are available.</p>
+<p>Choose between two input and output modes.</p>
 <h3 id="file-flow">File flow<a class="headerlink" href="#file-flow" title="Permanent link">&para;</a></h3>
 <p>Use files as input and output.</p>
 <p><img alt="Cipher file flow" src="../../../assets/images/picokeyapp/hsm/cipher-flow-file.png" /></p>
-<p>Behavior:</p>
-<ul>
-<li>Input is read from <strong>Input file</strong> (or drop zone)</li>
-<li>Output is written to <strong>Output file</strong></li>
-<li><strong>Browse</strong> buttons select input/output paths</li>
-</ul>
+<p>The file flow reads from <strong>Input file</strong> or the drop zone, then writes the result
+to <strong>Output file</strong>. Use the <strong>Browse</strong> buttons to choose the paths.</p>
 <h3 id="text-box-flow">Text box flow<a class="headerlink" href="#text-box-flow" title="Permanent link">&para;</a></h3>
 <p>Use a single text area for both input and output.</p>
 <p><img alt="Cipher text flow" src="../../../assets/images/picokeyapp/hsm/cipher-flow-text.png" /></p>
-<p>Behavior:</p>
-<ul>
-<li>You write plaintext/data/signing input in the text box</li>
-<li>After execution, the same box is replaced with the result</li>
-<li>The <code>Text input/output is hex</code> toggle switches between plain string mode and hex mode</li>
-</ul>
+<p>Enter plaintext, data, or signing input in the text box. After the operation,
+the app replaces the input with the result. Use <code>Text input/output is hex</code> to
+switch between plain text and hexadecimal input/output.</p>
 <hr />
 <h2 id="operation-specific-fields">Operation-specific fields<a class="headerlink" href="#operation-specific-fields" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3796,7 +3789,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If a selected key type does not support an operation, the corresponding algorithms are not offered in the selector.</p>
+<p>The selector omits algorithms for operations that the selected key type does not support.</p>
 </div>
 
 
@@ -3853,10 +3846,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

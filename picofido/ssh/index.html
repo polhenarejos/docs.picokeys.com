@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3544,7 +3544,7 @@
 
 <h1 id="ssh-keys">SSH keys<a class="headerlink" href="#ssh-keys" title="Permanent link">&para;</a></h1>
 <p>Pico FIDO can be used with OpenSSH security-key keys: <code>ed25519-sk</code> and <code>ecdsa-sk</code>.</p>
-<p>The private key operation is performed by the authenticator. The file stored on disk is a handle that points OpenSSH back to the device; it is not useful by itself without the Pico FIDO device.</p>
+<p>The authenticator performs private-key operations. The file on disk is only a handle that lets OpenSSH find the device, so it cannot be used without Pico FIDO.</p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ul>
 <li>OpenSSH with FIDO support</li>
@@ -3555,7 +3555,7 @@
 <p>Check whether your SSH client knows security-key key types:</p>
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-Q<span class="w"> </span>key<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>sk
 </code></pre></div>
-<p>On macOS, Apple's system OpenSSH may lag or omit the needed provider path. If enrollment fails before the device is touched, test with a current OpenSSH build before blaming the firmware.</p>
+<p>On macOS, Apple's system OpenSSH may be missing a required provider path. If enrollment fails before the device is touched, try a current OpenSSH build before investigating the firmware.</p>
 <h2 id="enroll-a-key">Enroll a key<a class="headerlink" href="#enroll-a-key" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519-sk<span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ed25519_sk<span class="w"> </span>-C<span class="w"> </span><span class="s2">"you@laptop"</span>
 </code></pre></div>
@@ -3567,7 +3567,7 @@
 <li><code>id_ed25519_sk</code> is the handle file</li>
 <li><code>id_ed25519_sk.pub</code> is the public key for <code>authorized_keys</code></li>
 </ul>
-<p>Copy the handle file only to machines you SSH from. The server only needs the public key.</p>
+<p>Copy the handle file to each machine you use for SSH; the server needs only the public key.</p>
 <h2 id="common-enrollment-options">Common enrollment options<a class="headerlink" href="#common-enrollment-options" title="Permanent link">&para;</a></h2>
 <p>Useful <code>ssh-keygen -O</code> options:</p>
 <table>
@@ -3614,7 +3614,7 @@
 <p>Then connect:</p>
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519_sk<span class="w"> </span>you@server
 </code></pre></div>
-<p>Expect user presence, and expect a PIN as well if the key or relying policy requires user verification.</p>
+<p>The authenticator may require user presence, and it will also request a PIN when the key or relying policy requires user verification.</p>
 <h2 id="resident-keys">Resident keys<a class="headerlink" href="#resident-keys" title="Permanent link">&para;</a></h2>
 <p>Resident keys are useful when you want to recover the handle on another machine:</p>
 <div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-K
@@ -3627,7 +3627,7 @@
     IdentityFile ~/.ssh/id_ed25519_sk
     IdentitiesOnly yes
 </code></pre></div>
-<p><code>IdentitiesOnly yes</code> avoids OpenSSH offering a pile of unrelated keys before it reaches the hardware-backed one.</p>
+<p><code>IdentitiesOnly yes</code> tells OpenSSH to skip unrelated keys and offer the hardware-backed key directly.</p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>requested feature not supported</code>: test <code>ecdsa-sk</code>, check OpenSSH/libfido2 support, and confirm the device is visible.</li>
@@ -3690,10 +3690,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

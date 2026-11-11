@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2249,17 +2249,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3779,17 +3768,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3808,20 +3786,18 @@
 
 
 <h1 id="core-concepts">Core concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h1>
-<p>This section explains the <strong>core concepts</strong> used throughout the PicoKeys ecosystem.</p>
-<p>Understanding these concepts is essential to correctly use PicoKey App and the different firmware variants.</p>
+<p>Before configuring a device, it helps to understand how PicoKey App, firmware,
+board registration, and commissioning fit together.</p>
 <hr />
 <h2 id="picokey-app-vs-firmware">PicoKey App vs firmware<a class="headerlink" href="#picokey-app-vs-firmware" title="Permanent link">&para;</a></h2>
-<p>The PicoKeys ecosystem is split into two distinct layers.</p>
+<p>PicoKeys has two layers: the desktop application and the firmware on the device.</p>
 <h3 id="picokey-app-desktop-application">PicoKey App (desktop application)<a class="headerlink" href="#picokey-app-desktop-application" title="Permanent link">&para;</a></h3>
 <p>PicoKey App is the <strong>management interface</strong>.</p>
-<p>It is responsible for:</p>
+<p>PicoKey App handles the management work:</p>
 <ul>
-<li>Detecting devices</li>
-<li>Displaying device and firmware information</li>
-<li>Configuring and commissioning devices</li>
-<li>Installing licenses and registering boards</li>
-<li>Providing diagnostics and troubleshooting tools</li>
+<li>It detects devices and displays device and firmware information.</li>
+<li>It configures and commissions devices, and manages licenses and board registration.</li>
+<li>It also provides diagnostic and troubleshooting tools.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3829,12 +3805,12 @@
 </div>
 <hr />
 <h3 id="firmware-device-functionality">Firmware (device functionality)<a class="headerlink" href="#firmware-device-functionality" title="Permanent link">&para;</a></h3>
-<p>The firmware installed on the device defines <strong>what the device actually does</strong>.</p>
-<p>Different firmware variants provide different functionality, such as:</p>
+<p>The installed firmware defines <strong>what the device does</strong>.</p>
+<p>Each firmware variant provides a different set of functions, for example:</p>
 <ul>
-<li>Hardware security module features (Pico HSM)</li>
-<li>FIDO2 / WebAuthn authentication (Pico FIDO)</li>
-<li>OpenPGP smartcard functionality (Pico OpenPGP)</li>
+<li>Pico HSM provides hardware security module features.</li>
+<li>Pico FIDO provides FIDO2 and WebAuthn authentication.</li>
+<li>Pico OpenPGP provides OpenPGP smart-card functions.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3842,10 +3818,10 @@
 </div>
 <hr />
 <h2 id="device-board-and-firmware">Device, board, and firmware<a class="headerlink" href="#device-board-and-firmware" title="Permanent link">&para;</a></h2>
-<p>Several terms are used to describe different aspects of the hardware.</p>
+<p>The words <em>device</em>, <em>board</em>, and <em>firmware</em> refer to different parts of the setup.</p>
 <h3 id="device">Device<a class="headerlink" href="#device" title="Permanent link">&para;</a></h3>
-<p>A <strong>device</strong> refers to the physical PicoKeys unit connected via USB.</p>
-<p>Each device has:</p>
+<p>A <strong>device</strong> is the physical PicoKeys unit connected over USB.</p>
+<p>It has:</p>
 <ul>
 <li>A unique serial number</li>
 <li>A hardware platform</li>
@@ -3853,8 +3829,8 @@
 </ul>
 <hr />
 <h3 id="board">Board<a class="headerlink" href="#board" title="Permanent link">&para;</a></h3>
-<p>A <strong>board</strong> describes the exact hardware variant.</p>
-<p>Board information is used to:</p>
+<p>A <strong>board</strong> identifies the exact hardware variant.</p>
+<p>PicoKey App uses this information to:</p>
 <ul>
 <li>Apply correct configuration</li>
 <li>Bind a license to compatible hardware</li>
@@ -3866,8 +3842,8 @@
 </div>
 <hr />
 <h3 id="firmware">Firmware<a class="headerlink" href="#firmware" title="Permanent link">&para;</a></h3>
-<p>The <strong>firmware</strong> is the software running on the device.</p>
-<p>Firmware determines:</p>
+<p>The <strong>firmware</strong> is the software that runs on the device.</p>
+<p>It determines:</p>
 <ul>
 <li>Supported features</li>
 <li>Available security options</li>
@@ -3876,9 +3852,9 @@
 <p>Changing firmware may change device capabilities without changing the hardware.</p>
 <hr />
 <h2 id="license-vs-board-registration">License vs board registration<a class="headerlink" href="#license-vs-board-registration" title="Permanent link">&para;</a></h2>
-<p>Licensing involves <strong>two distinct steps</strong>.</p>
+<p>Licensing has <strong>two steps</strong>, and installing the license does not register a board.</p>
 <h3 id="license-installation">License installation<a class="headerlink" href="#license-installation" title="Permanent link">&para;</a></h3>
-<p>Installing a license means:</p>
+<p>When you install a license:</p>
 <ul>
 <li>The license data is stored locally</li>
 <li>No device is modified yet</li>
@@ -3889,7 +3865,7 @@
 </div>
 <hr />
 <h3 id="board-registration">Board registration<a class="headerlink" href="#board-registration" title="Permanent link">&para;</a></h3>
-<p>Registering a board means:</p>
+<p>When you register a board:</p>
 <ul>
 <li>Binding a license to a specific board</li>
 <li>Making the license effective for that device</li>
@@ -3901,14 +3877,14 @@
 </div>
 <hr />
 <h2 id="commissioning">Commissioning<a class="headerlink" href="#commissioning" title="Permanent link">&para;</a></h2>
-<p>Commissioning is the process of <strong>finalizing device setup</strong>.</p>
-<p>Commissioning typically:</p>
+<p>Commissioning <strong>finalizes device setup</strong> by applying configuration and writing persistent state.</p>
+<p>It typically:</p>
 <ul>
 <li>Applies configuration settings</li>
 <li>Writes persistent state to the device</li>
 <li>Prepares the device for normal operation</li>
 </ul>
-<p>Commissioning is usually performed after:</p>
+<p>You normally commission the device after:</p>
 <ul>
 <li>Firmware installation</li>
 <li>Board registration</li>
@@ -3921,7 +3897,7 @@
 <h2 id="connection-modes">Connection modes<a class="headerlink" href="#connection-modes" title="Permanent link">&para;</a></h2>
 <p>A PicoKeys device can appear in different connection modes.</p>
 <h3 id="rescue-bootsel-mode">RESCUE / BOOTSEL mode<a class="headerlink" href="#rescue-bootsel-mode" title="Permanent link">&para;</a></h3>
-<p>This mode is typically used for:</p>
+<p>Use this mode for:</p>
 <ul>
 <li>Initial setup</li>
 <li>Firmware updates</li>
@@ -3933,14 +3909,14 @@
 </div>
 <hr />
 <h3 id="normal-operation-mode">Normal operation mode<a class="headerlink" href="#normal-operation-mode" title="Permanent link">&para;</a></h3>
-<p>In normal operation mode:</p>
+<p>In normal mode:</p>
 <ul>
 <li>The device runs the installed firmware</li>
 <li>Features exposed depend on the firmware variant</li>
 </ul>
 <hr />
 <h2 id="irreversible-actions">Irreversible actions<a class="headerlink" href="#irreversible-actions" title="Permanent link">&para;</a></h2>
-<p>Some actions in the PicoKeys ecosystem <strong>cannot be undone</strong>.</p>
+<p>Some PicoKeys actions <strong>cannot be undone</strong>. These include:</p>
 <p>Examples include:</p>
 <ul>
 <li>Selecting and registering a board type</li>
@@ -3953,8 +3929,7 @@
 </div>
 <hr />
 <h2 id="responsibility-model">Responsibility model<a class="headerlink" href="#responsibility-model" title="Permanent link">&para;</a></h2>
-<p>The PicoKeys ecosystem follows a <strong>user-controlled model</strong>.</p>
-<p>This means:</p>
+<p>PicoKeys follows a <strong>user-controlled model</strong>, where:</p>
 <ul>
 <li>The user explicitly selects actions</li>
 <li>PicoKey App does not auto-correct critical decisions</li>
@@ -3962,18 +3937,8 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This model is intentional and prioritizes transparency and control over automation.</p>
+<p>This model prioritizes transparency and user control over automation.</p>
 </div>
-<hr />
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>To use PicoKeys devices correctly, remember:</p>
-<ul>
-<li>PicoKey App is the management interface</li>
-<li>Firmware defines actual device functionality</li>
-<li>Board selection and registration are irreversible</li>
-<li>Commissioning finalizes device setup</li>
-<li>Understanding these concepts prevents configuration errors</li>
-</ul>
 
 
 
@@ -4029,10 +3994,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

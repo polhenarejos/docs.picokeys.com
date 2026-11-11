@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3640,29 +3640,18 @@
 
 
 <h1 id="slot-yubico-otp">Slot: Yubico OTP<a class="headerlink" href="#slot-yubico-otp" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>Yubico OTP slot type</strong> available in PicoKey App.</p>
-<p>The Yubico OTP slot generates one-time passwords following the <strong>Yubico OTP specification</strong> and emits them as <strong>keyboard input</strong> when triggered.</p>
+<p>A <strong>Yubico OTP slot</strong> generates one-time passwords according to the <strong>Yubico OTP specification</strong> and types them as <strong>keyboard input</strong> when triggered.</p>
 <p><img alt="Yubico OTP slot" src="../../../../assets/images/picokeyapp/fido/slots-yubiotp.png" /></p>
 <hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>The Yubico OTP slot allows the device to:</p>
-<ul>
-<li>Store Yubico-compatible identifiers and secret keys</li>
-<li>Generate Yubico OTP values</li>
-<li>Emit the OTP as keystrokes</li>
-<li>Behave as a USB keyboard when activated</li>
-</ul>
-<p>The generated OTPs are compatible with systems expecting standard Yubico OTP authentication.</p>
+<p>The device stores Yubico-compatible identifiers and secret keys, then uses
+them to generate OTP values when the slot is activated. It types each code
+through its USB keyboard interface for services that support Yubico OTP.</p>
 <hr />
 <h2 id="activation-mechanism">Activation mechanism<a class="headerlink" href="#activation-mechanism" title="Permanent link">&para;</a></h2>
 <p>The Yubico OTP slot is activated through the <strong>OTP / button interface</strong>.</p>
-<p>Activation works as follows:</p>
-<ul>
-<li>The user presses the BOOTSEL button <strong>N times</strong></li>
-<li><code>N</code> corresponds to the slot number</li>
-<li>The device generates a Yubico OTP</li>
-<li>The OTP is typed on the host system as keyboard input</li>
-</ul>
+<p>Press the BOOTSEL button <strong>N times</strong>, where <code>N</code> is the slot number. The device
+then generates a Yubico OTP and types it into the host as keyboard input.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>No additional software is required on the host beyond USB HID keyboard support.</p>
@@ -3670,43 +3659,29 @@
 <hr />
 <h2 id="slot-configuration">Slot configuration<a class="headerlink" href="#slot-configuration" title="Permanent link">&para;</a></h2>
 <h3 id="public-id">Public ID<a class="headerlink" href="#public-id" title="Permanent link">&para;</a></h3>
-<p>Defines the <strong>public identifier</strong> for the Yubico OTP.</p>
-<ul>
-<li>Sent in clear as part of the OTP</li>
-<li>Used by the verification service to identify the device</li>
-<li>Limited in length by the Yubico specification</li>
-</ul>
+<p>Enter the <strong>public identifier</strong> that the verification service uses to identify
+the device. It is sent in clear as part of the OTP and is limited in length by
+the Yubico specification.</p>
 <hr />
 <h3 id="private-id-hex">Private ID (hex)<a class="headerlink" href="#private-id-hex" title="Permanent link">&para;</a></h3>
-<p>Defines the <strong>private identifier</strong>.</p>
-<ul>
-<li>Stored securely on the device</li>
-<li>Used internally during OTP generation</li>
-<li>Must be provided in hexadecimal format</li>
-</ul>
+<p>Enter the <strong>private identifier</strong> in hexadecimal format. The device stores it
+securely and uses it internally when generating OTP values.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The private ID cannot be retrieved once stored.</p>
 </div>
 <hr />
 <h3 id="key-hex">Key (hex)<a class="headerlink" href="#key-hex" title="Permanent link">&para;</a></h3>
-<p>Defines the <strong>secret key</strong> used to generate the Yubico OTP.</p>
-<ul>
-<li>Stored securely on the device</li>
-<li>Must be provided in hexadecimal format</li>
-<li>Never exposed outside the device</li>
-</ul>
+<p>Enter the <strong>secret key</strong> in hexadecimal format. The device stores it securely
+and does not expose it outside the device.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>Losing the secret key prevents OTP verification and cannot be recovered.</p>
 </div>
 <hr />
 <h3 id="append-enter">Append Enter<a class="headerlink" href="#append-enter" title="Permanent link">&para;</a></h3>
-<p>When enabled:</p>
-<ul>
-<li>An Enter key is sent after the OTP</li>
-<li>Useful for automatic form submission</li>
-</ul>
+<p>When enabled, the device sends Enter after the OTP, which can submit a form
+automatically.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Enable this option when authenticating on web login forms.</p>
@@ -3714,8 +3689,8 @@
 <hr />
 <h2 id="save-and-cancel">Save and cancel<a class="headerlink" href="#save-and-cancel" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Save</strong> stores the Yubico OTP configuration permanently</li>
-<li><strong>Cancel</strong> discards the configuration</li>
+<li><strong>Save</strong> stores the Yubico OTP configuration permanently.</li>
+<li><strong>Cancel</strong> discards the changes.</li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -3723,19 +3698,15 @@
 </div>
 <hr />
 <h2 id="security-considerations">Security considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
-<p>The Yubico OTP slot:</p>
-<ul>
-<li>Follows Yubico OTP specifications</li>
-<li>Does not expose secrets over software interfaces</li>
-<li>Emits OTPs only as keyboard input</li>
-</ul>
+<p>The slot follows the Yubico OTP specification and keeps its secrets out of
+software interfaces. It emits OTPs only as keyboard input.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Anyone with physical access to the device may trigger OTP generation.</p>
 </div>
 <hr />
 <h2 id="typical-use-cases">Typical use cases<a class="headerlink" href="#typical-use-cases" title="Permanent link">&para;</a></h2>
-<p>Common use cases include:</p>
+<p>Use Yubico OTP slots for:</p>
 <ul>
 <li>Authentication against Yubico-compatible servers</li>
 <li>Legacy systems using Yubico OTP</li>
@@ -3747,11 +3718,8 @@
 </div>
 <hr />
 <h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Requires a compatible Yubico OTP verification service</li>
-<li>Keyboard-based emission only</li>
-<li>No host-side confirmation from the device</li>
-</ul>
+<p>The service must support Yubico OTP, and the device emits the code through its
+keyboard interface without host-side confirmation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This slot is intended for compatibility with existing Yubico OTP infrastructures.</p>
@@ -3811,10 +3779,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

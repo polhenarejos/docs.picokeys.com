@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3471,8 +3471,7 @@
 
 
 <h1 id="smart-card-shell-3">Smart Card Shell 3<a class="headerlink" href="#smart-card-shell-3" title="Permanent link">&para;</a></h1>
-<p>Smart Card Shell 3 (SCS3) matters for Pico HSM because some advanced workflows are not well covered by generic PKCS#11 tooling.</p>
-<p>That is the honest reason to use it.</p>
+<p>Smart Card Shell 3 (SCS3) is useful with Pico HSM when a workflow is not well covered by generic PKCS#11 tools.</p>
 <h2 id="when-scs3-becomes-relevant">When SCS3 becomes relevant<a class="headerlink" href="#when-scs3-becomes-relevant" title="Permanent link">&para;</a></h2>
 <p>According to upstream documentation, SCS3 is the path for workflows such as:</p>
 <ul>
@@ -3480,10 +3479,10 @@
 <li>importing WKY-wrapped material</li>
 <li>operating with CardContact-style SC-HSM logic that generic CLI tools do not expose cleanly</li>
 </ul>
-<p>If you only need ordinary key generation and signing, you probably do not need SCS3 yet.</p>
+<p>For ordinary key generation and signing, you can usually work without SCS3.</p>
 <h2 id="why-setup-is-awkward">Why setup is awkward<a class="headerlink" href="#why-setup-is-awkward" title="Permanent link">&para;</a></h2>
 <p>The upstream instructions explain that SCS3 trusts CardContact manufacturing certificates by default, so Pico HSM users need to extend the trust store for Pico HSM's CA material before advanced operations work.</p>
-<p>That is not a bug in your setup. It is part of adapting a CardContact-oriented toolchain to a different device family.</p>
+<p>This trust-store change adapts a CardContact-oriented toolchain to Pico HSM; it does not indicate a setup failure.</p>
 <h2 id="what-to-expect">What to expect<a class="headerlink" href="#what-to-expect" title="Permanent link">&para;</a></h2>
 <p>Using SCS3 successfully usually means:</p>
 <ul>
@@ -3492,7 +3491,7 @@
 <li>authenticating correctly before import/export actions</li>
 <li>having the required DKEK context available for wrapped-key operations</li>
 </ul>
-<p>This is advanced-admin territory, not a beginner workflow.</p>
+<p>These steps are intended for administrators who already understand the toolchain.</p>
 <h2 id="operational-advice">Operational advice<a class="headerlink" href="#operational-advice" title="Permanent link">&para;</a></h2>
 <ul>
 <li>keep a tested copy of your SCS3 trust-store changes under version control</li>
@@ -3500,7 +3499,7 @@
 <li>test imports on disposable material first</li>
 <li>do not discover DKEK or trust-anchor problems during a recovery event</li>
 </ul>
-<p>That last point is the whole reason to document SCS3 carefully.</p>
+<p>Documenting these details now can prevent trust-anchor or DKEK problems during recovery.</p>
 
 
 
@@ -3556,10 +3555,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

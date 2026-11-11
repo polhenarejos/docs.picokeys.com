@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3497,33 +3497,33 @@
 
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
 <h2 id="gpg-card-status-fails"><code>gpg --card-status</code> fails<a class="headerlink" href="#gpg-card-status-fails" title="Permanent link">&para;</a></h2>
-<p>Start with the host stack, not the card logic:</p>
+<p>First check whether the host can see the reader and card:</p>
 <ul>
 <li>is PC/SC running?</li>
 <li>is the reader visible?</li>
 <li>does another smart-card tool see the device?</li>
 </ul>
-<p>Most failures here are middleware problems first.</p>
+<p>If these checks fail, the issue is usually in the middleware or reader setup.</p>
 <h2 id="the-card-is-visible-but-an-admin-action-fails">The card is visible but an admin action fails<a class="headerlink" href="#the-card-is-visible-but-an-admin-action-fails" title="Permanent link">&para;</a></h2>
-<p>Check the role context before blaming the firmware:</p>
+<p>Before investigating the firmware, confirm that:</p>
 <ul>
 <li>are you authenticated as <code>PW3</code>?</li>
 <li>did the client keep or lose the session?</li>
 <li>is the operation one the client actually exposes cleanly?</li>
 </ul>
 <h2 id="large-rsa-operations-seem-stuck">Large RSA operations seem stuck<a class="headerlink" href="#large-rsa-operations-seem-stuck" title="Permanent link">&para;</a></h2>
-<p>That can be normal. Upstream timing for RSA generation and use is measured in seconds or minutes, not milliseconds.</p>
+<p>Long delays can be normal: upstream RSA timings range from seconds to minutes, depending on the key size and operation.</p>
 <p>If you need fast provisioning, prefer ECC unless a specific RSA requirement exists.</p>
 <h2 id="a-feature-exists-in-the-readme-but-not-in-the-client">A feature exists in the README but not in the client<a class="headerlink" href="#a-feature-exists-in-the-readme-but-not-in-the-client" title="Permanent link">&para;</a></h2>
-<p>That is common in OpenPGP land. Confirm separately:</p>
+<p>Firmware, middleware, and client support are separate checks. Confirm each one:</p>
 <ol>
 <li>firmware support</li>
 <li>middleware support</li>
 <li>client support</li>
 </ol>
-<p>Only the combination matters operationally.</p>
+<p>The feature is available in practice only when all three layers support it.</p>
 <h2 id="reset-or-unblock-behavior-is-unclear">Reset or unblock behavior is unclear<a class="headerlink" href="#reset-or-unblock-behavior-is-unclear" title="Permanent link">&para;</a></h2>
-<p>If the recovery path is unclear during an incident, the documentation is already too late. Test the recovery flows on a non-critical card and document the exact steps you will actually use.</p>
+<p>Test the recovery flow on a non-critical card and record the steps before an incident makes them urgent.</p>
 
 
 
@@ -3579,10 +3579,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3518,8 +3518,8 @@
 
 
 <h1 id="pico-openpgp">Pico OpenPGP<a class="headerlink" href="#pico-openpgp" title="Permanent link">&para;</a></h1>
-<p>A full OpenPGP smart card applet over USB CCID: three key roles, host-side GnuPG and OpenSC tooling, and on-device cryptographic operations without exporting private key material.</p>
-<p>The important part is not just that the firmware speaks OpenPGP card 3.4.1. It is that the host stack must speak it correctly too.</p>
+<p>Pico OpenPGP runs a full OpenPGP smart-card applet over USB CCID. It provides three key roles and on-device cryptographic operations, with host-side tools such as GnuPG and OpenSC.</p>
+<p>The firmware implements OpenPGP card 3.4.1, and the host stack must support the commands you plan to use.</p>
 <h2 id="start-here">Start here<a class="headerlink" href="#start-here" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="compatibility-notes/">Host setup and compatibility</a>: CCID, PC/SC, OpenSC, GnuPG, and where detection usually fails</li>
@@ -3539,7 +3539,7 @@
 <li>optional admin-less operation, where the user PIN can also authorize the
   administrative context when the firmware policy enables it</li>
 </ul>
-<p>That is a broad feature set. It still needs to be separated into two buckets:</p>
+<p>These capabilities fall into two groups:</p>
 <ul>
 <li>implemented in firmware</li>
 <li>realistically exposed by mainstream host software</li>
@@ -3551,7 +3551,7 @@
 <li>a general HSM appliance with Pico HSM's wider feature surface</li>
 <li>proof that every OpenPGP or PKCS#11 client supports every advertised card command</li>
 </ul>
-<p>If you need broader cryptographic primitives, key domains, or wrapped-key workflows, <a href="../picohsm/">Pico HSM</a> is the better fit.</p>
+<p>For broader cryptographic primitives, key domains, or wrapped-key workflows, see <a href="../picohsm/">Pico HSM</a>.</p>
 <h2 id="security-posture">Security posture<a class="headerlink" href="#security-posture" title="Permanent link">&para;</a></h2>
 <p>The upstream README describes:</p>
 <ul>
@@ -3566,13 +3566,12 @@
 <li>client support for advanced features is uneven even when the firmware implements them</li>
 </ul>
 <h2 id="practical-expectation">Practical expectation<a class="headerlink" href="#practical-expectation" title="Permanent link">&para;</a></h2>
-<p>The default use case is still the familiar OpenPGP card workflow:</p>
+<p>The usual workflow is straightforward:</p>
 <ul>
 <li>card visible through PC/SC</li>
 <li>GnuPG or OpenSC talks to it</li>
 <li>on-device keys sign, decrypt, or authenticate</li>
 </ul>
-<p>These docs now follow that flow much more directly.</p>
 <h2 id="recent-firmware-changes">Recent firmware changes<a class="headerlink" href="#recent-firmware-changes" title="Permanent link">&para;</a></h2>
 <p>Recent firmware work adds migration-aware authenticated storage for OpenPGP
 and PIV key material, stricter PIN and APDU validation, and more complete PIV
@@ -3638,10 +3637,10 @@ policy.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

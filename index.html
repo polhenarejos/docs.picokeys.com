@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3594,8 +3594,8 @@
 
 
 <h1 id="picokeys-documentation">PicoKeys Documentation<a class="headerlink" href="#picokeys-documentation" title="Permanent link">&para;</a></h1>
-<p>This site documents the firmware families in the PicoKeys ecosystem first, and the management application second.</p>
-<p>If you are here to decide which firmware to use, start with the firmware sections below. If you are already managing a device through the desktop app, keep the app pages as an operational reference, not as the source of truth for product capabilities.</p>
+<p>This site focuses first on the PicoKeys firmware families, then on the desktop application used to manage them.</p>
+<p>If you are choosing firmware, start with the firmware sections below. If you already manage a device through the desktop app, use its pages as an operational reference; the firmware documentation defines each product's capabilities.</p>
 <h2 id="start-here">Start here<a class="headerlink" href="#start-here" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="picofido/">Pico FIDO</a>: passkeys, FIDO2, U2F, OATH, OTP slots, and vendor extensions</li>
@@ -3603,14 +3603,14 @@
 <li><a href="picohsm/">Pico HSM</a>: key generation, signing, decryption, symmetric cryptography, and wrapped-key workflows</li>
 </ul>
 <h2 id="the-ecosystem-plainly">The ecosystem, plainly<a class="headerlink" href="#the-ecosystem-plainly" title="Permanent link">&para;</a></h2>
-<p>PicoKeys is not one product. It is a family of firmwares that run on supported microcontroller boards.</p>
-<p>The split matters:</p>
+<p>PicoKeys is a family of firmwares for supported microcontroller boards, with each firmware defining a different device role.</p>
+<p>The responsibilities are split across three layers:</p>
 <ul>
 <li>The firmware defines the real protocol surface, storage model, and security properties.</li>
 <li>The desktop application helps with flashing, commissioning, policy changes, and diagnostics.</li>
 <li>Host-side compatibility still depends on the protocol and middleware used by each firmware family.</li>
 </ul>
-<p>That last point is where many docs sets become vague. This one should not:</p>
+<p>Host compatibility also depends on the protocol and middleware each firmware uses:</p>
 <ul>
 <li>FIDO behavior is driven by what the authenticator reports through CTAP and what browsers or host tools actually consume.</li>
 <li>OpenPGP and HSM behavior depend heavily on CCID, PC/SC, OpenSC, PKCS#11, and client-specific support.</li>
@@ -3625,7 +3625,7 @@
 <li>OATH accounts</li>
 <li>OTP slots and challenge-response</li>
 </ul>
-<p>Do not pick Pico FIDO because you need a general-purpose smart card or HSM API. That is not its job.</p>
+<p>Pico FIDO is built for authentication. Choose another firmware if you need a general-purpose smart-card or HSM API.</p>
 <h3 id="pico-openpgp">Pico OpenPGP<a class="headerlink" href="#pico-openpgp" title="Permanent link">&para;</a></h3>
 <p>Use it when the device should behave like an OpenPGP smart card:</p>
 <ul>
@@ -3633,7 +3633,7 @@
 <li>on-device signing and decryption</li>
 <li>CCID / APDU / PKCS#11 style integration</li>
 </ul>
-<p>Do not pick it for FIDO2/WebAuthn or broad symmetric/HSM workflows.</p>
+<p>Choose another firmware for FIDO2/WebAuthn or broad symmetric-key and HSM workflows.</p>
 <h3 id="pico-hsm">Pico HSM<a class="headerlink" href="#pico-hsm" title="Permanent link">&para;</a></h3>
 <p>Use it when the device is meant to act as a compact HSM:</p>
 <ul>
@@ -3641,7 +3641,7 @@
 <li>signatures and decryption through PKCS#11</li>
 <li>AES, HMAC, KDF, wrapped-key import/export, and advanced key domains</li>
 </ul>
-<p>Do not treat it as a certified enterprise HSM. The feature set is broad, but the hardware and assurance model remain those of supported microcontroller boards.</p>
+<p>Its feature set is broad, while its hardware and assurance model remain those of supported microcontroller boards; it is not a certified enterprise HSM.</p>
 <h2 id="security-baseline">Security baseline<a class="headerlink" href="#security-baseline" title="Permanent link">&para;</a></h2>
 <p>Across the firmware families, the most important practical distinction is hardware:</p>
 <ul>
@@ -3649,9 +3649,9 @@
 <li>Secure Boot, Secure Lock, and OTP-backed key material are meaningful only on the platforms that actually implement those mechanisms.</li>
 <li>A host compromise can still drive operations on an unlocked device, regardless of firmware family.</li>
 </ul>
-<p>If your threat model includes funded physical attackers or certification requirements, you should assume these projects are outside that scope unless explicitly proven otherwise.</p>
+<p>These projects do not claim protection against well-funded physical attackers or certification-level requirements unless a specific capability has been demonstrated.</p>
 <h2 id="production-hardening">Production hardening<a class="headerlink" href="#production-hardening" title="Permanent link">&para;</a></h2>
-<p>Production hardening is intentionally not a top-level product tab. It is a cross-cutting subject that depends on the board family, the firmware image, and the provisioning state.</p>
+<p>Production hardening applies across products, and the right procedure depends on the board family, firmware image, and provisioning state.</p>
 <p>Read these pages before burning irreversible state:</p>
 <ul>
 <li><a href="production/otp-fuses/">OTP fuses</a>: which RP2350/RP2354 OTP rows and ESP32-S3 eFuses are used for PicoKeys root keys, secure boot, and secure lock.</li>
@@ -3671,7 +3671,7 @@
 <li>what is easy, what is awkward, and what is unsupported</li>
 <li>where the sharp edges are</li>
 </ul>
-<p>That is intentional. Glossy feature lists are easy to write and often misleading. Operational documentation is more useful.</p>
+<p>This structure keeps the focus on how each firmware works in practice, including the host tools it needs and the limits you may encounter.</p>
 
 
 
@@ -3727,10 +3727,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

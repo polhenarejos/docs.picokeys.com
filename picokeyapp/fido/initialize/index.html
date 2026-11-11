@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3618,13 +3618,13 @@
 
 
 <h1 id="pico-fido-initialization">Pico FIDO Initialization<a class="headerlink" href="#pico-fido-initialization" title="Permanent link">&para;</a></h1>
-<p>This page describes the <strong>security initialization and provisioning options</strong> available when using <strong>Pico FIDO</strong> with PicoKey App.</p>
-<p>These options are <strong>applied once during initialization</strong> and directly affect the security model of the authenticator.</p>
+<p>Use PicoKey App to set the <strong>security initialization and provisioning options</strong> for <strong>Pico FIDO</strong>.</p>
+<p>These options are <strong>applied during initialization</strong> and shape the authenticator's security model.</p>
 <p><img alt="Pico FIDO initialization" src="../../../assets/images/picokeyapp/fido/initialize.png" /></p>
 <hr />
 <h2 id="initialization-options">Initialization options<a class="headerlink" href="#initialization-options" title="Permanent link">&para;</a></h2>
 <h3 id="pin">PIN<a class="headerlink" href="#pin" title="Permanent link">&para;</a></h3>
-<p>Sets the <strong>user verification PIN</strong> for the authenticator.</p>
+<p>Set the authenticator's <strong>user verification PIN</strong> here.</p>
 <ul>
 <li>The PIN is required for user verification when enabled</li>
 <li>It protects resident credentials and sensitive operations</li>
@@ -3635,7 +3635,7 @@
 </div>
 <hr />
 <h3 id="attestation">Attestation<a class="headerlink" href="#attestation" title="Permanent link">&para;</a></h3>
-<p>Enables authenticator attestation.</p>
+<p>Enable authenticator attestation here.</p>
 <p>When enabled:</p>
 <ul>
 <li>The authenticator presents an attestation certificate</li>
@@ -3647,7 +3647,7 @@
 </div>
 <hr />
 <h3 id="minimum-pin-length">Minimum PIN length<a class="headerlink" href="#minimum-pin-length" title="Permanent link">&para;</a></h3>
-<p>Defines the minimum allowed PIN length.</p>
+<p>Set the minimum allowed PIN length.</p>
 <ul>
 <li>Enforced at PIN setup time</li>
 <li>Applies to all future PIN changes</li>
@@ -3657,9 +3657,9 @@
 <p>Longer PINs significantly improve resistance against guessing attacks.</p>
 </div>
 <h3 id="pin-complexity-policy">PIN complexity policy<a class="headerlink" href="#pin-complexity-policy" title="Permanent link">&para;</a></h3>
-<p>When supported by the firmware, <strong>Pin Complexity Policy</strong> adds a policy URL and
-one of these requirements. The policy switch must be enabled before the URL
-and policy controls are applied:</p>
+<p>When supported by the firmware, <strong>PIN Complexity Policy</strong> lets you set a policy
+URL and choose one of these requirements. Enable the policy switch before
+applying the URL or selecting a requirement:</p>
 <ul>
 <li>upper letters</li>
 <li>lower letters</li>
@@ -3671,7 +3671,7 @@ and policy controls are applied:</p>
 <p>The policy is enforced by the authenticator when PINs are created or changed.</p>
 <hr />
 <h3 id="rp-ids-restriction">RP IDs restriction<a class="headerlink" href="#rp-ids-restriction" title="Permanent link">&para;</a></h3>
-<p>Limits the set of allowed Relying Party IDs.</p>
+<p>Restrict which Relying Party IDs the authenticator accepts.</p>
 <ul>
 <li>RP IDs must be explicitly listed</li>
 <li>Multiple RP IDs are separated by commas</li>
@@ -3693,7 +3693,7 @@ and policy controls are applied:</p>
 options on the FIDO Dashboard before enrolling production credentials.</p>
 <hr />
 <h2 id="initialization-process">Initialization process<a class="headerlink" href="#initialization-process" title="Permanent link">&para;</a></h2>
-<p>After configuring the desired options:</p>
+<p>After choosing the options you need:</p>
 <ul>
 <li>Click <strong>Apply Changes</strong></li>
 <li>The device is provisioned with the selected security parameters</li>
@@ -3704,11 +3704,10 @@ options on the FIDO Dashboard before enrolling production credentials.</p>
 </div>
 <hr />
 <h2 id="registration-requirement">Registration requirement<a class="headerlink" href="#registration-requirement" title="Permanent link">&para;</a></h2>
-<p>This panel requires a registered board in PicoKey App. If the board is not registered, initialization actions are disabled.</p>
+<p>Register the board in PicoKey App before using this panel; otherwise, initialization actions are disabled.</p>
 <hr />
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Security initialization defines the <strong>trust model</strong> of Pico FIDO.</p>
-<p>Careful selection of these options ensures:</p>
+<p>Security initialization defines the <strong>trust model</strong> of Pico FIDO, so choose these options to set:</p>
 <ul>
 <li>Strong authentication guarantees</li>
 <li>Resistance against firmware tampering</li>
@@ -3769,10 +3768,10 @@ options on the FIDO Dashboard before enrolling production credentials.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
